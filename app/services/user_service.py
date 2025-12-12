@@ -32,7 +32,24 @@ def LoginUser(username, password):
         return False, "User not found."
     
     # Verify password
-    stored_hash = user[1]  # password_hash column
+    stored_hash = user[2]  # password_hash column
     if bcrypt.checkpw(password.encode('utf-8'), stored_hash.encode('utf-8')):
         return True, f"Login successful!"
     return False, "Incorrect password."
+
+def migrate_users_from_file(file_path='app/data/users.txt'):
+    """Migrate users from a text file into the database."""
+    if not Path(file_path).is_file():
+        print(f"User file '{file_path}' not found.")
+        return
+    
+    conn = connect_database()
+    create_users_table(conn)
+    
+    with open(file_path, 'r') as f:
+        for line in f:
+            username, password = line.strip().split(',')
+            success, msg = RegisterUser(username, password)
+            print(msg)
+    
+    conn.close()

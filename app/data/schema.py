@@ -20,6 +20,8 @@ def create_cyber_incidents_table(conn):
             incident_type TEXT NOT NULL,
             severity TEXT NOT NULL,
             status TEXT NOT NULL,
+            description TEXT,
+            reported_by TEXT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     """)
@@ -33,6 +35,9 @@ def create_datasets_metadata_table(conn):
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             dataset_name TEXT NOT NULL,
             category TEXT,
+            source TEXT,
+            last_updated DATE,
+            record_count INTEGER,
             file_size_mb REAL,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
@@ -46,16 +51,20 @@ def create_it_tickets_table(conn):
         CREATE TABLE IF NOT EXISTS IT_Tickets (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             ticket_id TEXT UNIQUE NOT NULL,
+            priority TEXT NOT NULL,
+            status TEXT NOT NULL,
+            category TEXT,
             subject TEXT NOT NULL,
-            priority TEXT,
-            status TEXT,
+            description TEXT,
             created_date DATE,
+            resolved_date DATE,
+            assigned_to TEXT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     """)
     conn.commit()
 
-def create_all_tables(conn):
+def create_all_tables()->None:
     """Create all necessary tables."""
     import sqlite3
     from pathlib import Path
