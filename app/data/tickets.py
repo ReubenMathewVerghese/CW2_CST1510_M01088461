@@ -1,87 +1,184 @@
 import csv
 from pathlib import Path
 import pandas as pd 
-import app.data.db as db
+from app.data.db import connect_database
+
+def insert_ticket(ticket_id, subject, priority, status, created_date, created_at):
+    """
+    Adds a new ticket record to the database matching the CSV structure.
+    """
+    # 1. Connect to the DB
+    db = connect_database()
+    cursor = db.cursor()
+
+    # 2. Run the SQL Command
+    sql = """
+        INSERT INTO it_tickets 
+        (ticket_id, subject, priority, status, created_date, created_at)
+        VALUES (?, ?, ?, ?, ?, ?)
+    """
+    values = (ticket_id, subject, priority, status, created_date, created_at)
+    
+    cursor.execute(sql, values)
+    db.commit()
+    db.close()
+
+def update_ticket(ticket_id, subject, priority, status, created_date, created_at):
+    """
+    Updates an existing ticket record in the database.
+    Returns True if successful, False otherwise.
+    """
+    # 1. Connect to the DB
+    db = connect_database()
+    cursor = db.cursor()
+
+    # 2. Run the SQL Command
+    sql = """
+        UPDATE it_tickets
+        SET subject = ?, priority = ?, status = ?, created_date = ?, created_at = ?
+        WHERE ticket_id = ?
+    """
+    # The ticket_id goes last to match the WHERE clause
+    values = (subject, priority, status, created_date, created_at, ticket_id)
+    
+    cursor.execute(sql, values)
+    db.commit()
+
+    # 3. Check if any row was updated
+    success = cursor.rowcount > 0
+    
+    db.close()
+    return success
+
+def delete_ticket(ticket_id):
+    """
+    Deletes a ticket record from the database by its ticket_id.
+    Returns True if successful, False otherwise.
+    """
+    # 1. Connect to the DB
+    db = connect_database()
+    cursor = db.cursor()
+
+    # 2. Run the SQL Command
+    sql = "DELETE FROM it_tickets WHERE ticket_id = ?"
+    cursor.execute(sql, (ticket_id,))
+    db.commit()
+
+    # 3. Check if any row was deleted
+    success = cursor.rowcount > 0
+    
+    db.close()
+    return success
+
+def get_groupby(column):
+    """
+    Retrieves distinct values for a specified column from the IT_Tickets table.
+    """
+    # 1. Establish connection
+    db = connect_database()
+    
+    # 2. Generate the full SQL command
+    sql_command = f"SELECT {column},COUNT(*) FROM IT_Tickets GROUP BY {column}"
+    
+    # 3. Execute query and load directly into a Pandas DataFrame
+    results_df = pd.read_sql_query(sql_command, db)
+    print(results_df)
+    
+    # 4. Close connection and return data
+    db.close()
+    return results_df
+
+def get_all_tickets(filter_str,column):
+    """
+    Retrieves ticket records from the database and returns them as a DataFrame.
+    Applies the provided SQL filter string to refine the results.
+    """
+    # 1. Establish connection
+    db = connect_database()
+    
+    # 2. Generate the full SQL command using the helper function
+    # Renamed to match the IT tickets context
+    sql_command =f"SELECT {column},COUNT(*) FROM IT_Tickets GROUP BY {column}"
+    
+    # 3. Execute query and load directly into a Pandas DataFrame
+    results_df = pd.read_sql_query(sql_command, db)
+    print(results_df)
+    
+    # 4. Close connection and return data
+    db.close()
+    return results_df
+
+def get_tickets_dataframe(filter_str=None):
+    """
+    Returns the DataFrame for IT_tickets table.
+    """
+    # 1. Establish connection
+    db = connect_database()
+    
+    # 2. Generate the full SQL command
+    sql_command = "SELECT * FROM IT_tickets"
+
+    # 3. Execute query and load directly into a Pandas DataFrame
+    results_df = pd.read_sql_query(sql_command, db)
+    print(results_df)
+    
+    # 4. Close connection and return data
+    db.close()
+    return results_df
+
+def get_ticketquery(filter_str,column):
+    """
+    Constructs the SQL query string for retrieving tickets with an optional filter.
+    """
+    # 1. Define the base requirement
+    query = f"SELECT {column},COUNT(*) FROM IT_Tickets GROUP BY {column}"
+    
+    # 2. Add the condition if it exists
+    if filter_str:
+        query += f" WHERE {filter_str}"
+    print('Filter string 1',filter_str)
+    
+    return query
+
+def total_tickets(filter_str: str) -> int:
+    """
+    Executes the query with the optional filter and returns the total count of matches
+    in the it_tickets table.
+    """
+    # 1. Open Connection
+    conn = connect_database()
+    
+    # 2. Get the SQL string using the helper function we updated earlier
+    sql_cmd = get_all_tickets(filter_str)
+    
+    # 3. Load results into a DataFrame
+    df_results = pd.read_sql_query(sql_cmd, conn)
+    
+    conn.close()
+    
+    # 4. Return the number of rows found
+    return len(df_results)
 
 def transfer_csv():
-    conn = db.connect_database()
+    import csv
+    from pathlib import Path
+    
+    conn = connect_database()
     cursor = conn.cursor()
-    with open(Path("DATA/cyber_incidents.csv")) as itFile:
-        reader = csv.reader(itFile)
-        header: bool = True
+    
+    # Updated to read from the correct file 'it_tickets.csv'
+    with open(Path("it_tickets.csv")) as csv_file:
+        reader = csv.reader(csv_file)
+                    
+        # Skip the header row
+        next(reader)
+        
         for row in reader:
-            if header:
-                header = False
-                continue
             cursor.execute("""
-                INSERT INTO cyber_incidents 
-                (date, incident_type, severity, status, description, reported_by)
+                INSERT INTO it_tickets 
+                (ticket_id, subject, priority, status, created_date, created_at)
                 VALUES (?, ?, ?, ?, ?, ?)
             """, (row[0], row[1], row[2], row[3], row[4], row[5]))
-    conn.commit()
-    conn.close()
-
-def GetQuery(filter, column) -> str:
-    if filter:
-        return f"SELECT {column} FROM IT_Tickets WHERE {filter}"
-    else:
-        return f"SELECT {column} from IT_Tickets"
-    
-def GetAllTickets(filter: str, col: str):
-    conn = db.connect_database()
-    df = pd.read_sql_query(GetQuery(filter, col), conn)
-    conn.close()
-    
-    return df
-
-def GetTable(filter: str):
-    conn = db.connect_database()
-    return pd.read_sql_query(f"SELECT * FROM IT_Tickets WHERE {filter}", conn) if filter else pd.read_sql_query(f"SELECT * FROM IT_Tickets", conn)
-
-
-def TotalTickets(filter: str, column: str) -> int:
-    conn = db.connect_database()
-    query = GetQuery(filter, column)
-    totalInc = pd.read_sql_query(query, conn)
-    
-    return len(totalInc)
-
-def GetDates(filter: str):
-    conn = db.connect_database()
-    if filter:  
-        query = f"SELECT created_date, COUNT(*) FROM IT_Tickets as dateAmt GROUP BY created_date HAVING {filter}"
-    else:
-        query = f"SELECT created_date, COUNT(*) FROM IT_Tickets as dateAmt GROUP BY created_date"
-    data = pd.read_sql_query(query, conn)
-    return data
-    
-
-def InsertTicket(tID: str, sub: str, prio: str, status: str, crDate: str):
-    conn = db.connect_database()
-    cursor = conn.cursor()
-    cursor.execute("""INSERT INTO It_Tickets (ticket_id, subject, priority, status, created_date) 
-                      VALUES (?, ?, ?, ?, ?)""", (tID, sub, prio, status, crDate))
-    conn.commit()
-    conn.close()
-    
-
-def UpdateTicket(id: str, newId: str, newSub: str, newPrio: str, newStat :str, newDate: str):
-    conn = db.connect_database()
-    cursor = conn.cursor()
-    cursor.execute(f"""UPDATE IT_Tickets
-                    SET ticket_id = ?, subject = ?, priority = ?, status = ?, created_date = ?
-                    WHERE ticket_id = ?""", (newId, newSub, newPrio, newStat, newDate, id))
-    cursor.execute("SELECT * FROM IT_Tickets ORDER BY id desc")
-    print(cursor.fetchone())
-    conn.commit()
-    conn.close()
-
-
-def DeleteTicket(id: str):
-    conn = db.connect_database()
-    cursor = conn.cursor()
-    cursor.execute("DELETE FROM It_Tickets WHERE ticket_id = ?", (id, ))
-    cursor.execute("SELECT * FROM IT_Tickets WHERE ticket_id = '36'")
-    print(cursor.fetchone())
+            
     conn.commit()
     conn.close()

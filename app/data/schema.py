@@ -14,14 +14,12 @@ def create_cyber_incidents_table(conn):
     """Create cyber_incidents table."""
     cursor = conn.cursor()
     cursor.execute("""
-        CREATE TABLE IF NOT EXISTS cyber_incidents (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            date TEXT NOT NULL,
-            incident_type TEXT NOT NULL,
-            severity TEXT NOT NULL,
-            status TEXT NOT NULL,
-            description TEXT,
-            reported_by TEXT,
+          CREATE TABLE IF NOT EXISTS Cyber_Incidents (
+            id  INTEGER PRIMARY KEY ,
+            date date,
+            incident_type TEXT,
+            severity TEXT,
+            status TEXT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     """)
@@ -31,13 +29,10 @@ def create_datasets_metadata_table(conn):
     """Create datasets_metadata table."""
     cursor = conn.cursor()
     cursor.execute("""
-        CREATE TABLE IF NOT EXISTS Datasets_Metadata (
+      CREATE TABLE IF NOT EXISTS Datasets_Metadata (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             dataset_name TEXT NOT NULL,
             category TEXT,
-            source TEXT,
-            last_updated DATE,
-            record_count INTEGER,
             file_size_mb REAL,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
@@ -51,14 +46,10 @@ def create_it_tickets_table(conn):
         CREATE TABLE IF NOT EXISTS IT_Tickets (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             ticket_id TEXT UNIQUE NOT NULL,
-            priority TEXT NOT NULL,
-            status TEXT NOT NULL,
-            category TEXT,
             subject TEXT NOT NULL,
-            description TEXT,
+            priority TEXT,
+            status TEXT,
             created_date DATE,
-            resolved_date DATE,
-            assigned_to TEXT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     """)

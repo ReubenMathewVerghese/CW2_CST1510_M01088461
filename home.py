@@ -2,7 +2,7 @@ import streamlit as st
 import app.services.user_service as LoginRegister
 import app.data.schema as Schema
 import auth
-
+import app.data.incidents as CyberFuncs
 def LoginCheck() -> None:
     """
     Checks if user has logged in through Login Page. Sets values to False/None if not
@@ -37,7 +37,7 @@ def GoCyber() -> None:
         st.success("Already logged in as **{}**.".format(st.session_state.username))
         
         if st.button("Go to Cyber Analytics Dashboard"):
-            st.switch_page("page/Cyber_Analytics.py")
+            st.switch_page("pages/Cyber_Analytics.py")
             
         st.stop()  # Stop execution so login forms don't render
 
@@ -68,7 +68,7 @@ def Login(loginTab) -> None:
                 st.success("Welcome back, {}! ".format(loginUsername))
 
                 # Redirect to dashboard page
-                st.switch_page("page/Cyber_Analytics.py")
+                st.switch_page("pages/Cyber_Analytics.py")
             else:
                 st.error(loginSuccess[1])
 
@@ -120,6 +120,7 @@ def Register(registerTab):
 
 
 if __name__ == "__main__": 
+    
     Schema.create_all_tables()
     LoginCheck()
     GoCyber()

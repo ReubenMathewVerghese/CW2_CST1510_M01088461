@@ -1,801 +1,1001 @@
-id,date,incident_type,severity,status,description,reported_by,created_at
-1,2025-03-13,Man-in-the-Middle,Low,Resolved,Firewall blocked multiple port scans.,admin,2025-03-13 11:47:17
-2,2025-02-09,Malware Infection,High,Mitigated,Database latency exceeded threshold.,jdoe,2025-02-09 10:05:43
-3,2025-04-25,Insider Threat,Critical,Closed,Unusual outbound traffic pattern.,asmith,2025-04-25 17:45:59
-4,2025-06-19,SQL Injection,Medium,False Positive,Suspicious login attempt detected.,jdoe,2025-06-19 03:52:32
-5,2025-07-27,Malware Infection,Low,Closed,Unusual outbound traffic pattern.,asmith,2025-07-27 18:48:59
-6,2024-12-15,SQL Injection,Medium,Resolved,Unusual outbound traffic pattern.,admin,2024-12-15 13:51:40
-7,2025-01-24,Data Breach,Critical,False Positive,Firewall blocked multiple port scans.,jdoe,2025-01-24 15:05:04
-8,2025-11-13,Malware Infection,High,Closed,Antivirus signature match found.,asmith,2025-11-13 12:42:05
-9,2025-04-21,Ransomware,Low,Open,Firewall blocked multiple port scans.,admin,2025-04-21 23:14:09
-10,2025-11-06,Phishing Attempt,Critical,Mitigated,Unusual outbound traffic pattern.,system_monitor,2025-11-06 08:18:18
-11,2025-08-03,Unauthorized Access,Medium,Resolved,Suspicious login attempt detected.,security_team,2025-08-03 13:38:33
-12,2025-08-16,Unauthorized Access,Low,Mitigated,Suspicious login attempt detected.,asmith,2025-08-16 21:41:03
-13,2025-08-14,Data Breach,High,Resolved,User reported strange email attachment.,system_monitor,2025-08-14 04:58:30
-14,2025-04-27,Malware Infection,Low,Closed,Suspicious login attempt detected.,klee,2025-04-27 03:30:47
-15,2025-08-20,Phishing Attempt,Medium,Investigating,Suspicious login attempt detected.,klee,2025-08-20 08:11:52
-16,2025-04-21,Phishing Attempt,Medium,Mitigated,Antivirus signature match found.,asmith,2025-04-21 12:42:01
-17,2025-02-24,DDoS Attack,Critical,Closed,Firewall blocked multiple port scans.,system_monitor,2025-02-24 19:21:43
-18,2025-02-02,SQL Injection,Critical,Open,Database latency exceeded threshold.,jdoe,2025-02-02 04:40:53
-19,2025-11-13,Insider Threat,Critical,Resolved,Antivirus signature match found.,asmith,2025-11-13 18:16:21
-20,2025-03-21,Unauthorized Access,Low,Open,Suspicious login attempt detected.,system_monitor,2025-03-21 21:50:59
-21,2025-01-03,Phishing Attempt,Medium,Open,Database latency exceeded threshold.,klee,2025-01-03 16:09:42
-22,2025-07-09,Malware Infection,Low,Resolved,User reported strange email attachment.,jdoe,2025-07-09 19:40:19
-23,2025-08-31,Malware Infection,Low,Mitigated,Database latency exceeded threshold.,asmith,2025-08-31 12:45:11
-24,2025-03-17,Insider Threat,High,Open,Unusual outbound traffic pattern.,asmith,2025-03-17 21:26:56
-25,2025-12-10,SQL Injection,Medium,Resolved,User reported strange email attachment.,security_team,2025-12-10 10:54:32
-26,2025-11-01,Ransomware,Low,Investigating,Database latency exceeded threshold.,klee,2025-11-01 22:10:41
-27,2025-03-12,Man-in-the-Middle,Low,Closed,Firewall blocked multiple port scans.,admin,2025-03-12 22:13:05
-28,2025-01-21,Data Breach,Critical,Mitigated,Firewall blocked multiple port scans.,security_team,2025-01-21 09:00:36
-29,2025-11-02,Ransomware,Medium,Closed,Antivirus signature match found.,admin,2025-11-02 11:01:03
-30,2025-01-06,Insider Threat,Critical,Investigating,Firewall blocked multiple port scans.,security_team,2025-01-06 15:52:41
-31,2024-12-14,Unauthorized Access,High,Investigating,Suspicious login attempt detected.,system_monitor,2024-12-14 22:53:50
-32,2025-10-24,Ransomware,Critical,False Positive,Antivirus signature match found.,system_monitor,2025-10-25 00:08:12
-33,2025-07-01,DDoS Attack,Low,Investigating,Firewall blocked multiple port scans.,system_monitor,2025-07-01 11:52:53
-34,2025-12-09,Insider Threat,Medium,Mitigated,Unusual outbound traffic pattern.,klee,2025-12-09 09:10:21
-35,2025-06-17,Insider Threat,Low,Mitigated,Antivirus signature match found.,klee,2025-06-17 02:56:40
-36,2025-03-17,Malware Infection,Low,Investigating,Antivirus signature match found.,klee,2025-03-17 10:51:15
-37,2025-04-10,Malware Infection,Low,Open,Database latency exceeded threshold.,system_monitor,2025-04-10 05:10:59
-38,2025-10-30,Malware Infection,High,Closed,Unusual outbound traffic pattern.,asmith,2025-10-30 22:43:13
-39,2024-12-13,Insider Threat,High,False Positive,Antivirus signature match found.,security_team,2024-12-13 09:34:36
-40,2025-10-15,Ransomware,Medium,Closed,Suspicious login attempt detected.,jdoe,2025-10-15 16:02:11
-41,2025-08-01,Phishing Attempt,High,Closed,Suspicious login attempt detected.,security_team,2025-08-01 22:25:43
-42,2025-05-26,Unauthorized Access,High,Mitigated,Suspicious login attempt detected.,system_monitor,2025-05-26 12:10:49
-43,2025-08-30,Data Breach,Critical,Open,Antivirus signature match found.,klee,2025-08-30 20:15:47
-44,2025-01-19,Data Breach,High,Mitigated,Firewall blocked multiple port scans.,asmith,2025-01-19 03:51:27
-45,2025-11-14,SQL Injection,Low,Investigating,Suspicious login attempt detected.,security_team,2025-11-14 03:43:50
-46,2025-04-14,Man-in-the-Middle,Low,Closed,Unusual outbound traffic pattern.,system_monitor,2025-04-14 21:53:37
-47,2025-01-07,DDoS Attack,Medium,False Positive,User reported strange email attachment.,admin,2025-01-07 06:41:58
-48,2025-09-06,Phishing Attempt,Critical,Closed,Suspicious login attempt detected.,klee,2025-09-06 18:35:16
-49,2025-04-02,Ransomware,Medium,Resolved,Firewall blocked multiple port scans.,security_team,2025-04-02 15:57:02
-50,2025-03-29,Phishing Attempt,Low,False Positive,Suspicious login attempt detected.,security_team,2025-03-29 19:51:29
-51,2025-05-10,Malware Infection,Low,Investigating,Unusual outbound traffic pattern.,security_team,2025-05-10 22:00:33
-52,2025-01-29,Malware Infection,High,False Positive,Firewall blocked multiple port scans.,jdoe,2025-01-29 06:14:56
-53,2025-06-04,Phishing Attempt,Medium,Resolved,User reported strange email attachment.,system_monitor,2025-06-04 19:03:00
-54,2025-09-02,Phishing Attempt,Critical,Investigating,Firewall blocked multiple port scans.,jdoe,2025-09-02 18:16:04
-55,2025-05-31,DDoS Attack,Medium,Open,Firewall blocked multiple port scans.,klee,2025-05-31 09:03:43
-56,2025-09-19,Insider Threat,Low,Mitigated,Suspicious login attempt detected.,asmith,2025-09-19 09:13:40
-57,2025-07-10,SQL Injection,High,Investigating,Database latency exceeded threshold.,system_monitor,2025-07-10 05:40:28
-58,2025-08-09,SQL Injection,Critical,Open,User reported strange email attachment.,system_monitor,2025-08-09 23:10:16
-59,2025-08-21,Man-in-the-Middle,Low,Mitigated,Antivirus signature match found.,security_team,2025-08-21 13:02:41
-60,2025-07-14,Malware Infection,Critical,Open,Firewall blocked multiple port scans.,security_team,2025-07-14 06:36:17
-61,2025-08-07,Malware Infection,Low,Resolved,Firewall blocked multiple port scans.,asmith,2025-08-07 15:03:16
-62,2025-11-28,Man-in-the-Middle,Medium,Open,Unusual outbound traffic pattern.,asmith,2025-11-28 03:01:50
-63,2025-12-03,SQL Injection,Critical,Investigating,User reported strange email attachment.,admin,2025-12-03 01:17:53
-64,2024-12-15,Insider Threat,Low,Investigating,Unusual outbound traffic pattern.,admin,2024-12-15 20:05:19
-65,2025-06-24,Phishing Attempt,Medium,Investigating,User reported strange email attachment.,klee,2025-06-24 05:29:40
-66,2025-06-30,Phishing Attempt,Medium,Resolved,Suspicious login attempt detected.,klee,2025-06-30 13:21:42
-67,2025-08-21,Data Breach,Critical,Mitigated,Antivirus signature match found.,system_monitor,2025-08-21 06:15:24
-68,2025-09-25,Insider Threat,High,Resolved,Antivirus signature match found.,asmith,2025-09-25 13:31:37
-69,2025-11-23,Malware Infection,Medium,Mitigated,Database latency exceeded threshold.,asmith,2025-11-23 06:38:33
-70,2025-01-30,Data Breach,High,False Positive,Unusual outbound traffic pattern.,admin,2025-01-30 17:10:17
-71,2024-12-31,Man-in-the-Middle,Low,Resolved,Database latency exceeded threshold.,jdoe,2024-12-31 10:24:39
-72,2024-12-25,Man-in-the-Middle,Critical,Resolved,Antivirus signature match found.,asmith,2024-12-25 01:12:37
-73,2025-10-10,Ransomware,Low,Investigating,Firewall blocked multiple port scans.,klee,2025-10-10 09:47:28
-74,2025-07-24,Man-in-the-Middle,High,Resolved,Database latency exceeded threshold.,klee,2025-07-24 16:17:52
-75,2025-05-16,DDoS Attack,Low,Investigating,Database latency exceeded threshold.,admin,2025-05-16 13:07:22
-76,2025-08-15,Man-in-the-Middle,High,False Positive,Firewall blocked multiple port scans.,security_team,2025-08-15 02:09:51
-77,2025-03-06,Data Breach,High,Open,Antivirus signature match found.,admin,2025-03-06 08:00:46
-78,2025-11-14,Man-in-the-Middle,High,Resolved,Antivirus signature match found.,asmith,2025-11-14 16:32:55
-79,2025-09-13,Unauthorized Access,Medium,Resolved,User reported strange email attachment.,admin,2025-09-13 14:48:19
-80,2025-10-31,SQL Injection,Critical,Open,Suspicious login attempt detected.,jdoe,2025-10-31 07:25:48
-81,2025-11-24,Ransomware,High,False Positive,Unusual outbound traffic pattern.,asmith,2025-11-24 16:16:53
-82,2025-02-03,Malware Infection,High,Mitigated,Unusual outbound traffic pattern.,asmith,2025-02-03 17:05:39
-83,2025-11-24,Man-in-the-Middle,Medium,Open,Database latency exceeded threshold.,asmith,2025-11-24 04:28:56
-84,2025-04-03,Unauthorized Access,High,Open,Antivirus signature match found.,admin,2025-04-03 03:31:30
-85,2025-05-14,Ransomware,High,Open,Database latency exceeded threshold.,klee,2025-05-14 15:42:33
-86,2025-09-16,Man-in-the-Middle,High,Closed,Unusual outbound traffic pattern.,klee,2025-09-16 02:24:32
-87,2024-12-23,Unauthorized Access,Critical,Resolved,Suspicious login attempt detected.,security_team,2024-12-23 03:45:52
-88,2025-12-02,Unauthorized Access,Critical,False Positive,Antivirus signature match found.,asmith,2025-12-02 11:38:36
-89,2024-12-17,Phishing Attempt,Medium,False Positive,Unusual outbound traffic pattern.,system_monitor,2024-12-17 17:15:00
-90,2025-08-29,Man-in-the-Middle,Critical,Mitigated,Unusual outbound traffic pattern.,klee,2025-08-29 22:32:03
-91,2024-12-28,SQL Injection,Critical,Open,Database latency exceeded threshold.,klee,2024-12-28 19:02:49
-92,2025-06-20,Man-in-the-Middle,Medium,Investigating,Database latency exceeded threshold.,klee,2025-06-20 16:57:22
-93,2025-06-16,DDoS Attack,Low,Closed,Firewall blocked multiple port scans.,asmith,2025-06-16 18:29:29
-94,2025-03-02,SQL Injection,High,Investigating,Unusual outbound traffic pattern.,system_monitor,2025-03-02 15:16:23
-95,2025-05-22,SQL Injection,High,Closed,Database latency exceeded threshold.,system_monitor,2025-05-22 02:36:05
-96,2025-11-18,Phishing Attempt,Medium,Resolved,User reported strange email attachment.,system_monitor,2025-11-18 13:55:52
-97,2025-08-23,Insider Threat,Low,Investigating,Suspicious login attempt detected.,system_monitor,2025-08-23 02:27:27
-98,2025-10-13,Man-in-the-Middle,High,False Positive,User reported strange email attachment.,jdoe,2025-10-13 22:45:20
-99,2025-07-27,Phishing Attempt,Critical,Open,Antivirus signature match found.,security_team,2025-07-27 07:58:35
-100,2025-10-21,DDoS Attack,High,Closed,Database latency exceeded threshold.,jdoe,2025-10-21 03:29:55
-101,2025-12-08,Unauthorized Access,Medium,False Positive,Antivirus signature match found.,security_team,2025-12-08 03:18:57
-102,2025-11-03,Man-in-the-Middle,High,Open,Database latency exceeded threshold.,security_team,2025-11-03 19:44:34
-103,2025-05-31,Ransomware,Medium,Resolved,Database latency exceeded threshold.,security_team,2025-05-31 05:23:41
-104,2025-01-14,Malware Infection,Medium,Mitigated,Suspicious login attempt detected.,klee,2025-01-14 14:35:12
-105,2025-02-20,DDoS Attack,Critical,Investigating,Database latency exceeded threshold.,klee,2025-02-20 06:03:21
-106,2025-02-28,Ransomware,High,Resolved,Antivirus signature match found.,admin,2025-02-28 22:17:41
-107,2025-01-06,Unauthorized Access,Critical,Closed,Database latency exceeded threshold.,security_team,2025-01-06 18:31:43
-108,2025-06-14,Phishing Attempt,Critical,Investigating,Unusual outbound traffic pattern.,asmith,2025-06-14 09:07:13
-109,2025-02-14,DDoS Attack,Critical,Resolved,Antivirus signature match found.,jdoe,2025-02-14 14:48:46
-110,2025-11-05,Man-in-the-Middle,Critical,False Positive,Firewall blocked multiple port scans.,klee,2025-11-05 00:43:38
-111,2025-04-15,DDoS Attack,Critical,Investigating,Firewall blocked multiple port scans.,admin,2025-04-15 20:04:26
-112,2025-11-19,Unauthorized Access,Medium,Resolved,Suspicious login attempt detected.,security_team,2025-11-19 19:39:06
-113,2025-05-04,Unauthorized Access,Critical,Investigating,Firewall blocked multiple port scans.,security_team,2025-05-04 20:50:59
-114,2025-07-06,SQL Injection,Medium,Resolved,Suspicious login attempt detected.,security_team,2025-07-06 16:58:23
-115,2025-08-13,Man-in-the-Middle,Critical,Investigating,Antivirus signature match found.,klee,2025-08-13 20:52:43
-116,2025-11-29,Malware Infection,Low,Mitigated,Unusual outbound traffic pattern.,admin,2025-11-29 17:53:14
-117,2024-12-14,Unauthorized Access,High,Open,Suspicious login attempt detected.,jdoe,2024-12-14 16:31:08
-118,2025-03-15,Insider Threat,Medium,Mitigated,Database latency exceeded threshold.,security_team,2025-03-15 10:28:13
-119,2025-11-29,Insider Threat,Low,Resolved,Database latency exceeded threshold.,asmith,2025-11-29 12:32:31
-120,2025-10-12,DDoS Attack,Low,Mitigated,Unusual outbound traffic pattern.,system_monitor,2025-10-12 07:54:49
-121,2025-11-01,Phishing Attempt,Medium,Mitigated,Unusual outbound traffic pattern.,system_monitor,2025-11-01 08:37:06
-122,2025-02-08,Data Breach,Medium,Resolved,Suspicious login attempt detected.,jdoe,2025-02-08 10:53:55
-123,2025-08-07,Man-in-the-Middle,High,Mitigated,Firewall blocked multiple port scans.,admin,2025-08-07 19:06:37
-124,2025-11-01,Ransomware,Medium,Open,Unusual outbound traffic pattern.,klee,2025-11-01 16:16:09
-125,2025-07-24,Unauthorized Access,High,Mitigated,Unusual outbound traffic pattern.,jdoe,2025-07-24 14:31:22
-126,2025-10-14,SQL Injection,Critical,Closed,Suspicious login attempt detected.,security_team,2025-10-14 17:35:29
-127,2025-05-07,Data Breach,Medium,Mitigated,Antivirus signature match found.,klee,2025-05-07 04:01:36
-128,2025-01-11,Ransomware,High,Resolved,User reported strange email attachment.,security_team,2025-01-11 15:46:48
-129,2025-08-31,Man-in-the-Middle,Medium,Open,User reported strange email attachment.,klee,2025-08-31 01:41:21
-130,2025-04-10,Ransomware,High,Resolved,User reported strange email attachment.,admin,2025-04-10 16:15:17
-131,2025-05-13,Unauthorized Access,Medium,Resolved,Antivirus signature match found.,admin,2025-05-13 20:12:25
-132,2025-09-20,SQL Injection,Critical,Open,Suspicious login attempt detected.,klee,2025-09-20 11:51:40
-133,2025-02-06,Data Breach,Medium,Mitigated,Antivirus signature match found.,system_monitor,2025-02-06 10:21:30
-134,2025-01-16,Man-in-the-Middle,Low,Mitigated,User reported strange email attachment.,admin,2025-01-16 23:55:41
-135,2025-03-07,Data Breach,Low,Resolved,Firewall blocked multiple port scans.,admin,2025-03-07 02:10:43
-136,2024-12-23,Malware Infection,Medium,Closed,Unusual outbound traffic pattern.,asmith,2024-12-23 17:30:58
-137,2025-03-26,DDoS Attack,Medium,Resolved,Unusual outbound traffic pattern.,klee,2025-03-26 23:17:51
-138,2025-03-14,Data Breach,Medium,Investigating,Database latency exceeded threshold.,klee,2025-03-14 22:47:54
-139,2025-04-12,Unauthorized Access,Critical,Open,Antivirus signature match found.,system_monitor,2025-04-12 17:10:26
-140,2025-06-08,Man-in-the-Middle,Critical,Closed,Firewall blocked multiple port scans.,klee,2025-06-08 09:27:09
-141,2025-09-06,Phishing Attempt,Critical,Investigating,Antivirus signature match found.,security_team,2025-09-06 03:11:11
-142,2025-02-03,Man-in-the-Middle,Critical,Mitigated,User reported strange email attachment.,admin,2025-02-03 16:13:02
-143,2025-06-24,SQL Injection,Low,Resolved,Suspicious login attempt detected.,system_monitor,2025-06-24 02:16:12
-144,2025-11-29,SQL Injection,Medium,Investigating,Antivirus signature match found.,system_monitor,2025-11-29 09:57:52
-145,2025-04-18,Malware Infection,Low,Resolved,Firewall blocked multiple port scans.,asmith,2025-04-18 05:28:38
-146,2025-07-26,Phishing Attempt,Critical,False Positive,Unusual outbound traffic pattern.,admin,2025-07-26 01:28:48
-147,2025-05-01,Malware Infection,Low,Closed,User reported strange email attachment.,asmith,2025-05-01 21:02:42
-148,2025-01-22,Insider Threat,High,Investigating,Antivirus signature match found.,security_team,2025-01-22 02:38:44
-149,2025-09-07,Man-in-the-Middle,Critical,Open,User reported strange email attachment.,system_monitor,2025-09-07 21:55:01
-150,2025-05-02,Ransomware,Low,False Positive,Unusual outbound traffic pattern.,jdoe,2025-05-02 13:03:40
-151,2025-05-30,Phishing Attempt,Low,Investigating,Suspicious login attempt detected.,security_team,2025-05-30 01:52:41
-152,2025-03-11,Phishing Attempt,Critical,False Positive,Firewall blocked multiple port scans.,admin,2025-03-11 07:42:42
-153,2025-02-01,Ransomware,Low,Mitigated,Firewall blocked multiple port scans.,security_team,2025-02-01 08:05:56
-154,2025-04-13,Phishing Attempt,Low,Closed,User reported strange email attachment.,asmith,2025-04-13 15:20:13
-155,2025-05-13,Phishing Attempt,High,Mitigated,User reported strange email attachment.,jdoe,2025-05-13 15:24:48
-156,2025-02-21,Malware Infection,Medium,Closed,Database latency exceeded threshold.,klee,2025-02-21 05:18:46
-157,2025-02-22,Data Breach,Medium,Open,Suspicious login attempt detected.,jdoe,2025-02-22 12:01:20
-158,2025-06-09,Man-in-the-Middle,High,False Positive,Antivirus signature match found.,admin,2025-06-09 16:44:38
-159,2025-03-27,Ransomware,Critical,Resolved,Firewall blocked multiple port scans.,asmith,2025-03-27 21:53:19
-160,2025-11-27,Unauthorized Access,High,Mitigated,Firewall blocked multiple port scans.,klee,2025-11-27 04:31:17
-161,2025-10-30,Phishing Attempt,Critical,Mitigated,Database latency exceeded threshold.,asmith,2025-10-30 05:03:50
-162,2025-10-16,DDoS Attack,Critical,Closed,Firewall blocked multiple port scans.,asmith,2025-10-16 23:27:01
-163,2024-12-21,SQL Injection,Medium,Mitigated,User reported strange email attachment.,klee,2024-12-21 05:50:35
-164,2025-01-13,Phishing Attempt,Critical,Closed,Unusual outbound traffic pattern.,klee,2025-01-13 17:08:07
-165,2025-03-31,Man-in-the-Middle,Medium,False Positive,Firewall blocked multiple port scans.,jdoe,2025-03-31 14:44:03
-166,2025-09-30,Unauthorized Access,Medium,Open,Antivirus signature match found.,security_team,2025-09-30 18:42:21
-167,2025-08-18,Unauthorized Access,Critical,False Positive,User reported strange email attachment.,system_monitor,2025-08-18 21:24:23
-168,2024-12-26,Data Breach,Medium,Resolved,Firewall blocked multiple port scans.,klee,2024-12-26 05:17:58
-169,2025-03-19,Data Breach,High,Mitigated,Database latency exceeded threshold.,system_monitor,2025-03-19 12:11:45
-170,2025-05-22,Malware Infection,Medium,Closed,User reported strange email attachment.,system_monitor,2025-05-22 12:43:33
-171,2025-10-20,SQL Injection,Medium,Resolved,Database latency exceeded threshold.,system_monitor,2025-10-20 04:27:23
-172,2025-03-21,DDoS Attack,Critical,Resolved,Suspicious login attempt detected.,jdoe,2025-03-21 23:35:57
-173,2025-01-14,Malware Infection,High,False Positive,Suspicious login attempt detected.,jdoe,2025-01-14 04:10:04
-174,2025-11-05,Unauthorized Access,Critical,Investigating,Suspicious login attempt detected.,admin,2025-11-05 15:32:42
-175,2025-05-25,Phishing Attempt,Medium,False Positive,Antivirus signature match found.,system_monitor,2025-05-25 08:22:04
-176,2025-07-27,Ransomware,Medium,Closed,Database latency exceeded threshold.,asmith,2025-07-27 09:07:47
-177,2025-05-14,Malware Infection,Medium,Closed,User reported strange email attachment.,klee,2025-05-14 08:56:54
-178,2025-09-16,Man-in-the-Middle,Low,Closed,Antivirus signature match found.,klee,2025-09-16 08:24:40
-179,2025-11-30,Data Breach,High,Open,Suspicious login attempt detected.,admin,2025-11-30 04:23:35
-180,2025-06-06,DDoS Attack,Critical,Resolved,Antivirus signature match found.,security_team,2025-06-06 10:05:47
-181,2025-08-16,Unauthorized Access,Low,Investigating,Unusual outbound traffic pattern.,klee,2025-08-16 22:56:45
-182,2025-08-08,SQL Injection,High,Investigating,Antivirus signature match found.,admin,2025-08-08 22:59:39
-183,2025-04-21,Phishing Attempt,Critical,Investigating,Antivirus signature match found.,security_team,2025-04-22 00:50:02
-184,2024-12-31,Phishing Attempt,Low,Mitigated,Firewall blocked multiple port scans.,asmith,2024-12-31 01:36:50
-185,2025-11-01,SQL Injection,Critical,Resolved,Firewall blocked multiple port scans.,security_team,2025-11-01 02:33:42
-186,2025-06-16,Phishing Attempt,Low,Closed,User reported strange email attachment.,system_monitor,2025-06-16 12:53:45
-187,2025-08-04,Phishing Attempt,Medium,Mitigated,Database latency exceeded threshold.,asmith,2025-08-04 22:59:55
-188,2025-11-18,Malware Infection,High,Investigating,Suspicious login attempt detected.,security_team,2025-11-18 03:52:32
-189,2025-01-04,Malware Infection,Critical,Mitigated,User reported strange email attachment.,klee,2025-01-04 10:48:55
-190,2025-01-06,Man-in-the-Middle,Critical,Closed,Database latency exceeded threshold.,security_team,2025-01-06 20:12:21
-191,2025-04-08,Man-in-the-Middle,Low,Closed,Suspicious login attempt detected.,asmith,2025-04-08 14:55:41
-192,2025-09-11,DDoS Attack,Medium,Investigating,User reported strange email attachment.,klee,2025-09-11 23:34:10
-193,2025-07-10,Data Breach,Low,Mitigated,Suspicious login attempt detected.,klee,2025-07-10 17:37:18
-194,2025-07-20,Ransomware,Low,Mitigated,Antivirus signature match found.,klee,2025-07-20 21:47:57
-195,2025-04-08,DDoS Attack,High,Investigating,Firewall blocked multiple port scans.,jdoe,2025-04-08 07:11:20
-196,2025-01-23,SQL Injection,Critical,Resolved,Database latency exceeded threshold.,system_monitor,2025-01-23 02:28:14
-197,2025-04-08,DDoS Attack,High,Mitigated,Antivirus signature match found.,klee,2025-04-08 09:01:19
-198,2025-10-05,Insider Threat,Critical,False Positive,Antivirus signature match found.,security_team,2025-10-05 15:47:52
-199,2025-06-09,DDoS Attack,Medium,Open,Suspicious login attempt detected.,klee,2025-06-09 12:25:07
-200,2025-08-04,SQL Injection,Critical,False Positive,Antivirus signature match found.,system_monitor,2025-08-04 13:24:55
-201,2025-09-20,DDoS Attack,High,Investigating,User reported strange email attachment.,system_monitor,2025-09-20 02:12:02
-202,2025-02-23,Ransomware,Critical,Open,User reported strange email attachment.,jdoe,2025-02-23 01:31:50
-203,2024-12-13,Malware Infection,Medium,Closed,User reported strange email attachment.,asmith,2024-12-13 23:32:29
-204,2025-08-01,Man-in-the-Middle,High,Open,Suspicious login attempt detected.,system_monitor,2025-08-01 12:42:33
-205,2025-01-10,Ransomware,Medium,Investigating,Firewall blocked multiple port scans.,asmith,2025-01-10 20:19:12
-206,2025-02-23,Ransomware,Medium,Closed,Database latency exceeded threshold.,system_monitor,2025-02-23 02:35:09
-207,2025-03-29,DDoS Attack,Medium,Investigating,User reported strange email attachment.,admin,2025-03-29 12:53:30
-208,2025-01-18,Malware Infection,Medium,Investigating,Firewall blocked multiple port scans.,system_monitor,2025-01-18 06:55:40
-209,2025-08-23,Man-in-the-Middle,Low,Open,Database latency exceeded threshold.,admin,2025-08-23 08:08:10
-210,2025-01-11,Data Breach,Low,False Positive,Unusual outbound traffic pattern.,klee,2025-01-11 04:12:06
-211,2025-11-20,SQL Injection,High,Open,Database latency exceeded threshold.,klee,2025-11-20 18:27:52
-212,2025-04-08,Data Breach,Medium,Investigating,Database latency exceeded threshold.,asmith,2025-04-08 14:40:48
-213,2025-04-23,Man-in-the-Middle,Medium,Open,Suspicious login attempt detected.,admin,2025-04-23 10:08:34
-214,2025-10-04,Man-in-the-Middle,High,Resolved,Unusual outbound traffic pattern.,asmith,2025-10-04 15:21:22
-215,2025-02-19,Insider Threat,Low,Resolved,User reported strange email attachment.,security_team,2025-02-19 16:49:43
-216,2025-07-30,Man-in-the-Middle,High,False Positive,Database latency exceeded threshold.,klee,2025-07-31 00:32:40
-217,2024-12-20,Phishing Attempt,Medium,Open,User reported strange email attachment.,system_monitor,2024-12-20 05:42:25
-218,2025-12-10,Ransomware,High,Investigating,User reported strange email attachment.,security_team,2025-12-10 10:45:21
-219,2025-02-15,Insider Threat,Medium,False Positive,Suspicious login attempt detected.,admin,2025-02-15 22:43:04
-220,2024-12-18,DDoS Attack,High,Mitigated,User reported strange email attachment.,system_monitor,2024-12-18 03:26:59
-221,2025-03-09,Phishing Attempt,Medium,Resolved,Antivirus signature match found.,security_team,2025-03-09 03:38:19
-222,2025-07-06,Data Breach,High,Mitigated,User reported strange email attachment.,asmith,2025-07-06 07:48:44
-223,2025-10-06,Data Breach,High,Open,Unusual outbound traffic pattern.,asmith,2025-10-06 15:13:50
-224,2025-08-23,Unauthorized Access,Critical,Resolved,Suspicious login attempt detected.,admin,2025-08-23 12:44:57
-225,2025-09-26,SQL Injection,High,False Positive,Antivirus signature match found.,jdoe,2025-09-26 16:33:34
-226,2025-09-06,Insider Threat,Medium,False Positive,Firewall blocked multiple port scans.,jdoe,2025-09-07 00:24:26
-227,2025-01-18,Insider Threat,Medium,Investigating,Unusual outbound traffic pattern.,admin,2025-01-18 17:59:59
-228,2025-01-18,Insider Threat,Medium,False Positive,Unusual outbound traffic pattern.,system_monitor,2025-01-18 16:45:37
-229,2025-04-09,Insider Threat,Medium,Resolved,Database latency exceeded threshold.,asmith,2025-04-09 21:40:27
-230,2025-03-04,Malware Infection,Critical,Open,Unusual outbound traffic pattern.,system_monitor,2025-03-04 08:22:00
-231,2025-10-25,SQL Injection,Medium,Resolved,Firewall blocked multiple port scans.,klee,2025-10-25 19:17:47
-232,2025-03-12,SQL Injection,High,Closed,Database latency exceeded threshold.,jdoe,2025-03-12 19:29:11
-233,2025-05-19,Unauthorized Access,High,Mitigated,Antivirus signature match found.,system_monitor,2025-05-19 04:07:13
-234,2025-03-21,Unauthorized Access,High,Mitigated,Unusual outbound traffic pattern.,klee,2025-03-21 18:30:08
-235,2025-06-26,DDoS Attack,Medium,Open,Antivirus signature match found.,klee,2025-06-26 12:40:11
-236,2025-02-13,DDoS Attack,Low,False Positive,User reported strange email attachment.,security_team,2025-02-13 06:34:44
-237,2025-03-30,Insider Threat,High,Open,User reported strange email attachment.,security_team,2025-03-30 01:13:00
-238,2025-11-03,Ransomware,High,Mitigated,Suspicious login attempt detected.,asmith,2025-11-03 17:59:09
-239,2025-07-03,DDoS Attack,Medium,Mitigated,Suspicious login attempt detected.,admin,2025-07-03 10:08:58
-240,2025-05-11,Data Breach,Critical,Investigating,Firewall blocked multiple port scans.,jdoe,2025-05-11 15:56:58
-241,2025-01-27,Ransomware,Critical,Investigating,Unusual outbound traffic pattern.,security_team,2025-01-27 21:54:55
-242,2025-10-08,Phishing Attempt,Critical,Closed,Firewall blocked multiple port scans.,jdoe,2025-10-08 18:13:32
-243,2024-12-31,Unauthorized Access,Medium,Mitigated,Suspicious login attempt detected.,system_monitor,2024-12-31 15:22:49
-244,2025-02-27,Malware Infection,Critical,Open,Database latency exceeded threshold.,admin,2025-02-27 08:16:30
-245,2025-03-24,Data Breach,Medium,False Positive,Antivirus signature match found.,asmith,2025-03-24 06:40:20
-246,2025-07-17,Malware Infection,Medium,Mitigated,Antivirus signature match found.,security_team,2025-07-17 11:15:33
-247,2025-09-18,Insider Threat,Low,Closed,User reported strange email attachment.,security_team,2025-09-18 09:10:26
-248,2025-03-10,Insider Threat,Medium,False Positive,Unusual outbound traffic pattern.,security_team,2025-03-10 16:05:06
-249,2025-10-01,Ransomware,High,Open,User reported strange email attachment.,klee,2025-10-01 09:05:20
-250,2025-11-13,Ransomware,Medium,Investigating,Unusual outbound traffic pattern.,klee,2025-11-13 16:20:39
-251,2025-05-30,Ransomware,Critical,Closed,Suspicious login attempt detected.,admin,2025-05-30 14:05:40
-252,2025-09-18,Data Breach,High,Mitigated,Unusual outbound traffic pattern.,system_monitor,2025-09-18 10:06:40
-253,2025-03-24,SQL Injection,High,Closed,Suspicious login attempt detected.,asmith,2025-03-24 11:53:47
-254,2025-03-13,SQL Injection,Critical,Open,User reported strange email attachment.,security_team,2025-03-13 09:20:54
-255,2025-01-02,Phishing Attempt,High,Investigating,User reported strange email attachment.,system_monitor,2025-01-02 07:59:30
-256,2025-02-05,Unauthorized Access,Low,Investigating,Antivirus signature match found.,security_team,2025-02-05 17:46:36
-257,2025-02-12,DDoS Attack,High,Mitigated,Antivirus signature match found.,security_team,2025-02-12 14:54:06
-258,2024-12-12,SQL Injection,Medium,Open,Firewall blocked multiple port scans.,security_team,2024-12-12 18:08:40
-259,2025-11-14,Phishing Attempt,High,Closed,Firewall blocked multiple port scans.,admin,2025-11-14 18:59:08
-260,2025-04-27,Ransomware,Medium,Mitigated,Antivirus signature match found.,security_team,2025-04-27 18:40:30
-261,2025-03-29,DDoS Attack,Critical,Closed,Database latency exceeded threshold.,jdoe,2025-03-29 04:12:25
-262,2025-09-26,Data Breach,High,False Positive,Antivirus signature match found.,security_team,2025-09-26 12:33:54
-263,2025-05-07,Phishing Attempt,Critical,Resolved,User reported strange email attachment.,asmith,2025-05-07 07:39:12
-264,2025-04-10,DDoS Attack,Medium,Open,Antivirus signature match found.,admin,2025-04-10 04:04:42
-265,2025-10-29,Malware Infection,Medium,Closed,Database latency exceeded threshold.,security_team,2025-10-29 14:49:51
-266,2025-05-31,Unauthorized Access,Medium,Investigating,Database latency exceeded threshold.,security_team,2025-05-31 03:44:22
-267,2025-03-29,DDoS Attack,High,False Positive,Firewall blocked multiple port scans.,admin,2025-03-30 01:09:02
-268,2025-07-11,Man-in-the-Middle,Low,Investigating,Unusual outbound traffic pattern.,jdoe,2025-07-11 03:31:54
-269,2025-09-30,Insider Threat,High,False Positive,Suspicious login attempt detected.,jdoe,2025-09-30 04:00:01
-270,2025-07-21,Phishing Attempt,Critical,Closed,User reported strange email attachment.,system_monitor,2025-07-21 18:27:45
-271,2025-04-24,Ransomware,High,Resolved,Firewall blocked multiple port scans.,asmith,2025-04-24 23:57:44
-272,2025-06-10,Phishing Attempt,High,Mitigated,Suspicious login attempt detected.,security_team,2025-06-10 22:52:59
-273,2025-02-17,Ransomware,Low,Open,User reported strange email attachment.,jdoe,2025-02-17 05:20:08
-274,2025-01-13,Data Breach,High,Open,Suspicious login attempt detected.,jdoe,2025-01-13 04:10:31
-275,2024-12-21,Man-in-the-Middle,Low,Investigating,User reported strange email attachment.,jdoe,2024-12-21 18:40:11
-276,2025-03-19,DDoS Attack,Critical,Investigating,Firewall blocked multiple port scans.,security_team,2025-03-19 16:36:15
-277,2025-08-18,Ransomware,High,Resolved,Unusual outbound traffic pattern.,klee,2025-08-18 13:29:45
-278,2025-11-15,Ransomware,Medium,False Positive,User reported strange email attachment.,admin,2025-11-15 10:30:41
-279,2025-03-11,Man-in-the-Middle,Medium,Resolved,Antivirus signature match found.,jdoe,2025-03-11 08:53:50
-280,2025-10-26,DDoS Attack,Critical,Open,Database latency exceeded threshold.,klee,2025-10-26 04:29:58
-281,2025-01-31,Malware Infection,Medium,False Positive,User reported strange email attachment.,admin,2025-01-31 08:56:23
-282,2025-07-24,Insider Threat,Low,Investigating,Unusual outbound traffic pattern.,system_monitor,2025-07-24 05:20:16
-283,2025-11-26,DDoS Attack,Critical,Mitigated,User reported strange email attachment.,security_team,2025-11-26 22:46:10
-284,2025-02-08,Man-in-the-Middle,Medium,Closed,Database latency exceeded threshold.,admin,2025-02-08 11:04:43
-285,2025-11-20,Unauthorized Access,Low,Investigating,Database latency exceeded threshold.,admin,2025-11-20 06:43:44
-286,2025-08-20,Phishing Attempt,High,False Positive,Database latency exceeded threshold.,klee,2025-08-20 05:01:51
-287,2025-06-22,Phishing Attempt,Medium,Open,Unusual outbound traffic pattern.,jdoe,2025-06-22 13:17:02
-288,2025-04-08,SQL Injection,Medium,Resolved,User reported strange email attachment.,system_monitor,2025-04-08 11:47:16
-289,2025-11-20,Phishing Attempt,High,Mitigated,Firewall blocked multiple port scans.,jdoe,2025-11-20 07:11:27
-290,2025-01-22,Data Breach,Critical,Mitigated,Firewall blocked multiple port scans.,system_monitor,2025-01-22 04:59:29
-291,2025-03-24,SQL Injection,Critical,Open,Firewall blocked multiple port scans.,jdoe,2025-03-24 22:19:13
-292,2024-12-15,DDoS Attack,Medium,Resolved,Firewall blocked multiple port scans.,admin,2024-12-15 07:21:35
-293,2025-02-25,SQL Injection,Medium,Mitigated,Antivirus signature match found.,admin,2025-02-25 00:28:31
-294,2025-01-08,Data Breach,High,Mitigated,Antivirus signature match found.,security_team,2025-01-08 18:29:53
-295,2025-07-28,Man-in-the-Middle,High,Closed,Suspicious login attempt detected.,klee,2025-07-28 16:02:15
-296,2025-09-11,Malware Infection,High,Open,Firewall blocked multiple port scans.,jdoe,2025-09-11 06:22:55
-297,2025-03-31,Phishing Attempt,Medium,Investigating,Unusual outbound traffic pattern.,admin,2025-03-31 08:46:45
-298,2025-07-10,SQL Injection,Critical,Investigating,Antivirus signature match found.,jdoe,2025-07-10 15:56:06
-299,2025-01-07,Ransomware,High,Investigating,Database latency exceeded threshold.,admin,2025-01-07 23:27:45
-300,2025-11-06,SQL Injection,Low,Investigating,Suspicious login attempt detected.,admin,2025-11-06 12:53:45
-301,2025-02-24,DDoS Attack,Critical,Mitigated,Database latency exceeded threshold.,klee,2025-02-24 12:16:28
-302,2025-12-08,DDoS Attack,High,Mitigated,Unusual outbound traffic pattern.,admin,2025-12-08 15:56:46
-303,2025-06-20,Insider Threat,Medium,False Positive,Antivirus signature match found.,system_monitor,2025-06-20 03:46:47
-304,2025-10-03,Unauthorized Access,Medium,Mitigated,Firewall blocked multiple port scans.,klee,2025-10-03 03:31:11
-305,2025-07-12,DDoS Attack,Critical,Open,Unusual outbound traffic pattern.,admin,2025-07-12 23:01:23
-306,2025-02-03,Unauthorized Access,High,Open,Unusual outbound traffic pattern.,security_team,2025-02-03 03:54:29
-307,2025-08-11,Data Breach,Critical,Closed,Firewall blocked multiple port scans.,jdoe,2025-08-12 00:18:25
-308,2025-12-09,Man-in-the-Middle,Low,Mitigated,Suspicious login attempt detected.,klee,2025-12-09 18:59:55
-309,2025-01-22,Unauthorized Access,Critical,Closed,User reported strange email attachment.,admin,2025-01-22 05:40:09
-310,2025-10-25,Phishing Attempt,Critical,Resolved,Suspicious login attempt detected.,admin,2025-10-25 12:05:03
-311,2025-11-02,Insider Threat,Critical,False Positive,Suspicious login attempt detected.,system_monitor,2025-11-02 18:24:19
-312,2025-07-24,Phishing Attempt,High,Closed,User reported strange email attachment.,jdoe,2025-07-25 00:52:16
-313,2025-10-14,Ransomware,Critical,Resolved,Database latency exceeded threshold.,admin,2025-10-14 16:55:18
-314,2025-03-19,Unauthorized Access,Medium,False Positive,Unusual outbound traffic pattern.,jdoe,2025-03-19 03:54:37
-315,2025-10-15,Unauthorized Access,Medium,Investigating,Unusual outbound traffic pattern.,admin,2025-10-15 11:04:28
-316,2025-08-28,Ransomware,Low,False Positive,Firewall blocked multiple port scans.,klee,2025-08-28 08:42:19
-317,2025-01-28,Unauthorized Access,Medium,Investigating,Firewall blocked multiple port scans.,klee,2025-01-28 21:39:52
-318,2025-05-18,DDoS Attack,Medium,Investigating,User reported strange email attachment.,klee,2025-05-18 12:53:00
-319,2025-03-15,Phishing Attempt,Critical,Resolved,User reported strange email attachment.,klee,2025-03-15 12:22:58
-320,2025-09-04,Unauthorized Access,Low,Investigating,Database latency exceeded threshold.,system_monitor,2025-09-04 09:44:49
-321,2025-02-23,Man-in-the-Middle,Medium,Closed,Antivirus signature match found.,system_monitor,2025-02-23 12:15:30
-322,2025-09-11,Malware Infection,Medium,Open,Database latency exceeded threshold.,asmith,2025-09-11 15:49:29
-323,2025-02-20,Man-in-the-Middle,Low,Investigating,Unusual outbound traffic pattern.,jdoe,2025-02-20 19:56:32
-324,2025-04-06,Man-in-the-Middle,Critical,Resolved,Antivirus signature match found.,admin,2025-04-06 11:19:14
-325,2025-05-20,Insider Threat,Low,Open,Suspicious login attempt detected.,security_team,2025-05-20 14:38:01
-326,2025-07-03,Malware Infection,Critical,Investigating,Antivirus signature match found.,security_team,2025-07-03 12:24:51
-327,2025-05-23,Phishing Attempt,Critical,Mitigated,Antivirus signature match found.,asmith,2025-05-23 12:41:55
-328,2024-12-26,Man-in-the-Middle,High,False Positive,Database latency exceeded threshold.,security_team,2024-12-26 19:14:13
-329,2025-08-14,SQL Injection,Critical,Closed,Suspicious login attempt detected.,system_monitor,2025-08-14 17:30:50
-330,2025-04-25,Phishing Attempt,Medium,Resolved,Suspicious login attempt detected.,klee,2025-04-25 03:54:10
-331,2025-04-12,Data Breach,Medium,Mitigated,User reported strange email attachment.,security_team,2025-04-12 08:02:26
-332,2025-10-14,Malware Infection,High,Resolved,Suspicious login attempt detected.,jdoe,2025-10-14 03:23:34
-333,2025-09-01,Ransomware,Medium,Open,Firewall blocked multiple port scans.,jdoe,2025-09-01 12:56:14
-334,2025-02-22,Phishing Attempt,High,Open,Unusual outbound traffic pattern.,system_monitor,2025-02-22 21:00:35
-335,2025-04-30,DDoS Attack,Low,Investigating,Suspicious login attempt detected.,admin,2025-04-30 10:48:20
-336,2024-12-15,Phishing Attempt,Low,False Positive,User reported strange email attachment.,system_monitor,2024-12-15 21:01:51
-337,2025-04-14,Phishing Attempt,Medium,Resolved,Suspicious login attempt detected.,asmith,2025-04-14 19:42:56
-338,2025-09-18,Unauthorized Access,Critical,Mitigated,Firewall blocked multiple port scans.,security_team,2025-09-18 08:37:26
-339,2025-09-24,Ransomware,Critical,Investigating,Firewall blocked multiple port scans.,security_team,2025-09-24 03:47:33
-340,2025-06-27,DDoS Attack,Medium,Investigating,Antivirus signature match found.,security_team,2025-06-27 18:36:31
-341,2025-01-10,Ransomware,Critical,Mitigated,Unusual outbound traffic pattern.,asmith,2025-01-10 09:37:25
-342,2025-02-05,Data Breach,Low,Mitigated,Suspicious login attempt detected.,jdoe,2025-02-05 15:33:13
-343,2025-12-03,DDoS Attack,Critical,False Positive,Suspicious login attempt detected.,jdoe,2025-12-03 14:56:03
-344,2025-05-22,Insider Threat,Critical,Mitigated,Database latency exceeded threshold.,admin,2025-05-22 06:22:59
-345,2025-08-06,Man-in-the-Middle,Medium,Mitigated,Suspicious login attempt detected.,security_team,2025-08-06 12:31:54
-346,2025-10-03,Unauthorized Access,High,Resolved,User reported strange email attachment.,admin,2025-10-03 16:06:37
-347,2025-10-07,Phishing Attempt,High,Mitigated,Firewall blocked multiple port scans.,system_monitor,2025-10-07 12:02:45
-348,2025-03-31,Ransomware,High,Investigating,User reported strange email attachment.,admin,2025-03-31 06:03:26
-349,2025-11-27,SQL Injection,Critical,Mitigated,Antivirus signature match found.,security_team,2025-11-27 04:29:49
-350,2025-10-30,Insider Threat,High,False Positive,User reported strange email attachment.,system_monitor,2025-10-30 13:05:49
-351,2025-03-17,SQL Injection,Medium,Investigating,User reported strange email attachment.,security_team,2025-03-17 06:13:57
-352,2025-10-07,Malware Infection,Low,Closed,Unusual outbound traffic pattern.,asmith,2025-10-07 09:11:10
-353,2024-12-20,SQL Injection,Critical,Closed,Database latency exceeded threshold.,jdoe,2024-12-20 03:06:20
-354,2025-02-27,Insider Threat,Medium,Mitigated,Database latency exceeded threshold.,jdoe,2025-02-27 10:13:34
-355,2025-11-18,Insider Threat,High,False Positive,Suspicious login attempt detected.,security_team,2025-11-19 00:03:03
-356,2025-09-04,Malware Infection,Low,Investigating,Unusual outbound traffic pattern.,admin,2025-09-04 15:20:33
-357,2025-09-02,Man-in-the-Middle,Critical,Resolved,Unusual outbound traffic pattern.,klee,2025-09-02 12:26:19
-358,2025-10-30,DDoS Attack,Low,Mitigated,Unusual outbound traffic pattern.,admin,2025-10-30 14:04:18
-359,2025-01-05,Malware Infection,High,Investigating,Firewall blocked multiple port scans.,security_team,2025-01-05 00:55:24
-360,2025-11-25,Data Breach,Medium,Investigating,User reported strange email attachment.,admin,2025-11-26 00:05:56
-361,2025-02-07,SQL Injection,Low,Closed,User reported strange email attachment.,admin,2025-02-07 18:53:37
-362,2025-07-04,Unauthorized Access,Low,False Positive,Antivirus signature match found.,admin,2025-07-04 07:28:53
-363,2025-09-20,Data Breach,Medium,Investigating,Database latency exceeded threshold.,admin,2025-09-20 17:51:05
-364,2025-05-26,Phishing Attempt,High,Closed,Database latency exceeded threshold.,jdoe,2025-05-26 18:50:54
-365,2025-10-29,DDoS Attack,Low,Closed,Suspicious login attempt detected.,security_team,2025-10-29 19:26:57
-366,2025-08-27,Malware Infection,Low,Resolved,Unusual outbound traffic pattern.,security_team,2025-08-27 18:54:26
-367,2025-03-15,Malware Infection,Medium,False Positive,Firewall blocked multiple port scans.,asmith,2025-03-15 15:25:57
-368,2025-07-21,Unauthorized Access,High,Mitigated,Firewall blocked multiple port scans.,system_monitor,2025-07-21 11:27:43
-369,2025-03-31,SQL Injection,Low,Mitigated,User reported strange email attachment.,security_team,2025-03-31 23:30:52
-370,2025-05-01,Data Breach,Low,Open,Firewall blocked multiple port scans.,asmith,2025-05-01 15:12:18
-371,2025-04-22,Phishing Attempt,Critical,Open,Suspicious login attempt detected.,klee,2025-04-22 15:51:40
-372,2025-11-11,Ransomware,High,Mitigated,User reported strange email attachment.,system_monitor,2025-11-11 17:37:03
-373,2025-11-18,Phishing Attempt,Low,False Positive,Firewall blocked multiple port scans.,security_team,2025-11-18 19:54:11
-374,2025-01-06,Malware Infection,Medium,False Positive,Suspicious login attempt detected.,klee,2025-01-06 08:03:41
-375,2025-11-19,Malware Infection,High,Resolved,Firewall blocked multiple port scans.,asmith,2025-11-19 04:42:25
-376,2025-05-10,Phishing Attempt,Critical,Resolved,Database latency exceeded threshold.,asmith,2025-05-11 00:46:34
-377,2025-02-23,Malware Infection,High,Closed,Unusual outbound traffic pattern.,system_monitor,2025-02-23 11:59:06
-378,2025-09-20,Ransomware,Critical,Open,User reported strange email attachment.,jdoe,2025-09-20 19:44:17
-379,2025-01-10,Man-in-the-Middle,Low,False Positive,Firewall blocked multiple port scans.,klee,2025-01-10 18:18:14
-380,2024-12-20,Insider Threat,Critical,False Positive,Antivirus signature match found.,klee,2024-12-20 22:25:22
-381,2025-07-11,Unauthorized Access,High,Mitigated,Firewall blocked multiple port scans.,klee,2025-07-11 07:16:26
-382,2025-10-12,Insider Threat,Critical,Resolved,Suspicious login attempt detected.,admin,2025-10-12 20:34:08
-383,2025-10-17,Ransomware,Low,Resolved,Database latency exceeded threshold.,klee,2025-10-17 06:35:30
-384,2025-11-05,SQL Injection,Critical,Closed,Database latency exceeded threshold.,jdoe,2025-11-05 04:18:27
-385,2025-07-16,Malware Infection,High,Resolved,Unusual outbound traffic pattern.,admin,2025-07-16 05:00:35
-386,2025-03-04,SQL Injection,High,Resolved,Suspicious login attempt detected.,admin,2025-03-04 22:46:41
-387,2025-02-25,Phishing Attempt,Medium,Resolved,Firewall blocked multiple port scans.,security_team,2025-02-25 17:36:59
-388,2025-10-15,Insider Threat,High,Investigating,Unusual outbound traffic pattern.,klee,2025-10-15 10:41:09
-389,2025-11-28,SQL Injection,Medium,Open,Unusual outbound traffic pattern.,asmith,2025-11-28 05:43:11
-390,2025-11-16,DDoS Attack,Low,Resolved,Suspicious login attempt detected.,system_monitor,2025-11-16 05:39:00
-391,2025-06-09,SQL Injection,Critical,Investigating,Firewall blocked multiple port scans.,asmith,2025-06-09 04:03:15
-392,2025-08-18,Ransomware,High,False Positive,Database latency exceeded threshold.,klee,2025-08-18 08:22:32
-393,2024-12-20,SQL Injection,Critical,Investigating,Firewall blocked multiple port scans.,security_team,2024-12-20 17:36:25
-394,2025-02-13,Malware Infection,Low,Investigating,Suspicious login attempt detected.,system_monitor,2025-02-13 20:19:57
-395,2025-10-31,Phishing Attempt,Low,False Positive,Suspicious login attempt detected.,admin,2025-10-31 09:10:53
-396,2025-08-10,Ransomware,Critical,Resolved,Firewall blocked multiple port scans.,jdoe,2025-08-10 23:44:49
-397,2025-09-21,Malware Infection,Critical,Mitigated,Suspicious login attempt detected.,security_team,2025-09-21 03:44:43
-398,2025-07-03,Malware Infection,High,Mitigated,Database latency exceeded threshold.,security_team,2025-07-03 21:16:17
-399,2025-09-28,DDoS Attack,Medium,Resolved,Firewall blocked multiple port scans.,system_monitor,2025-09-28 06:32:11
-400,2025-11-23,Ransomware,Medium,Closed,Suspicious login attempt detected.,admin,2025-11-23 02:15:48
-401,2025-07-24,Man-in-the-Middle,Critical,Resolved,Database latency exceeded threshold.,security_team,2025-07-24 06:22:34
-402,2025-12-07,Ransomware,Medium,Mitigated,User reported strange email attachment.,security_team,2025-12-07 09:24:41
-403,2025-08-12,DDoS Attack,High,Open,Suspicious login attempt detected.,security_team,2025-08-12 21:14:07
-404,2025-07-27,Insider Threat,High,False Positive,Antivirus signature match found.,jdoe,2025-07-27 08:40:25
-405,2025-11-14,Phishing Attempt,High,Closed,User reported strange email attachment.,klee,2025-11-14 15:16:07
-406,2025-01-13,Ransomware,Low,Mitigated,Firewall blocked multiple port scans.,jdoe,2025-01-13 06:30:49
-407,2025-08-30,Unauthorized Access,Critical,Investigating,Antivirus signature match found.,security_team,2025-08-30 20:26:52
-408,2025-03-23,DDoS Attack,Critical,Closed,Firewall blocked multiple port scans.,security_team,2025-03-23 15:02:55
-409,2025-08-26,Ransomware,Critical,Mitigated,Suspicious login attempt detected.,jdoe,2025-08-26 16:08:31
-410,2025-07-05,Data Breach,High,Investigating,Firewall blocked multiple port scans.,security_team,2025-07-05 11:17:36
-411,2024-12-30,Phishing Attempt,Low,Resolved,Database latency exceeded threshold.,admin,2024-12-30 10:16:24
-412,2025-07-16,SQL Injection,Medium,False Positive,User reported strange email attachment.,system_monitor,2025-07-16 16:16:58
-413,2025-05-21,Unauthorized Access,Critical,Mitigated,Firewall blocked multiple port scans.,system_monitor,2025-05-21 04:40:26
-414,2025-09-24,Unauthorized Access,Medium,Investigating,Database latency exceeded threshold.,asmith,2025-09-24 17:02:51
-415,2025-06-19,Ransomware,Critical,Investigating,Database latency exceeded threshold.,klee,2025-06-19 17:47:24
-416,2025-02-13,Data Breach,Medium,Open,Database latency exceeded threshold.,system_monitor,2025-02-13 03:27:53
-417,2025-07-27,SQL Injection,Medium,False Positive,User reported strange email attachment.,system_monitor,2025-07-27 06:11:09
-418,2025-01-08,Unauthorized Access,Low,Closed,Antivirus signature match found.,jdoe,2025-01-08 21:19:24
-419,2025-11-24,Malware Infection,Critical,Investigating,Antivirus signature match found.,security_team,2025-11-24 18:47:03
-420,2025-08-03,Man-in-the-Middle,Medium,False Positive,Database latency exceeded threshold.,klee,2025-08-03 19:58:25
-421,2025-08-26,SQL Injection,Critical,Mitigated,Firewall blocked multiple port scans.,system_monitor,2025-08-26 13:58:19
-422,2025-05-28,Phishing Attempt,High,False Positive,Firewall blocked multiple port scans.,asmith,2025-05-28 16:22:36
-423,2025-03-26,Phishing Attempt,Medium,False Positive,Antivirus signature match found.,security_team,2025-03-27 01:34:11
-424,2025-02-12,SQL Injection,Medium,Mitigated,Database latency exceeded threshold.,system_monitor,2025-02-12 09:37:10
-425,2025-01-19,Malware Infection,Critical,False Positive,Suspicious login attempt detected.,klee,2025-01-19 19:58:55
-426,2025-12-03,Unauthorized Access,Low,Closed,Suspicious login attempt detected.,jdoe,2025-12-04 00:10:31
-427,2025-10-26,Phishing Attempt,Medium,Closed,Database latency exceeded threshold.,security_team,2025-10-26 14:18:49
-428,2025-05-26,Insider Threat,Critical,Investigating,Database latency exceeded threshold.,security_team,2025-05-26 10:29:26
-429,2025-10-26,Ransomware,High,Mitigated,Antivirus signature match found.,admin,2025-10-26 19:06:04
-430,2025-05-19,Data Breach,Low,Resolved,Firewall blocked multiple port scans.,jdoe,2025-05-19 21:48:41
-431,2025-01-17,Unauthorized Access,Critical,Closed,Firewall blocked multiple port scans.,jdoe,2025-01-17 03:29:53
-432,2025-04-01,Malware Infection,Low,Resolved,Database latency exceeded threshold.,klee,2025-04-01 21:17:44
-433,2025-11-27,Data Breach,Medium,Open,Database latency exceeded threshold.,system_monitor,2025-11-27 19:08:36
-434,2025-02-18,Ransomware,Low,Mitigated,Unusual outbound traffic pattern.,klee,2025-02-18 12:43:03
-435,2025-03-23,Phishing Attempt,High,Mitigated,Firewall blocked multiple port scans.,asmith,2025-03-23 22:13:14
-436,2025-08-21,Insider Threat,Low,Resolved,User reported strange email attachment.,admin,2025-08-21 23:13:06
-437,2025-01-19,Ransomware,Medium,Resolved,Firewall blocked multiple port scans.,jdoe,2025-01-19 14:42:29
-438,2025-09-26,DDoS Attack,Low,Mitigated,User reported strange email attachment.,admin,2025-09-26 12:43:08
-439,2024-12-13,Data Breach,Critical,Resolved,Suspicious login attempt detected.,klee,2024-12-13 08:02:44
-440,2025-01-25,Ransomware,High,Investigating,Firewall blocked multiple port scans.,jdoe,2025-01-25 11:47:15
-441,2025-08-08,Insider Threat,Critical,Open,Antivirus signature match found.,security_team,2025-08-08 09:32:51
-442,2025-09-30,Unauthorized Access,Medium,Mitigated,Suspicious login attempt detected.,admin,2025-09-30 21:30:47
-443,2025-02-13,Insider Threat,High,Resolved,Firewall blocked multiple port scans.,security_team,2025-02-13 14:37:53
-444,2025-03-12,SQL Injection,High,Resolved,Firewall blocked multiple port scans.,system_monitor,2025-03-12 09:44:28
-445,2025-01-17,Phishing Attempt,Medium,Open,Database latency exceeded threshold.,klee,2025-01-17 22:17:08
-446,2025-09-05,Malware Infection,Medium,False Positive,Suspicious login attempt detected.,system_monitor,2025-09-05 02:22:27
-447,2025-06-29,Insider Threat,Critical,Open,Suspicious login attempt detected.,admin,2025-06-29 10:28:02
-448,2025-09-29,Insider Threat,High,False Positive,Database latency exceeded threshold.,admin,2025-09-29 07:49:33
-449,2025-02-03,Data Breach,High,Closed,User reported strange email attachment.,system_monitor,2025-02-03 01:40:06
-450,2025-11-03,Insider Threat,Low,Closed,User reported strange email attachment.,security_team,2025-11-03 11:32:22
-451,2025-05-26,Data Breach,Critical,Investigating,Unusual outbound traffic pattern.,system_monitor,2025-05-26 12:30:09
-452,2025-01-30,DDoS Attack,Medium,Resolved,User reported strange email attachment.,asmith,2025-01-30 19:30:57
-453,2025-09-24,Man-in-the-Middle,Low,Investigating,Firewall blocked multiple port scans.,klee,2025-09-24 17:23:09
-454,2025-02-18,Ransomware,Medium,Resolved,Suspicious login attempt detected.,admin,2025-02-18 10:39:09
-455,2025-06-29,Phishing Attempt,Low,Mitigated,Antivirus signature match found.,admin,2025-06-29 02:51:33
-456,2025-06-20,Unauthorized Access,Low,Resolved,Firewall blocked multiple port scans.,asmith,2025-06-20 14:14:49
-457,2025-11-13,Unauthorized Access,Medium,Mitigated,Suspicious login attempt detected.,security_team,2025-11-13 23:19:52
-458,2025-03-03,Insider Threat,Critical,Resolved,Antivirus signature match found.,admin,2025-03-03 01:08:54
-459,2025-04-01,Insider Threat,Low,Resolved,Database latency exceeded threshold.,security_team,2025-04-02 00:36:16
-460,2025-11-04,Ransomware,Low,Investigating,User reported strange email attachment.,asmith,2025-11-04 06:23:08
-461,2025-03-19,Insider Threat,High,False Positive,Unusual outbound traffic pattern.,system_monitor,2025-03-19 21:25:27
-462,2025-01-03,Data Breach,Medium,Open,Suspicious login attempt detected.,asmith,2025-01-03 03:23:19
-463,2025-11-21,SQL Injection,Critical,Open,User reported strange email attachment.,klee,2025-11-21 02:29:27
-464,2025-11-10,Phishing Attempt,Medium,Investigating,User reported strange email attachment.,system_monitor,2025-11-10 10:54:08
-465,2025-03-29,Unauthorized Access,Critical,Resolved,Database latency exceeded threshold.,security_team,2025-03-29 16:28:09
-466,2025-07-11,Man-in-the-Middle,High,Mitigated,Firewall blocked multiple port scans.,asmith,2025-07-11 07:35:04
-467,2025-11-05,Unauthorized Access,Medium,False Positive,Firewall blocked multiple port scans.,security_team,2025-11-05 13:56:05
-468,2025-08-27,Unauthorized Access,High,Resolved,Firewall blocked multiple port scans.,system_monitor,2025-08-27 15:00:02
-469,2025-09-13,Malware Infection,Medium,Closed,Antivirus signature match found.,security_team,2025-09-13 18:13:05
-470,2025-01-17,Data Breach,Medium,False Positive,Firewall blocked multiple port scans.,klee,2025-01-17 08:54:57
-471,2025-08-13,Malware Infection,Low,Mitigated,Suspicious login attempt detected.,system_monitor,2025-08-13 06:41:19
-472,2025-03-05,Unauthorized Access,Critical,Open,Suspicious login attempt detected.,admin,2025-03-05 02:24:02
-473,2024-12-21,Malware Infection,Low,Investigating,User reported strange email attachment.,admin,2024-12-21 17:46:20
-474,2025-06-04,Data Breach,Low,Open,Unusual outbound traffic pattern.,klee,2025-06-04 17:35:17
-475,2024-12-28,DDoS Attack,Low,Closed,Database latency exceeded threshold.,jdoe,2024-12-28 17:51:39
-476,2025-10-28,Insider Threat,Low,Mitigated,Unusual outbound traffic pattern.,klee,2025-10-28 15:48:58
-477,2025-04-16,Malware Infection,Critical,Open,Unusual outbound traffic pattern.,jdoe,2025-04-16 14:44:30
-478,2025-04-13,Insider Threat,Critical,Resolved,Database latency exceeded threshold.,admin,2025-04-13 17:32:58
-479,2025-05-09,Insider Threat,High,Mitigated,User reported strange email attachment.,security_team,2025-05-10 00:34:36
-480,2025-08-10,Ransomware,Low,False Positive,Unusual outbound traffic pattern.,jdoe,2025-08-10 22:01:32
-481,2025-10-18,SQL Injection,High,Mitigated,Database latency exceeded threshold.,asmith,2025-10-18 13:01:15
-482,2025-07-17,Unauthorized Access,Critical,Mitigated,Antivirus signature match found.,asmith,2025-07-17 18:54:51
-483,2025-02-13,Phishing Attempt,Medium,False Positive,Antivirus signature match found.,jdoe,2025-02-13 14:42:50
-484,2025-08-05,Ransomware,Medium,Investigating,Unusual outbound traffic pattern.,security_team,2025-08-05 08:17:20
-485,2025-08-30,Unauthorized Access,Low,Closed,User reported strange email attachment.,asmith,2025-08-30 08:23:55
-486,2025-07-01,Unauthorized Access,Low,Investigating,Suspicious login attempt detected.,asmith,2025-07-01 09:02:16
-487,2025-12-10,DDoS Attack,High,Investigating,Suspicious login attempt detected.,system_monitor,2025-12-10 05:19:14
-488,2025-03-10,Data Breach,Critical,Investigating,User reported strange email attachment.,asmith,2025-03-10 13:49:54
-489,2025-07-13,Ransomware,Low,False Positive,User reported strange email attachment.,asmith,2025-07-13 22:45:39
-490,2024-12-16,DDoS Attack,Critical,Closed,Antivirus signature match found.,system_monitor,2024-12-16 09:03:22
-491,2024-12-29,Insider Threat,High,Investigating,User reported strange email attachment.,klee,2024-12-29 16:02:27
-492,2025-10-07,Phishing Attempt,Medium,Investigating,Antivirus signature match found.,system_monitor,2025-10-07 18:25:51
-493,2025-07-24,Man-in-the-Middle,Medium,False Positive,Antivirus signature match found.,klee,2025-07-24 14:16:36
-494,2025-02-19,Unauthorized Access,High,False Positive,Database latency exceeded threshold.,admin,2025-02-19 10:01:57
-495,2025-06-07,DDoS Attack,Medium,False Positive,Unusual outbound traffic pattern.,jdoe,2025-06-07 05:23:14
-496,2024-12-25,Ransomware,Critical,Resolved,Suspicious login attempt detected.,klee,2024-12-25 16:34:33
-497,2024-12-22,Malware Infection,Low,Mitigated,Firewall blocked multiple port scans.,system_monitor,2024-12-22 03:59:08
-498,2025-05-27,Man-in-the-Middle,Medium,Open,Firewall blocked multiple port scans.,jdoe,2025-05-28 00:59:32
-499,2025-10-14,Unauthorized Access,High,Closed,Unusual outbound traffic pattern.,security_team,2025-10-14 16:55:05
-500,2025-07-14,Man-in-the-Middle,Medium,Closed,Firewall blocked multiple port scans.,system_monitor,2025-07-14 22:37:36
-501,2025-09-23,SQL Injection,Low,Resolved,Suspicious login attempt detected.,jdoe,2025-09-23 22:03:34
-502,2025-01-12,Data Breach,Critical,Resolved,User reported strange email attachment.,jdoe,2025-01-12 06:36:48
-503,2025-05-19,Malware Infection,Critical,False Positive,Antivirus signature match found.,asmith,2025-05-19 08:12:01
-504,2025-09-03,SQL Injection,Critical,Resolved,Antivirus signature match found.,security_team,2025-09-03 01:33:19
-505,2024-12-11,SQL Injection,High,Closed,Database latency exceeded threshold.,admin,2024-12-11 23:07:52
-506,2025-11-29,Phishing Attempt,High,Closed,Suspicious login attempt detected.,klee,2025-11-29 19:03:21
-507,2025-04-20,Insider Threat,Low,Mitigated,Database latency exceeded threshold.,admin,2025-04-20 04:25:09
-508,2025-04-02,Data Breach,Medium,Mitigated,Unusual outbound traffic pattern.,admin,2025-04-02 03:46:05
-509,2025-06-30,Phishing Attempt,High,Investigating,Database latency exceeded threshold.,klee,2025-06-30 21:58:22
-510,2025-03-18,Phishing Attempt,Critical,Resolved,User reported strange email attachment.,security_team,2025-03-18 03:34:19
-511,2025-06-29,Data Breach,Critical,Investigating,Unusual outbound traffic pattern.,admin,2025-06-29 01:40:26
-512,2025-03-02,Phishing Attempt,Critical,Investigating,Database latency exceeded threshold.,security_team,2025-03-02 02:21:44
-513,2025-05-16,Malware Infection,High,Mitigated,Antivirus signature match found.,admin,2025-05-16 12:45:32
-514,2025-09-10,SQL Injection,Low,Resolved,Database latency exceeded threshold.,asmith,2025-09-10 17:38:03
-515,2025-01-01,SQL Injection,High,Closed,Antivirus signature match found.,jdoe,2025-01-01 10:33:26
-516,2025-08-13,Man-in-the-Middle,Critical,False Positive,Unusual outbound traffic pattern.,security_team,2025-08-13 05:26:13
-517,2025-06-02,SQL Injection,High,Resolved,Suspicious login attempt detected.,security_team,2025-06-02 08:44:03
-518,2025-06-22,Insider Threat,Medium,Resolved,Unusual outbound traffic pattern.,system_monitor,2025-06-22 19:14:51
-519,2025-02-10,SQL Injection,Critical,Resolved,Unusual outbound traffic pattern.,klee,2025-02-10 10:54:29
-520,2025-01-03,Man-in-the-Middle,Medium,Open,Unusual outbound traffic pattern.,klee,2025-01-03 17:34:26
-521,2025-09-25,Phishing Attempt,High,Mitigated,User reported strange email attachment.,klee,2025-09-25 23:23:55
-522,2025-08-20,Ransomware,High,Resolved,Firewall blocked multiple port scans.,admin,2025-08-20 02:22:44
-523,2025-04-16,Ransomware,Medium,Open,Antivirus signature match found.,asmith,2025-04-16 09:42:49
-524,2025-06-05,DDoS Attack,Low,Mitigated,Antivirus signature match found.,security_team,2025-06-05 19:13:21
-525,2024-12-18,Insider Threat,Low,Investigating,User reported strange email attachment.,jdoe,2024-12-18 17:06:46
-526,2025-05-24,Ransomware,Medium,Investigating,Unusual outbound traffic pattern.,system_monitor,2025-05-24 06:49:51
-527,2025-02-02,Ransomware,Critical,Open,Antivirus signature match found.,jdoe,2025-02-02 15:40:33
-528,2025-03-08,DDoS Attack,High,Closed,Antivirus signature match found.,admin,2025-03-08 04:05:19
-529,2025-07-14,Phishing Attempt,Low,Closed,Firewall blocked multiple port scans.,klee,2025-07-14 01:26:34
-530,2025-10-27,Ransomware,Medium,Mitigated,Unusual outbound traffic pattern.,jdoe,2025-10-27 16:26:51
-531,2025-06-23,DDoS Attack,Low,False Positive,Unusual outbound traffic pattern.,system_monitor,2025-06-23 14:35:43
-532,2025-10-29,Insider Threat,Medium,Resolved,User reported strange email attachment.,security_team,2025-10-29 21:50:37
-533,2025-10-30,DDoS Attack,Critical,Investigating,Unusual outbound traffic pattern.,security_team,2025-10-30 23:15:14
-534,2025-09-25,Insider Threat,Critical,Mitigated,User reported strange email attachment.,admin,2025-09-25 13:31:59
-535,2025-03-25,Data Breach,Medium,Mitigated,Database latency exceeded threshold.,admin,2025-03-25 20:23:34
-536,2025-11-03,Phishing Attempt,Medium,False Positive,Unusual outbound traffic pattern.,jdoe,2025-11-03 23:50:41
-537,2025-01-29,Man-in-the-Middle,Critical,False Positive,Suspicious login attempt detected.,jdoe,2025-01-29 22:43:09
-538,2025-07-17,Data Breach,Low,Closed,Unusual outbound traffic pattern.,klee,2025-07-17 14:09:24
-539,2025-05-01,Data Breach,Medium,Open,Suspicious login attempt detected.,klee,2025-05-01 05:19:19
-540,2025-10-03,Data Breach,High,Open,Suspicious login attempt detected.,security_team,2025-10-03 22:20:23
-541,2025-01-24,Insider Threat,Medium,Closed,Firewall blocked multiple port scans.,admin,2025-01-24 09:19:11
-542,2025-10-06,DDoS Attack,Medium,Open,Firewall blocked multiple port scans.,asmith,2025-10-06 14:05:56
-543,2025-05-16,Data Breach,Critical,Open,Database latency exceeded threshold.,security_team,2025-05-16 13:34:41
-544,2025-04-04,Data Breach,Critical,False Positive,Antivirus signature match found.,admin,2025-04-04 12:12:02
-545,2025-11-27,Unauthorized Access,Critical,Open,Firewall blocked multiple port scans.,system_monitor,2025-11-27 08:18:26
-546,2025-03-03,Malware Infection,Medium,Open,Database latency exceeded threshold.,asmith,2025-03-03 03:47:01
-547,2024-12-19,Unauthorized Access,Low,Open,Firewall blocked multiple port scans.,system_monitor,2024-12-19 07:22:51
-548,2025-05-01,Ransomware,Low,Resolved,Database latency exceeded threshold.,asmith,2025-05-01 13:28:22
-549,2025-07-20,DDoS Attack,Medium,False Positive,Database latency exceeded threshold.,jdoe,2025-07-20 01:22:14
-550,2025-10-12,Ransomware,High,Open,Antivirus signature match found.,jdoe,2025-10-12 13:31:22
-551,2024-12-11,Man-in-the-Middle,Medium,Open,Suspicious login attempt detected.,system_monitor,2024-12-11 05:21:17
-552,2025-01-10,Malware Infection,High,Resolved,User reported strange email attachment.,admin,2025-01-10 10:50:50
-553,2025-08-02,Malware Infection,Critical,Mitigated,Unusual outbound traffic pattern.,system_monitor,2025-08-02 15:08:58
-554,2025-06-30,Phishing Attempt,Low,Open,Suspicious login attempt detected.,system_monitor,2025-06-30 07:17:29
-555,2025-07-01,Malware Infection,High,Investigating,Database latency exceeded threshold.,admin,2025-07-01 12:55:38
-556,2025-09-10,Insider Threat,Medium,Investigating,Suspicious login attempt detected.,jdoe,2025-09-10 12:40:56
-557,2025-01-30,Data Breach,Low,Mitigated,Firewall blocked multiple port scans.,jdoe,2025-01-30 11:24:38
-558,2025-03-11,DDoS Attack,High,Investigating,User reported strange email attachment.,system_monitor,2025-03-11 14:26:32
-559,2025-02-02,Insider Threat,Low,Open,Firewall blocked multiple port scans.,admin,2025-02-03 01:16:13
-560,2025-07-19,Ransomware,Low,False Positive,Suspicious login attempt detected.,admin,2025-07-19 11:04:38
-561,2025-03-26,Unauthorized Access,Medium,Resolved,Database latency exceeded threshold.,jdoe,2025-03-27 00:33:54
-562,2025-02-26,Malware Infection,Low,Investigating,User reported strange email attachment.,asmith,2025-02-26 10:43:13
-563,2024-12-12,Insider Threat,Medium,Open,Suspicious login attempt detected.,admin,2024-12-12 12:18:16
-564,2024-12-18,Ransomware,High,Investigating,User reported strange email attachment.,jdoe,2024-12-18 14:43:36
-565,2025-08-02,Data Breach,High,Investigating,Suspicious login attempt detected.,admin,2025-08-02 08:18:02
-566,2025-01-24,Insider Threat,Critical,Investigating,Antivirus signature match found.,admin,2025-01-24 10:09:47
-567,2025-05-29,Man-in-the-Middle,Critical,False Positive,User reported strange email attachment.,security_team,2025-05-29 08:52:55
-568,2025-02-03,Data Breach,Medium,Open,User reported strange email attachment.,admin,2025-02-03 17:02:15
-569,2025-07-26,SQL Injection,High,Closed,Database latency exceeded threshold.,security_team,2025-07-26 20:38:41
-570,2025-07-29,Malware Infection,Critical,Investigating,Antivirus signature match found.,asmith,2025-07-29 16:35:10
-571,2025-02-05,Insider Threat,Medium,Closed,Suspicious login attempt detected.,admin,2025-02-05 07:56:16
-572,2025-07-19,Ransomware,Critical,Open,Antivirus signature match found.,asmith,2025-07-19 04:59:40
-573,2025-06-22,Man-in-the-Middle,High,Investigating,Suspicious login attempt detected.,security_team,2025-06-22 20:23:46
-574,2025-06-20,Ransomware,Medium,False Positive,Unusual outbound traffic pattern.,asmith,2025-06-20 05:45:54
-575,2025-03-17,Ransomware,Medium,Investigating,Antivirus signature match found.,klee,2025-03-17 02:08:38
-576,2025-10-27,Ransomware,Low,Resolved,Database latency exceeded threshold.,security_team,2025-10-27 16:41:16
-577,2025-05-19,Malware Infection,Medium,False Positive,Firewall blocked multiple port scans.,security_team,2025-05-19 20:57:53
-578,2025-02-02,Unauthorized Access,Critical,Mitigated,Database latency exceeded threshold.,security_team,2025-02-02 19:45:05
-579,2025-09-05,Malware Infection,High,False Positive,User reported strange email attachment.,asmith,2025-09-05 20:45:26
-580,2025-07-09,Data Breach,Low,Resolved,Firewall blocked multiple port scans.,admin,2025-07-09 15:36:02
-581,2025-09-17,Ransomware,Medium,Mitigated,Database latency exceeded threshold.,system_monitor,2025-09-17 07:13:35
-582,2025-01-25,DDoS Attack,Critical,Mitigated,Unusual outbound traffic pattern.,asmith,2025-01-25 06:23:57
-583,2025-03-03,Phishing Attempt,Low,Investigating,Suspicious login attempt detected.,admin,2025-03-03 18:14:01
-584,2025-10-03,Unauthorized Access,Medium,Open,Antivirus signature match found.,klee,2025-10-03 22:10:22
-585,2025-08-31,DDoS Attack,High,Closed,Unusual outbound traffic pattern.,security_team,2025-08-31 22:51:37
-586,2025-08-29,Phishing Attempt,Low,Closed,User reported strange email attachment.,klee,2025-08-29 09:24:02
-587,2025-06-02,Man-in-the-Middle,Critical,Closed,Unusual outbound traffic pattern.,admin,2025-06-03 00:43:53
-588,2025-07-29,Insider Threat,Low,Mitigated,User reported strange email attachment.,jdoe,2025-07-29 14:33:15
-589,2025-03-20,Insider Threat,Critical,Investigating,Firewall blocked multiple port scans.,security_team,2025-03-20 20:35:29
-590,2025-10-31,SQL Injection,High,Resolved,Unusual outbound traffic pattern.,admin,2025-10-31 17:05:39
-591,2025-06-26,Phishing Attempt,High,Investigating,Database latency exceeded threshold.,jdoe,2025-06-26 04:57:36
-592,2025-05-07,Insider Threat,Low,Mitigated,Database latency exceeded threshold.,system_monitor,2025-05-07 00:28:30
-593,2025-09-20,DDoS Attack,Critical,Investigating,Database latency exceeded threshold.,admin,2025-09-21 00:17:16
-594,2025-05-20,Data Breach,High,Open,Antivirus signature match found.,security_team,2025-05-20 05:19:16
-595,2025-05-14,DDoS Attack,Low,False Positive,Antivirus signature match found.,jdoe,2025-05-14 01:43:36
-596,2025-10-30,Insider Threat,Critical,False Positive,User reported strange email attachment.,security_team,2025-10-30 02:01:14
-597,2025-10-30,Data Breach,Medium,Closed,User reported strange email attachment.,admin,2025-10-30 20:26:22
-598,2025-10-15,Insider Threat,Low,Mitigated,Antivirus signature match found.,jdoe,2025-10-15 17:13:10
-599,2025-04-04,Insider Threat,High,False Positive,Database latency exceeded threshold.,system_monitor,2025-04-04 07:01:55
-600,2025-07-06,SQL Injection,Critical,Mitigated,Firewall blocked multiple port scans.,jdoe,2025-07-06 21:57:02
-601,2025-01-29,Man-in-the-Middle,High,Mitigated,Unusual outbound traffic pattern.,klee,2025-01-29 08:37:38
-602,2025-03-11,Man-in-the-Middle,Medium,Resolved,Firewall blocked multiple port scans.,system_monitor,2025-03-11 04:16:09
-603,2025-02-13,Phishing Attempt,High,Resolved,Database latency exceeded threshold.,jdoe,2025-02-13 01:49:41
-604,2025-11-17,Malware Infection,Low,False Positive,Antivirus signature match found.,security_team,2025-11-17 20:26:25
-605,2025-07-08,DDoS Attack,High,Closed,Suspicious login attempt detected.,admin,2025-07-08 07:36:30
-606,2025-11-17,DDoS Attack,Low,Open,Antivirus signature match found.,security_team,2025-11-17 04:21:38
-607,2025-04-14,Phishing Attempt,High,Mitigated,User reported strange email attachment.,admin,2025-04-14 06:25:39
-608,2025-02-16,Unauthorized Access,Critical,Resolved,Antivirus signature match found.,system_monitor,2025-02-16 02:21:20
-609,2025-11-22,Phishing Attempt,Critical,Closed,Firewall blocked multiple port scans.,security_team,2025-11-22 06:52:13
-610,2025-04-06,Man-in-the-Middle,Medium,Mitigated,Antivirus signature match found.,jdoe,2025-04-06 19:32:11
-611,2025-07-09,Phishing Attempt,Critical,False Positive,Firewall blocked multiple port scans.,security_team,2025-07-09 09:31:38
-612,2025-04-27,Malware Infection,Critical,Resolved,Unusual outbound traffic pattern.,klee,2025-04-27 12:07:25
-613,2025-10-28,Insider Threat,Medium,False Positive,Unusual outbound traffic pattern.,asmith,2025-10-28 03:56:58
-614,2025-06-20,Man-in-the-Middle,Low,Open,Suspicious login attempt detected.,klee,2025-06-20 13:39:48
-615,2025-01-18,Ransomware,Low,Mitigated,Database latency exceeded threshold.,jdoe,2025-01-18 18:42:59
-616,2025-12-01,SQL Injection,Medium,False Positive,Suspicious login attempt detected.,klee,2025-12-01 12:41:29
-617,2025-11-26,DDoS Attack,Critical,False Positive,Unusual outbound traffic pattern.,security_team,2025-11-26 12:09:27
-618,2025-07-08,Data Breach,Medium,Resolved,Firewall blocked multiple port scans.,klee,2025-07-08 16:44:12
-619,2025-11-07,SQL Injection,Medium,False Positive,Suspicious login attempt detected.,klee,2025-11-07 18:42:59
-620,2025-05-28,Malware Infection,Medium,False Positive,Suspicious login attempt detected.,jdoe,2025-05-28 01:43:05
-621,2025-09-04,Malware Infection,Low,Investigating,Antivirus signature match found.,klee,2025-09-04 14:20:08
-622,2025-10-16,Unauthorized Access,Critical,Resolved,Database latency exceeded threshold.,system_monitor,2025-10-16 04:01:16
-623,2024-12-11,Malware Infection,High,Closed,Firewall blocked multiple port scans.,system_monitor,2024-12-11 12:21:02
-624,2025-07-29,Malware Infection,High,Closed,Unusual outbound traffic pattern.,security_team,2025-07-29 08:50:31
-625,2025-05-20,Malware Infection,Critical,Resolved,Database latency exceeded threshold.,system_monitor,2025-05-20 22:04:39
-626,2024-12-19,Malware Infection,Low,False Positive,Database latency exceeded threshold.,security_team,2024-12-19 10:53:57
-627,2025-03-17,SQL Injection,High,Investigating,User reported strange email attachment.,klee,2025-03-17 17:53:02
-628,2024-12-31,DDoS Attack,Low,Mitigated,Firewall blocked multiple port scans.,admin,2024-12-31 12:02:45
-629,2025-05-24,Phishing Attempt,Low,Mitigated,Antivirus signature match found.,admin,2025-05-24 11:19:24
-630,2025-04-06,Man-in-the-Middle,Critical,Open,Firewall blocked multiple port scans.,jdoe,2025-04-06 05:33:09
-631,2025-09-30,Man-in-the-Middle,High,Open,Antivirus signature match found.,security_team,2025-09-30 22:14:38
-632,2025-03-25,Ransomware,Critical,Closed,User reported strange email attachment.,system_monitor,2025-03-25 19:29:10
-633,2025-11-11,Data Breach,High,Investigating,Unusual outbound traffic pattern.,security_team,2025-11-11 14:34:23
-634,2025-10-20,Ransomware,Low,Open,Antivirus signature match found.,system_monitor,2025-10-20 15:15:31
-635,2025-07-06,Ransomware,Low,Investigating,Firewall blocked multiple port scans.,klee,2025-07-06 03:19:45
-636,2024-12-21,Ransomware,Low,False Positive,Database latency exceeded threshold.,admin,2024-12-21 22:47:18
-637,2025-07-17,Malware Infection,High,Closed,Firewall blocked multiple port scans.,security_team,2025-07-17 20:57:51
-638,2025-02-14,Data Breach,Medium,Closed,Unusual outbound traffic pattern.,system_monitor,2025-02-14 06:40:28
-639,2025-02-12,Insider Threat,Medium,Investigating,Antivirus signature match found.,system_monitor,2025-02-12 17:29:37
-640,2025-03-12,Man-in-the-Middle,Medium,Mitigated,Antivirus signature match found.,admin,2025-03-12 18:15:33
-641,2025-10-16,Malware Infection,High,False Positive,User reported strange email attachment.,security_team,2025-10-16 06:16:59
-642,2025-01-10,Malware Infection,Medium,Closed,Database latency exceeded threshold.,admin,2025-01-10 04:25:25
-643,2025-05-01,Ransomware,Medium,Investigating,Unusual outbound traffic pattern.,asmith,2025-05-01 17:46:05
-644,2025-04-20,Malware Infection,Medium,Open,Firewall blocked multiple port scans.,admin,2025-04-20 17:30:45
-645,2025-01-30,Phishing Attempt,High,Resolved,Firewall blocked multiple port scans.,asmith,2025-01-30 03:05:29
-646,2025-11-04,Unauthorized Access,Low,False Positive,Suspicious login attempt detected.,asmith,2025-11-04 19:00:39
-647,2025-11-30,Ransomware,Medium,Mitigated,Suspicious login attempt detected.,jdoe,2025-11-30 16:34:27
-648,2025-04-21,Phishing Attempt,Medium,Investigating,Antivirus signature match found.,admin,2025-04-21 21:25:03
-649,2025-08-23,Malware Infection,High,False Positive,User reported strange email attachment.,jdoe,2025-08-23 20:21:02
-650,2025-03-23,Man-in-the-Middle,Critical,Mitigated,Unusual outbound traffic pattern.,jdoe,2025-03-23 01:44:03
-651,2025-01-14,SQL Injection,Low,Open,Suspicious login attempt detected.,system_monitor,2025-01-15 00:08:25
-652,2025-08-25,Phishing Attempt,Medium,Closed,Antivirus signature match found.,klee,2025-08-26 00:11:27
-653,2025-04-06,Ransomware,High,Mitigated,Antivirus signature match found.,klee,2025-04-07 00:17:44
-654,2025-10-11,DDoS Attack,Low,False Positive,Antivirus signature match found.,jdoe,2025-10-11 10:06:55
-655,2025-08-23,Man-in-the-Middle,Critical,Investigating,Unusual outbound traffic pattern.,system_monitor,2025-08-23 20:05:49
-656,2025-02-02,DDoS Attack,High,Investigating,Database latency exceeded threshold.,security_team,2025-02-02 20:30:30
-657,2025-10-28,Man-in-the-Middle,Low,Closed,Firewall blocked multiple port scans.,klee,2025-10-28 14:44:24
-658,2025-06-11,Unauthorized Access,High,False Positive,User reported strange email attachment.,admin,2025-06-11 05:30:52
-659,2025-09-06,Man-in-the-Middle,High,Mitigated,Database latency exceeded threshold.,admin,2025-09-06 05:09:11
-660,2025-03-14,Malware Infection,Critical,False Positive,Firewall blocked multiple port scans.,security_team,2025-03-14 23:30:36
-661,2025-03-18,DDoS Attack,High,Investigating,Unusual outbound traffic pattern.,security_team,2025-03-18 04:39:01
-662,2025-05-15,Phishing Attempt,Low,Mitigated,Firewall blocked multiple port scans.,jdoe,2025-05-15 09:38:06
-663,2025-07-04,Phishing Attempt,High,Resolved,Unusual outbound traffic pattern.,asmith,2025-07-04 18:23:34
-664,2025-03-06,SQL Injection,Low,Resolved,User reported strange email attachment.,system_monitor,2025-03-06 17:58:33
-665,2025-01-19,SQL Injection,Critical,Closed,User reported strange email attachment.,jdoe,2025-01-19 14:58:42
-666,2025-06-28,Phishing Attempt,Medium,Closed,Database latency exceeded threshold.,klee,2025-06-28 02:52:28
-667,2025-10-15,Man-in-the-Middle,Critical,Investigating,Firewall blocked multiple port scans.,jdoe,2025-10-15 18:52:18
-668,2025-03-02,Unauthorized Access,Low,Open,Suspicious login attempt detected.,klee,2025-03-02 09:30:35
-669,2025-01-29,Insider Threat,Low,Open,Antivirus signature match found.,jdoe,2025-01-29 04:38:43
-670,2025-01-20,DDoS Attack,Low,Open,Suspicious login attempt detected.,admin,2025-01-20 10:30:39
-671,2025-10-29,Ransomware,High,False Positive,User reported strange email attachment.,security_team,2025-10-29 08:41:16
-672,2025-03-13,SQL Injection,Low,Investigating,Firewall blocked multiple port scans.,admin,2025-03-13 18:03:33
-673,2025-05-31,Man-in-the-Middle,Critical,Resolved,Database latency exceeded threshold.,jdoe,2025-05-31 13:33:42
-674,2025-08-25,Man-in-the-Middle,Critical,Investigating,Unusual outbound traffic pattern.,asmith,2025-08-25 06:26:18
-675,2025-09-11,Phishing Attempt,High,Open,Antivirus signature match found.,jdoe,2025-09-12 01:05:59
-676,2025-04-01,Phishing Attempt,High,Closed,Antivirus signature match found.,jdoe,2025-04-01 05:31:17
-677,2025-02-18,Malware Infection,Low,Open,Suspicious login attempt detected.,security_team,2025-02-18 23:32:45
-678,2025-09-13,Data Breach,Medium,Closed,Database latency exceeded threshold.,security_team,2025-09-13 14:31:30
-679,2025-09-30,Phishing Attempt,Low,False Positive,User reported strange email attachment.,asmith,2025-09-30 18:08:59
-680,2025-01-21,Unauthorized Access,Critical,False Positive,Firewall blocked multiple port scans.,asmith,2025-01-21 05:16:04
-681,2025-08-18,Data Breach,Medium,Open,Database latency exceeded threshold.,security_team,2025-08-18 14:16:38
-682,2025-07-03,DDoS Attack,High,Resolved,Firewall blocked multiple port scans.,asmith,2025-07-03 02:50:42
-683,2025-05-17,Insider Threat,Medium,Resolved,Suspicious login attempt detected.,asmith,2025-05-17 19:42:28
-684,2025-08-01,Insider Threat,Medium,Open,Suspicious login attempt detected.,admin,2025-08-01 11:25:01
-685,2025-01-31,Data Breach,High,Investigating,Antivirus signature match found.,jdoe,2025-01-31 08:51:36
-686,2025-08-08,Phishing Attempt,Low,Closed,User reported strange email attachment.,system_monitor,2025-08-08 05:46:19
-687,2025-02-05,Insider Threat,Critical,Open,Unusual outbound traffic pattern.,asmith,2025-02-05 16:13:17
-688,2025-10-24,Man-in-the-Middle,Critical,Closed,User reported strange email attachment.,klee,2025-10-24 13:27:27
-689,2025-10-07,Insider Threat,Medium,False Positive,Suspicious login attempt detected.,asmith,2025-10-07 18:15:30
-690,2025-05-04,Insider Threat,Critical,Resolved,Database latency exceeded threshold.,klee,2025-05-05 01:56:05
-691,2025-08-31,SQL Injection,Medium,False Positive,Firewall blocked multiple port scans.,admin,2025-08-31 11:45:01
-692,2025-05-14,Phishing Attempt,Critical,Resolved,Unusual outbound traffic pattern.,admin,2025-05-14 07:52:25
-693,2025-01-15,Ransomware,Critical,Open,Firewall blocked multiple port scans.,klee,2025-01-15 12:58:39
-694,2025-11-28,Data Breach,High,Closed,Antivirus signature match found.,security_team,2025-11-28 21:00:31
-695,2025-11-29,SQL Injection,High,Mitigated,Unusual outbound traffic pattern.,asmith,2025-11-30 00:56:10
-696,2025-09-02,Ransomware,Medium,Investigating,Suspicious login attempt detected.,asmith,2025-09-02 04:20:50
-697,2025-03-30,Ransomware,Low,Resolved,Suspicious login attempt detected.,klee,2025-03-30 18:37:31
-698,2025-08-19,DDoS Attack,Critical,Investigating,Unusual outbound traffic pattern.,jdoe,2025-08-19 19:36:41
-699,2025-06-22,Phishing Attempt,Low,Resolved,Database latency exceeded threshold.,system_monitor,2025-06-22 20:12:58
-700,2025-01-16,Ransomware,High,False Positive,User reported strange email attachment.,admin,2025-01-16 04:57:49
-701,2025-02-15,Malware Infection,Critical,Mitigated,Database latency exceeded threshold.,klee,2025-02-15 06:11:40
-702,2025-01-17,Malware Infection,Medium,Closed,User reported strange email attachment.,system_monitor,2025-01-17 22:49:50
-703,2025-11-25,Insider Threat,Medium,Mitigated,Antivirus signature match found.,jdoe,2025-11-25 14:35:44
-704,2025-01-26,Unauthorized Access,Medium,Open,Suspicious login attempt detected.,security_team,2025-01-26 03:25:25
-705,2025-02-17,Insider Threat,Low,Investigating,Unusual outbound traffic pattern.,system_monitor,2025-02-17 07:09:32
-706,2025-11-25,Insider Threat,High,False Positive,User reported strange email attachment.,security_team,2025-11-25 22:58:32
-707,2025-04-22,Unauthorized Access,Low,Closed,Database latency exceeded threshold.,klee,2025-04-22 08:59:48
-708,2025-10-10,Phishing Attempt,Low,Investigating,Unusual outbound traffic pattern.,system_monitor,2025-10-10 18:57:32
-709,2025-09-21,Insider Threat,High,False Positive,Suspicious login attempt detected.,system_monitor,2025-09-21 04:38:34
-710,2025-04-19,Phishing Attempt,Low,Closed,Antivirus signature match found.,klee,2025-04-19 02:25:09
-711,2025-08-12,Ransomware,Medium,False Positive,Database latency exceeded threshold.,security_team,2025-08-12 01:12:24
-712,2025-04-25,Malware Infection,Low,Resolved,Firewall blocked multiple port scans.,system_monitor,2025-04-25 22:51:13
-713,2025-09-02,Unauthorized Access,Medium,Investigating,Suspicious login attempt detected.,klee,2025-09-03 00:18:34
-714,2025-05-02,Malware Infection,Medium,Investigating,Database latency exceeded threshold.,jdoe,2025-05-02 17:36:15
-715,2025-03-29,Data Breach,Medium,Mitigated,Firewall blocked multiple port scans.,klee,2025-03-29 13:26:34
-716,2025-11-03,Unauthorized Access,Critical,Investigating,Unusual outbound traffic pattern.,security_team,2025-11-03 19:57:51
-717,2025-01-29,Data Breach,Medium,Resolved,Database latency exceeded threshold.,jdoe,2025-01-29 16:31:06
-718,2025-11-02,SQL Injection,Low,Open,Database latency exceeded threshold.,jdoe,2025-11-02 11:50:40
-719,2025-10-21,Insider Threat,Critical,Resolved,Firewall blocked multiple port scans.,asmith,2025-10-21 11:44:59
-720,2025-01-13,Insider Threat,Medium,Closed,User reported strange email attachment.,jdoe,2025-01-13 18:13:05
-721,2025-06-12,Malware Infection,High,Mitigated,Suspicious login attempt detected.,asmith,2025-06-12 10:38:00
-722,2025-10-16,Data Breach,Critical,Resolved,Suspicious login attempt detected.,asmith,2025-10-16 21:18:38
-723,2025-07-23,Phishing Attempt,High,Open,Antivirus signature match found.,asmith,2025-07-23 10:24:22
-724,2024-12-17,Ransomware,Medium,Investigating,Suspicious login attempt detected.,asmith,2024-12-17 20:03:59
-725,2025-07-06,Phishing Attempt,Medium,Open,Unusual outbound traffic pattern.,admin,2025-07-06 01:13:26
-726,2025-09-11,Data Breach,Critical,Mitigated,Antivirus signature match found.,klee,2025-09-11 13:09:22
-727,2025-02-06,Unauthorized Access,Low,Investigating,Firewall blocked multiple port scans.,jdoe,2025-02-06 17:37:24
-728,2025-02-08,Data Breach,Medium,Mitigated,Database latency exceeded threshold.,jdoe,2025-02-08 15:22:53
-729,2025-09-12,Ransomware,High,Mitigated,Database latency exceeded threshold.,security_team,2025-09-12 15:56:55
-730,2025-10-06,Unauthorized Access,High,Investigating,Database latency exceeded threshold.,jdoe,2025-10-06 12:05:10
-731,2025-08-19,Man-in-the-Middle,Low,Investigating,Firewall blocked multiple port scans.,security_team,2025-08-19 01:22:25
-732,2024-12-29,Data Breach,Medium,Resolved,User reported strange email attachment.,admin,2024-12-29 20:44:40
-733,2025-07-13,Data Breach,Low,Investigating,Firewall blocked multiple port scans.,admin,2025-07-13 01:16:58
-734,2025-09-14,DDoS Attack,Medium,Investigating,Antivirus signature match found.,asmith,2025-09-14 08:12:00
-735,2025-10-05,Unauthorized Access,Critical,Resolved,Antivirus signature match found.,admin,2025-10-05 22:28:53
-736,2025-10-17,DDoS Attack,Critical,Closed,Unusual outbound traffic pattern.,klee,2025-10-17 02:32:47
-737,2025-06-15,Insider Threat,High,False Positive,Unusual outbound traffic pattern.,admin,2025-06-15 22:45:50
-738,2025-08-20,Man-in-the-Middle,High,Resolved,Unusual outbound traffic pattern.,jdoe,2025-08-20 21:03:58
-739,2025-11-13,Malware Infection,High,Resolved,Antivirus signature match found.,asmith,2025-11-13 14:42:25
-740,2025-01-29,Data Breach,High,Closed,Database latency exceeded threshold.,security_team,2025-01-29 20:28:11
-741,2025-02-10,Man-in-the-Middle,High,Mitigated,Unusual outbound traffic pattern.,jdoe,2025-02-10 17:54:17
-742,2025-05-08,Malware Infection,Critical,Closed,Firewall blocked multiple port scans.,security_team,2025-05-08 08:10:20
-743,2024-12-25,Man-in-the-Middle,Critical,Mitigated,Unusual outbound traffic pattern.,system_monitor,2024-12-25 11:06:29
-744,2024-12-18,Data Breach,High,Mitigated,Antivirus signature match found.,security_team,2024-12-18 20:54:31
-745,2025-07-09,Phishing Attempt,Critical,Open,Antivirus signature match found.,security_team,2025-07-09 02:10:48
-746,2025-02-28,Unauthorized Access,Medium,Open,Database latency exceeded threshold.,admin,2025-02-28 13:00:24
-747,2025-11-17,DDoS Attack,Low,False Positive,Database latency exceeded threshold.,klee,2025-11-17 02:07:14
-748,2025-01-27,Unauthorized Access,Low,Closed,Firewall blocked multiple port scans.,system_monitor,2025-01-27 08:30:32
-749,2025-02-27,Malware Infection,High,Open,Antivirus signature match found.,klee,2025-02-27 11:03:42
-750,2025-12-04,Unauthorized Access,Low,Open,User reported strange email attachment.,admin,2025-12-04 10:06:03
-751,2024-12-13,Malware Infection,Medium,Resolved,Unusual outbound traffic pattern.,security_team,2024-12-13 18:22:43
-752,2025-02-24,Ransomware,Medium,False Positive,User reported strange email attachment.,klee,2025-02-24 06:54:51
-753,2025-02-28,Ransomware,Low,Investigating,Antivirus signature match found.,admin,2025-02-28 20:29:35
-754,2025-07-20,Phishing Attempt,High,Open,Unusual outbound traffic pattern.,security_team,2025-07-20 05:04:03
-755,2025-04-08,Man-in-the-Middle,Low,Mitigated,User reported strange email attachment.,jdoe,2025-04-08 18:53:03
-756,2025-06-03,Data Breach,Low,Open,Database latency exceeded threshold.,security_team,2025-06-03 11:47:13
-757,2025-09-18,Insider Threat,Critical,Investigating,Antivirus signature match found.,system_monitor,2025-09-18 16:18:38
-758,2025-10-24,Man-in-the-Middle,High,Mitigated,Database latency exceeded threshold.,admin,2025-10-24 19:13:49
-759,2025-06-12,SQL Injection,Medium,Resolved,Database latency exceeded threshold.,security_team,2025-06-12 02:12:18
-760,2025-03-23,DDoS Attack,Critical,Closed,Firewall blocked multiple port scans.,klee,2025-03-23 20:42:52
-761,2025-06-15,Data Breach,High,Resolved,Suspicious login attempt detected.,security_team,2025-06-15 05:09:11
-762,2025-09-11,Man-in-the-Middle,Critical,Investigating,Firewall blocked multiple port scans.,klee,2025-09-11 23:25:05
-763,2025-07-30,Phishing Attempt,Critical,Open,Antivirus signature match found.,klee,2025-07-30 18:02:04
-764,2025-12-08,Malware Infection,Low,Resolved,User reported strange email attachment.,asmith,2025-12-08 19:43:22
-765,2025-04-20,Phishing Attempt,Medium,False Positive,User reported strange email attachment.,asmith,2025-04-20 08:11:57
-766,2025-09-28,SQL Injection,Medium,False Positive,Unusual outbound traffic pattern.,klee,2025-09-28 12:15:18
-767,2025-02-01,Ransomware,Medium,Resolved,Suspicious login attempt detected.,asmith,2025-02-01 08:00:45
-768,2025-08-06,DDoS Attack,Low,Investigating,Firewall blocked multiple port scans.,klee,2025-08-06 17:19:58
-769,2025-01-11,Malware Infection,High,Closed,Suspicious login attempt detected.,system_monitor,2025-01-11 19:55:43
-770,2025-01-02,Man-in-the-Middle,Low,False Positive,Firewall blocked multiple port scans.,admin,2025-01-02 06:32:27
-771,2025-02-22,DDoS Attack,Low,Open,Database latency exceeded threshold.,klee,2025-02-22 20:13:49
-772,2025-10-06,Man-in-the-Middle,High,Open,Database latency exceeded threshold.,asmith,2025-10-06 06:33:50
-773,2025-11-19,Data Breach,Critical,False Positive,Database latency exceeded threshold.,security_team,2025-11-19 08:53:59
-774,2025-06-21,Phishing Attempt,Low,False Positive,Suspicious login attempt detected.,asmith,2025-06-21 11:35:25
-775,2025-10-22,Malware Infection,Critical,Closed,Unusual outbound traffic pattern.,klee,2025-10-22 12:44:11
-776,2025-01-25,Unauthorized Access,Low,False Positive,User reported strange email attachment.,klee,2025-01-25 15:48:08
-777,2025-05-20,Malware Infection,Medium,False Positive,User reported strange email attachment.,asmith,2025-05-20 19:23:46
-778,2025-07-16,Phishing Attempt,High,Open,Unusual outbound traffic pattern.,admin,2025-07-16 08:19:12
-779,2025-04-25,Unauthorized Access,High,Mitigated,Antivirus signature match found.,jdoe,2025-04-25 22:51:36
-780,2025-02-10,Insider Threat,Critical,Open,Antivirus signature match found.,klee,2025-02-10 20:09:49
-781,2025-03-27,Insider Threat,Critical,False Positive,Unusual outbound traffic pattern.,security_team,2025-03-27 11:18:26
-782,2025-02-27,Ransomware,Low,Open,Unusual outbound traffic pattern.,klee,2025-02-27 19:42:46
-783,2025-11-14,Data Breach,Low,False Positive,Antivirus signature match found.,admin,2025-11-15 00:19:16
-784,2025-07-23,DDoS Attack,Medium,Resolved,User reported strange email attachment.,security_team,2025-07-23 01:27:00
-785,2025-08-11,Phishing Attempt,Critical,Mitigated,Firewall blocked multiple port scans.,asmith,2025-08-11 20:15:41
-786,2025-05-17,DDoS Attack,Medium,Closed,Database latency exceeded threshold.,security_team,2025-05-17 02:42:12
-787,2024-12-13,DDoS Attack,Low,Mitigated,Antivirus signature match found.,jdoe,2024-12-13 11:38:45
-788,2025-09-03,Data Breach,Medium,False Positive,Database latency exceeded threshold.,klee,2025-09-04 00:00:04
-789,2025-08-17,Malware Infection,High,Open,Database latency exceeded threshold.,security_team,2025-08-17 20:51:09
-790,2025-05-26,Man-in-the-Middle,Critical,Resolved,Unusual outbound traffic pattern.,system_monitor,2025-05-26 16:21:35
-791,2025-06-29,Man-in-the-Middle,Low,Mitigated,Unusual outbound traffic pattern.,klee,2025-06-29 07:17:50
-792,2025-02-08,SQL Injection,Critical,Mitigated,Unusual outbound traffic pattern.,admin,2025-02-08 05:34:15
-793,2025-04-24,Man-in-the-Middle,Low,Closed,Suspicious login attempt detected.,system_monitor,2025-04-24 17:02:11
-794,2025-03-12,Ransomware,High,Resolved,Suspicious login attempt detected.,admin,2025-03-12 11:13:18
-795,2025-08-18,Insider Threat,Critical,Investigating,Unusual outbound traffic pattern.,asmith,2025-08-18 02:41:37
-796,2025-09-25,Phishing Attempt,Medium,False Positive,Unusual outbound traffic pattern.,system_monitor,2025-09-25 03:59:12
-797,2025-07-04,Data Breach,Medium,Closed,Database latency exceeded threshold.,security_team,2025-07-04 05:24:59
-798,2025-02-15,Man-in-the-Middle,High,Resolved,Database latency exceeded threshold.,jdoe,2025-02-15 12:00:39
-799,2025-03-09,Unauthorized Access,Critical,Closed,Unusual outbound traffic pattern.,security_team,2025-03-09 14:14:26
-800,2025-06-07,Insider Threat,High,Closed,Database latency exceeded threshold.,admin,2025-06-07 14:23:37
+id,date,incident_type,severity,status,created_at
+1,16/12/2024,Data Leak,Low,Closed,16/12/2024 3:29
+2,24/01/2025,Data Leak,Low,Open,24/01/2025 7:17
+3,10/01/2025,Phishing,Critical,Pending Review,10/01/2025 7:38
+4,26/08/2025,Data Leak,High,Pending Review,26/08/2025 10:03
+5,15/11/2025,SQL Injection,High,Pending Review,15/11/2025 20:06
+6,13/09/2025,Data Leak,Low,Resolved,13/09/2025 23:23
+7,06/12/2025,Phishing,High,Resolved,06/12/2025 4:46
+8,18/06/2025,Phishing,Critical,Open,18/06/2025 6:56
+9,25/09/2025,Insider Threat,Critical,Pending Review,25/09/2025 23:33
+10,21/06/2025,Brute Force,High,Under Investigation,21/06/2025 14:53
+11,20/11/2025,Ransomware,Critical,Resolved,20/11/2025 21:53
+12,11/09/2025,SQL Injection,Medium,Pending Review,11/09/2025 18:41
+13,15/07/2025,Phishing,Medium,Resolved,15/07/2025 22:10
+14,21/08/2025,SQL Injection,High,Under Investigation,21/08/2025 3:51
+15,10/07/2025,Brute Force,Critical,Under Investigation,10/07/2025 5:08
+16,23/06/2025,DDoS,Low,Under Investigation,23/06/2025 11:54
+17,02/01/2025,Ransomware,High,Resolved,02/01/2025 9:46
+18,24/09/2025,DDoS,High,Under Investigation,24/09/2025 7:26
+19,21/04/2025,SQL Injection,Low,Pending Review,21/04/2025 16:48
+20,28/10/2025,Insider Threat,Critical,Pending Review,28/10/2025 11:43
+21,22/08/2025,Ransomware,Critical,Open,22/08/2025 14:56
+22,24/12/2024,Data Leak,Medium,Pending Review,24/12/2024 14:15
+23,06/07/2025,Data Leak,Low,Closed,06/07/2025 23:37
+24,22/07/2025,Phishing,Medium,Pending Review,22/07/2025 10:42
+25,10/03/2025,SQL Injection,Critical,Resolved,10/03/2025 3:08
+26,01/01/2025,SQL Injection,High,Closed,01/01/2025 18:02
+27,10/10/2025,Brute Force,Low,Pending Review,10/10/2025 13:48
+28,04/04/2025,Data Leak,Low,Open,04/04/2025 0:22
+29,02/05/2025,Insider Threat,Critical,Resolved,02/05/2025 5:48
+30,18/02/2025,Data Leak,Critical,Pending Review,18/02/2025 2:14
+31,23/04/2025,SQL Injection,Critical,Pending Review,23/04/2025 17:34
+32,24/09/2025,DDoS,Low,Under Investigation,24/09/2025 9:03
+33,29/07/2025,Data Leak,Critical,Open,29/07/2025 7:55
+34,07/09/2025,Data Leak,Critical,Closed,07/09/2025 13:17
+35,14/08/2025,Ransomware,Low,Under Investigation,14/08/2025 1:20
+36,21/04/2025,Ransomware,Critical,Pending Review,21/04/2025 17:45
+37,09/12/2025,Data Leak,High,Under Investigation,09/12/2025 14:41
+38,09/03/2025,Data Leak,Medium,Under Investigation,09/03/2025 15:02
+39,17/11/2025,Ransomware,Low,Resolved,17/11/2025 5:06
+40,04/04/2025,Phishing,Low,Closed,04/04/2025 23:30
+41,26/02/2025,SQL Injection,High,Resolved,26/02/2025 2:49
+42,23/03/2025,Ransomware,High,Under Investigation,23/03/2025 11:54
+43,22/07/2025,Phishing,High,Open,22/07/2025 4:41
+44,11/05/2025,Data Leak,High,Closed,11/05/2025 14:13
+45,31/03/2025,Insider Threat,Medium,Resolved,31/03/2025 15:34
+46,29/12/2024,Phishing,Low,Under Investigation,29/12/2024 22:11
+47,17/06/2025,DDoS,Critical,Under Investigation,17/06/2025 7:14
+48,13/01/2025,Brute Force,Low,Open,13/01/2025 5:05
+49,21/01/2025,Malware,Critical,Resolved,21/01/2025 9:41
+50,02/07/2025,Ransomware,High,Resolved,02/07/2025 8:56
+51,31/01/2025,SQL Injection,High,Resolved,31/01/2025 9:56
+52,15/12/2024,Data Leak,High,Resolved,15/12/2024 22:20
+53,26/12/2024,Brute Force,Medium,Pending Review,26/12/2024 13:41
+54,13/02/2025,SQL Injection,High,Pending Review,13/02/2025 1:30
+55,09/07/2025,Brute Force,Medium,Resolved,09/07/2025 22:46
+56,23/01/2025,SQL Injection,High,Pending Review,23/01/2025 12:01
+57,05/10/2025,Malware,High,Resolved,05/10/2025 1:52
+58,21/08/2025,DDoS,High,Resolved,21/08/2025 15:46
+59,07/12/2025,Ransomware,Low,Resolved,07/12/2025 20:17
+60,05/10/2025,Ransomware,Critical,Pending Review,05/10/2025 6:50
+61,21/11/2025,SQL Injection,High,Pending Review,21/11/2025 20:22
+62,22/08/2025,Phishing,High,Pending Review,22/08/2025 2:54
+63,15/11/2025,Data Leak,High,Resolved,15/11/2025 11:07
+64,21/02/2025,SQL Injection,Low,Under Investigation,21/02/2025 4:33
+65,23/04/2025,DDoS,High,Under Investigation,23/04/2025 11:51
+66,11/10/2025,Brute Force,Low,Closed,11/10/2025 17:29
+67,09/02/2025,Brute Force,Low,Closed,09/02/2025 20:21
+68,25/07/2025,Brute Force,Low,Open,25/07/2025 17:15
+69,28/08/2025,DDoS,Critical,Pending Review,28/08/2025 8:38
+70,19/01/2025,Data Leak,High,Pending Review,19/01/2025 23:26
+71,20/04/2025,Brute Force,Medium,Resolved,20/04/2025 15:37
+72,23/10/2025,Malware,Medium,Open,23/10/2025 17:20
+73,15/05/2025,Brute Force,Low,Under Investigation,15/05/2025 20:54
+74,02/05/2025,Malware,Critical,Under Investigation,02/05/2025 19:59
+75,03/10/2025,Data Leak,Medium,Open,03/10/2025 8:09
+76,29/03/2025,Brute Force,Low,Resolved,29/03/2025 18:09
+77,13/01/2025,SQL Injection,Medium,Closed,13/01/2025 10:12
+78,18/12/2024,Brute Force,High,Pending Review,18/12/2024 8:50
+79,07/03/2025,Brute Force,Medium,Open,07/03/2025 10:14
+80,05/06/2025,DDoS,High,Open,05/06/2025 20:30
+81,23/10/2025,Phishing,Low,Resolved,23/10/2025 9:46
+82,06/12/2025,Ransomware,High,Open,06/12/2025 11:38
+83,13/12/2025,Insider Threat,Low,Pending Review,13/12/2025 4:47
+84,02/08/2025,Ransomware,Medium,Under Investigation,02/08/2025 11:22
+85,05/09/2025,Malware,Low,Closed,05/09/2025 19:34
+86,11/01/2025,Phishing,Medium,Closed,11/01/2025 2:13
+87,24/05/2025,Phishing,High,Under Investigation,24/05/2025 5:40
+88,05/08/2025,Ransomware,Medium,Open,05/08/2025 9:36
+89,20/12/2024,SQL Injection,Critical,Open,20/12/2024 9:37
+90,18/04/2025,Insider Threat,Low,Resolved,18/04/2025 22:55
+91,14/06/2025,Phishing,Critical,Open,14/06/2025 14:40
+92,04/04/2025,DDoS,Low,Closed,04/04/2025 0:49
+93,24/12/2024,DDoS,Critical,Resolved,24/12/2024 5:51
+94,15/05/2025,Data Leak,Critical,Closed,15/05/2025 8:46
+95,09/08/2025,DDoS,Critical,Closed,09/08/2025 17:50
+96,30/01/2025,DDoS,Critical,Resolved,30/01/2025 8:00
+97,31/05/2025,Insider Threat,Low,Resolved,31/05/2025 9:22
+98,22/06/2025,DDoS,Medium,Resolved,22/06/2025 21:51
+99,17/03/2025,Ransomware,High,Under Investigation,17/03/2025 11:46
+100,01/10/2025,Brute Force,Critical,Open,01/10/2025 6:30
+101,06/06/2025,Insider Threat,Low,Closed,06/06/2025 17:59
+102,28/02/2025,Malware,High,Closed,28/02/2025 2:38
+103,01/10/2025,Data Leak,Low,Open,01/10/2025 2:48
+104,12/07/2025,Data Leak,Critical,Closed,12/07/2025 6:21
+105,13/01/2025,Data Leak,Low,Closed,13/01/2025 2:34
+106,05/01/2025,Phishing,Medium,Open,05/01/2025 11:05
+107,06/05/2025,Brute Force,Medium,Open,06/05/2025 8:59
+108,18/12/2024,Malware,Critical,Open,18/12/2024 12:03
+109,17/04/2025,Data Leak,Low,Closed,17/04/2025 6:37
+110,25/06/2025,Brute Force,Low,Open,25/06/2025 0:07
+111,03/07/2025,SQL Injection,High,Pending Review,03/07/2025 18:28
+112,22/02/2025,Malware,Low,Pending Review,22/02/2025 0:56
+113,06/01/2025,Malware,Medium,Under Investigation,06/01/2025 2:45
+114,01/05/2025,Brute Force,Medium,Open,01/05/2025 18:35
+115,02/04/2025,Insider Threat,Critical,Resolved,02/04/2025 14:27
+116,14/01/2025,SQL Injection,Medium,Pending Review,14/01/2025 16:27
+117,04/07/2025,Data Leak,Critical,Pending Review,04/07/2025 3:21
+118,11/09/2025,Brute Force,Low,Open,11/09/2025 10:43
+119,23/05/2025,Brute Force,Medium,Resolved,23/05/2025 23:47
+120,30/12/2024,Ransomware,Medium,Closed,30/12/2024 17:26
+121,26/03/2025,Ransomware,Medium,Pending Review,26/03/2025 10:38
+122,04/04/2025,Data Leak,High,Under Investigation,04/04/2025 15:48
+123,17/04/2025,Malware,High,Closed,17/04/2025 9:52
+124,09/11/2025,Phishing,Medium,Closed,09/11/2025 8:06
+125,11/05/2025,SQL Injection,High,Under Investigation,11/05/2025 0:34
+126,03/10/2025,Insider Threat,High,Under Investigation,03/10/2025 19:46
+127,15/07/2025,DDoS,High,Pending Review,15/07/2025 22:13
+128,25/10/2025,Malware,Low,Pending Review,25/10/2025 21:19
+129,25/12/2024,Data Leak,Medium,Pending Review,25/12/2024 2:19
+130,03/01/2025,Malware,Low,Pending Review,03/01/2025 15:53
+131,26/04/2025,DDoS,Medium,Under Investigation,26/04/2025 8:52
+132,05/02/2025,Data Leak,Critical,Under Investigation,05/02/2025 23:36
+133,03/08/2025,Data Leak,Low,Pending Review,03/08/2025 0:48
+134,18/04/2025,Malware,Critical,Closed,18/04/2025 20:46
+135,19/01/2025,Insider Threat,High,Open,19/01/2025 4:17
+136,08/05/2025,SQL Injection,Low,Closed,08/05/2025 23:06
+137,27/01/2025,Brute Force,Low,Resolved,27/01/2025 11:52
+138,09/09/2025,Brute Force,Medium,Open,09/09/2025 12:23
+139,20/04/2025,Malware,High,Open,20/04/2025 9:12
+140,12/12/2025,Data Leak,Critical,Resolved,12/12/2025 8:48
+141,19/05/2025,SQL Injection,Medium,Closed,19/05/2025 5:59
+142,02/02/2025,Phishing,Low,Closed,02/02/2025 23:02
+143,07/05/2025,Phishing,Critical,Closed,07/05/2025 2:32
+144,03/02/2025,Brute Force,Low,Pending Review,03/02/2025 22:10
+145,01/11/2025,Malware,Critical,Pending Review,01/11/2025 5:40
+146,22/06/2025,SQL Injection,Critical,Under Investigation,22/06/2025 6:12
+147,19/07/2025,DDoS,Low,Open,19/07/2025 16:40
+148,01/07/2025,SQL Injection,Medium,Pending Review,01/07/2025 11:13
+149,13/02/2025,Data Leak,High,Resolved,13/02/2025 9:41
+150,30/05/2025,Phishing,High,Closed,30/05/2025 6:52
+151,13/07/2025,SQL Injection,Medium,Resolved,13/07/2025 1:46
+152,07/01/2025,Data Leak,Low,Pending Review,07/01/2025 18:13
+153,13/06/2025,Phishing,Critical,Closed,13/06/2025 11:18
+154,10/04/2025,Brute Force,Low,Closed,10/04/2025 5:57
+155,12/02/2025,Insider Threat,Low,Closed,12/02/2025 21:58
+156,23/04/2025,Phishing,Low,Open,23/04/2025 22:41
+157,07/07/2025,Insider Threat,High,Resolved,07/07/2025 23:32
+158,25/11/2025,Ransomware,Low,Closed,25/11/2025 20:45
+159,10/11/2025,Brute Force,High,Pending Review,10/11/2025 22:55
+160,04/07/2025,Phishing,Medium,Open,04/07/2025 3:38
+161,05/12/2025,Malware,Medium,Open,05/12/2025 20:56
+162,12/11/2025,Ransomware,Medium,Resolved,12/11/2025 12:19
+163,30/03/2025,SQL Injection,Critical,Closed,30/03/2025 22:33
+164,20/12/2024,Malware,Medium,Resolved,20/12/2024 3:33
+165,04/06/2025,Ransomware,Medium,Open,04/06/2025 18:13
+166,25/01/2025,DDoS,Low,Resolved,25/01/2025 19:55
+167,14/03/2025,Malware,Critical,Closed,14/03/2025 15:29
+168,08/01/2025,SQL Injection,Critical,Under Investigation,08/01/2025 2:21
+169,22/07/2025,Brute Force,High,Resolved,22/07/2025 19:42
+170,17/12/2024,Ransomware,Medium,Resolved,17/12/2024 10:24
+171,18/10/2025,Phishing,Medium,Closed,18/10/2025 14:34
+172,27/12/2024,Phishing,Low,Open,27/12/2024 20:09
+173,21/02/2025,Insider Threat,Medium,Under Investigation,21/02/2025 6:00
+174,13/04/2025,Data Leak,Medium,Open,13/04/2025 5:51
+175,04/11/2025,Insider Threat,High,Resolved,04/11/2025 12:21
+176,23/08/2025,Insider Threat,Low,Closed,23/08/2025 5:04
+177,08/10/2025,Ransomware,Low,Pending Review,08/10/2025 17:03
+178,11/10/2025,Data Leak,High,Open,11/10/2025 14:51
+179,09/12/2025,Insider Threat,Medium,Open,09/12/2025 6:30
+180,19/10/2025,Insider Threat,Critical,Pending Review,19/10/2025 8:14
+181,30/01/2025,Phishing,High,Closed,30/01/2025 8:41
+182,28/09/2025,Ransomware,High,Under Investigation,28/09/2025 17:31
+183,20/04/2025,Malware,Critical,Open,20/04/2025 4:02
+184,30/08/2025,Brute Force,High,Under Investigation,30/08/2025 13:26
+185,01/08/2025,SQL Injection,Critical,Pending Review,01/08/2025 19:29
+186,21/09/2025,Brute Force,Low,Pending Review,21/09/2025 21:13
+187,18/09/2025,Data Leak,Critical,Pending Review,18/09/2025 0:13
+188,07/11/2025,Ransomware,High,Resolved,07/11/2025 0:34
+189,22/08/2025,SQL Injection,High,Closed,22/08/2025 19:35
+190,24/09/2025,Phishing,High,Pending Review,24/09/2025 2:45
+191,05/10/2025,Data Leak,Medium,Resolved,05/10/2025 10:28
+192,29/10/2025,Phishing,High,Pending Review,29/10/2025 9:48
+193,15/06/2025,Malware,Medium,Under Investigation,15/06/2025 10:49
+194,31/12/2024,Data Leak,Critical,Pending Review,31/12/2024 0:24
+195,15/05/2025,Insider Threat,Low,Open,15/05/2025 18:52
+196,01/02/2025,Insider Threat,Medium,Pending Review,01/02/2025 14:34
+197,09/08/2025,Malware,Critical,Pending Review,09/08/2025 6:23
+198,27/06/2025,Phishing,Critical,Resolved,27/06/2025 18:35
+199,20/03/2025,Ransomware,High,Pending Review,20/03/2025 21:33
+200,09/09/2025,Insider Threat,Critical,Resolved,09/09/2025 15:08
+201,24/12/2024,Data Leak,High,Closed,24/12/2024 17:40
+202,29/12/2024,Brute Force,High,Open,29/12/2024 5:24
+203,09/04/2025,Ransomware,Low,Resolved,09/04/2025 12:40
+204,03/08/2025,Brute Force,Critical,Open,03/08/2025 15:55
+205,19/04/2025,Insider Threat,Critical,Pending Review,19/04/2025 22:13
+206,03/10/2025,Malware,Medium,Resolved,03/10/2025 14:56
+207,15/03/2025,DDoS,High,Pending Review,15/03/2025 6:27
+208,21/09/2025,Insider Threat,Critical,Resolved,21/09/2025 20:02
+209,18/10/2025,Phishing,Low,Under Investigation,18/10/2025 11:12
+210,20/12/2024,SQL Injection,High,Pending Review,20/12/2024 5:09
+211,26/02/2025,Brute Force,High,Pending Review,26/02/2025 9:08
+212,26/11/2025,DDoS,High,Open,26/11/2025 13:35
+213,23/01/2025,Data Leak,Critical,Closed,23/01/2025 10:32
+214,11/04/2025,Ransomware,Medium,Pending Review,11/04/2025 0:05
+215,26/07/2025,DDoS,Medium,Pending Review,26/07/2025 11:54
+216,31/10/2025,Phishing,Low,Open,31/10/2025 3:06
+217,14/02/2025,Ransomware,Medium,Under Investigation,14/02/2025 8:40
+218,03/12/2025,Data Leak,Low,Under Investigation,03/12/2025 14:11
+219,06/03/2025,Insider Threat,Medium,Pending Review,06/03/2025 23:05
+220,02/04/2025,Phishing,Low,Open,02/04/2025 16:03
+221,26/04/2025,Malware,Critical,Under Investigation,26/04/2025 22:40
+222,27/03/2025,Malware,Critical,Closed,27/03/2025 11:43
+223,16/04/2025,DDoS,Medium,Under Investigation,16/04/2025 10:19
+224,26/12/2024,SQL Injection,Low,Pending Review,26/12/2024 7:59
+225,03/06/2025,Phishing,Medium,Closed,03/06/2025 3:52
+226,24/06/2025,Ransomware,Medium,Under Investigation,24/06/2025 22:33
+227,30/08/2025,Malware,Critical,Pending Review,30/08/2025 19:13
+228,09/10/2025,Brute Force,Medium,Resolved,09/10/2025 1:47
+229,25/05/2025,SQL Injection,Low,Pending Review,25/05/2025 1:12
+230,01/02/2025,Phishing,High,Resolved,01/02/2025 9:17
+231,28/10/2025,Insider Threat,High,Open,28/10/2025 13:29
+232,29/03/2025,DDoS,Critical,Pending Review,29/03/2025 9:26
+233,23/07/2025,DDoS,Low,Pending Review,23/07/2025 16:43
+234,16/05/2025,Data Leak,Critical,Open,16/05/2025 3:43
+235,29/06/2025,Brute Force,Medium,Open,29/06/2025 21:41
+236,18/01/2025,Insider Threat,Critical,Open,18/01/2025 12:26
+237,28/03/2025,Insider Threat,Medium,Under Investigation,28/03/2025 15:37
+238,03/08/2025,SQL Injection,Critical,Closed,03/08/2025 13:49
+239,20/12/2024,Data Leak,Medium,Under Investigation,20/12/2024 22:44
+240,22/10/2025,Malware,Critical,Resolved,22/10/2025 3:11
+241,18/05/2025,Data Leak,Low,Closed,18/05/2025 9:13
+242,07/05/2025,Malware,Low,Pending Review,07/05/2025 9:35
+243,28/08/2025,Insider Threat,High,Resolved,28/08/2025 14:21
+244,08/07/2025,SQL Injection,Low,Pending Review,08/07/2025 13:25
+245,18/03/2025,SQL Injection,Medium,Closed,18/03/2025 0:45
+246,30/10/2025,Malware,Low,Resolved,30/10/2025 14:23
+247,27/02/2025,Data Leak,Medium,Open,27/02/2025 19:42
+248,15/08/2025,Ransomware,Low,Pending Review,15/08/2025 0:27
+249,21/06/2025,Phishing,Medium,Under Investigation,21/06/2025 4:20
+250,16/06/2025,Data Leak,Low,Resolved,16/06/2025 1:04
+251,24/11/2025,Data Leak,Critical,Closed,24/11/2025 8:49
+252,24/10/2025,DDoS,Low,Under Investigation,24/10/2025 10:09
+253,04/06/2025,Malware,Low,Under Investigation,04/06/2025 16:20
+254,20/03/2025,SQL Injection,Medium,Under Investigation,20/03/2025 14:47
+255,14/05/2025,Brute Force,Medium,Under Investigation,14/05/2025 8:44
+256,05/02/2025,Insider Threat,Medium,Open,05/02/2025 2:37
+257,07/08/2025,Brute Force,Low,Pending Review,07/08/2025 22:29
+258,15/02/2025,Ransomware,Low,Closed,15/02/2025 0:46
+259,06/07/2025,SQL Injection,Critical,Resolved,06/07/2025 1:10
+260,03/07/2025,SQL Injection,Medium,Open,03/07/2025 18:17
+261,12/01/2025,Ransomware,High,Open,12/01/2025 20:42
+262,20/08/2025,Phishing,Medium,Closed,20/08/2025 16:53
+263,11/03/2025,SQL Injection,Medium,Resolved,11/03/2025 10:43
+264,19/03/2025,Brute Force,High,Under Investigation,19/03/2025 11:55
+265,15/08/2025,SQL Injection,High,Resolved,15/08/2025 16:57
+266,10/02/2025,Insider Threat,Critical,Resolved,10/02/2025 2:21
+267,12/03/2025,Insider Threat,Medium,Under Investigation,12/03/2025 1:12
+268,04/04/2025,Insider Threat,High,Resolved,04/04/2025 16:40
+269,19/04/2025,Insider Threat,High,Pending Review,19/04/2025 11:48
+270,26/02/2025,Insider Threat,Medium,Pending Review,26/02/2025 8:11
+271,08/08/2025,Data Leak,High,Under Investigation,08/08/2025 19:11
+272,06/10/2025,Malware,High,Resolved,06/10/2025 16:03
+273,17/11/2025,Phishing,Low,Open,17/11/2025 11:51
+274,12/12/2025,Brute Force,High,Resolved,12/12/2025 6:38
+275,07/12/2025,Ransomware,Medium,Resolved,07/12/2025 1:07
+276,29/07/2025,Data Leak,Critical,Closed,29/07/2025 13:20
+277,12/12/2025,Insider Threat,Low,Pending Review,12/12/2025 15:52
+278,28/12/2024,Brute Force,Low,Under Investigation,28/12/2024 9:21
+279,22/11/2025,Malware,Critical,Resolved,22/11/2025 22:24
+280,31/05/2025,SQL Injection,Critical,Pending Review,31/05/2025 13:39
+281,16/06/2025,Brute Force,High,Under Investigation,16/06/2025 13:10
+282,31/03/2025,Brute Force,Medium,Open,31/03/2025 12:56
+283,10/11/2025,Ransomware,Medium,Closed,10/11/2025 20:09
+284,13/03/2025,Ransomware,Critical,Under Investigation,13/03/2025 21:23
+285,10/01/2025,SQL Injection,Critical,Resolved,10/01/2025 5:44
+286,22/03/2025,Data Leak,Medium,Open,22/03/2025 4:28
+287,01/10/2025,Insider Threat,High,Closed,01/10/2025 7:42
+288,05/01/2025,Phishing,Medium,Under Investigation,05/01/2025 12:17
+289,05/09/2025,Malware,Low,Resolved,05/09/2025 6:05
+290,06/12/2025,Insider Threat,Critical,Resolved,06/12/2025 21:15
+291,27/06/2025,Data Leak,Critical,Under Investigation,27/06/2025 3:58
+292,25/12/2024,SQL Injection,Medium,Closed,25/12/2024 23:22
+293,31/05/2025,Brute Force,Critical,Pending Review,31/05/2025 16:08
+294,17/03/2025,SQL Injection,Low,Resolved,17/03/2025 4:31
+295,25/03/2025,Brute Force,Critical,Resolved,25/03/2025 22:05
+296,25/02/2025,Insider Threat,Medium,Under Investigation,25/02/2025 18:05
+297,04/10/2025,Phishing,Medium,Pending Review,04/10/2025 15:44
+298,25/07/2025,Phishing,High,Pending Review,25/07/2025 10:20
+299,27/12/2024,Insider Threat,High,Resolved,27/12/2024 8:34
+300,20/06/2025,SQL Injection,Medium,Resolved,20/06/2025 18:50
+301,18/01/2025,Insider Threat,Low,Resolved,18/01/2025 16:20
+302,24/03/2025,Ransomware,High,Resolved,24/03/2025 12:32
+303,24/10/2025,Phishing,Medium,Open,24/10/2025 16:40
+304,23/02/2025,DDoS,Low,Under Investigation,23/02/2025 4:38
+305,12/11/2025,Brute Force,High,Closed,12/11/2025 18:04
+306,04/12/2025,DDoS,Medium,Resolved,04/12/2025 15:10
+307,20/11/2025,Brute Force,Low,Open,20/11/2025 3:39
+308,23/11/2025,Ransomware,High,Open,23/11/2025 8:40
+309,06/07/2025,DDoS,High,Resolved,06/07/2025 11:25
+310,05/05/2025,Brute Force,Critical,Open,05/05/2025 18:32
+311,13/12/2024,Data Leak,Low,Closed,13/12/2024 16:54
+312,14/11/2025,Brute Force,High,Closed,14/11/2025 1:47
+313,26/02/2025,Insider Threat,Critical,Open,26/02/2025 13:22
+314,14/09/2025,Insider Threat,High,Resolved,14/09/2025 1:15
+315,10/03/2025,Ransomware,High,Pending Review,10/03/2025 15:28
+316,23/03/2025,DDoS,Low,Under Investigation,23/03/2025 22:50
+317,29/08/2025,Data Leak,Low,Open,29/08/2025 23:41
+318,31/08/2025,DDoS,Critical,Pending Review,31/08/2025 18:15
+319,18/05/2025,Malware,Medium,Closed,18/05/2025 13:01
+320,10/08/2025,Brute Force,High,Under Investigation,10/08/2025 3:30
+321,06/10/2025,Phishing,Medium,Closed,06/10/2025 14:28
+322,02/11/2025,DDoS,Critical,Pending Review,02/11/2025 10:30
+323,19/11/2025,Brute Force,Medium,Closed,19/11/2025 6:33
+324,15/05/2025,Ransomware,High,Pending Review,15/05/2025 1:11
+325,28/12/2024,DDoS,Critical,Open,28/12/2024 5:43
+326,02/03/2025,Brute Force,Medium,Closed,02/03/2025 6:23
+327,18/09/2025,Brute Force,Low,Closed,18/09/2025 8:44
+328,15/05/2025,Malware,Medium,Pending Review,15/05/2025 8:12
+329,15/02/2025,SQL Injection,High,Under Investigation,15/02/2025 8:30
+330,16/01/2025,Data Leak,Critical,Open,16/01/2025 17:55
+331,21/01/2025,Brute Force,Low,Pending Review,21/01/2025 16:48
+332,03/06/2025,DDoS,Medium,Resolved,03/06/2025 15:07
+333,13/10/2025,SQL Injection,High,Closed,13/10/2025 7:21
+334,08/10/2025,Data Leak,Medium,Closed,08/10/2025 11:12
+335,11/11/2025,DDoS,High,Open,11/11/2025 6:12
+336,08/04/2025,Ransomware,Medium,Closed,08/04/2025 5:20
+337,06/12/2025,DDoS,Critical,Resolved,06/12/2025 20:08
+338,20/02/2025,Insider Threat,Medium,Pending Review,20/02/2025 17:27
+339,26/08/2025,Phishing,Low,Closed,26/08/2025 1:19
+340,17/11/2025,Malware,Medium,Resolved,17/11/2025 15:39
+341,25/09/2025,Malware,High,Closed,25/09/2025 10:21
+342,24/05/2025,Malware,Critical,Under Investigation,24/05/2025 9:23
+343,04/05/2025,Malware,Medium,Open,04/05/2025 18:50
+344,19/02/2025,Insider Threat,Critical,Closed,19/02/2025 0:31
+345,18/11/2025,Ransomware,Low,Under Investigation,18/11/2025 8:15
+346,19/12/2024,Brute Force,High,Under Investigation,19/12/2024 1:37
+347,04/05/2025,Insider Threat,Medium,Under Investigation,04/05/2025 4:13
+348,25/12/2024,Insider Threat,High,Resolved,25/12/2024 3:33
+349,03/08/2025,Ransomware,Critical,Pending Review,03/08/2025 12:49
+350,18/02/2025,Brute Force,Medium,Resolved,18/02/2025 20:53
+351,28/01/2025,DDoS,Low,Under Investigation,28/01/2025 1:23
+352,24/08/2025,DDoS,Critical,Pending Review,24/08/2025 20:32
+353,03/11/2025,Phishing,Low,Resolved,03/11/2025 4:53
+354,05/04/2025,DDoS,Low,Under Investigation,05/04/2025 9:32
+355,08/10/2025,Brute Force,Low,Resolved,08/10/2025 15:24
+356,08/01/2025,Phishing,Medium,Pending Review,08/01/2025 13:20
+357,19/04/2025,Malware,High,Open,19/04/2025 4:20
+358,11/02/2025,SQL Injection,Low,Closed,11/02/2025 6:11
+359,04/01/2025,Brute Force,Critical,Open,04/01/2025 3:50
+360,20/10/2025,DDoS,Medium,Under Investigation,20/10/2025 12:40
+361,04/05/2025,Brute Force,High,Pending Review,04/05/2025 13:37
+362,26/03/2025,Brute Force,Critical,Pending Review,26/03/2025 0:35
+363,07/07/2025,Phishing,High,Open,07/07/2025 3:09
+364,18/01/2025,Insider Threat,Low,Pending Review,18/01/2025 23:47
+365,18/02/2025,Insider Threat,High,Open,18/02/2025 10:18
+366,18/06/2025,Insider Threat,Critical,Resolved,18/06/2025 9:14
+367,07/02/2025,Malware,Critical,Resolved,07/02/2025 12:06
+368,02/04/2025,DDoS,Medium,Pending Review,02/04/2025 10:32
+369,15/10/2025,Phishing,Medium,Resolved,15/10/2025 10:38
+370,19/09/2025,DDoS,Low,Resolved,19/09/2025 0:03
+371,03/08/2025,Insider Threat,Low,Resolved,03/08/2025 15:59
+372,26/02/2025,Brute Force,High,Resolved,26/02/2025 0:22
+373,29/01/2025,SQL Injection,Medium,Closed,29/01/2025 22:01
+374,23/05/2025,Ransomware,Medium,Pending Review,23/05/2025 8:16
+375,02/07/2025,DDoS,Critical,Resolved,02/07/2025 22:30
+376,13/05/2025,DDoS,High,Open,13/05/2025 13:40
+377,14/01/2025,Data Leak,Critical,Pending Review,14/01/2025 16:35
+378,11/06/2025,Brute Force,High,Under Investigation,11/06/2025 22:50
+379,07/10/2025,Phishing,Low,Pending Review,07/10/2025 10:56
+380,08/01/2025,Data Leak,High,Open,08/01/2025 18:29
+381,15/05/2025,Phishing,High,Open,15/05/2025 7:50
+382,29/11/2025,Insider Threat,Critical,Open,29/11/2025 13:38
+383,17/08/2025,Malware,High,Resolved,17/08/2025 19:16
+384,10/02/2025,DDoS,High,Resolved,10/02/2025 12:30
+385,04/01/2025,Insider Threat,Low,Resolved,04/01/2025 4:39
+386,26/10/2025,Brute Force,Critical,Resolved,26/10/2025 18:32
+387,18/12/2024,Ransomware,Critical,Open,18/12/2024 22:20
+388,13/05/2025,Malware,Low,Pending Review,13/05/2025 2:28
+389,03/05/2025,Phishing,Critical,Pending Review,03/05/2025 6:54
+390,13/11/2025,Phishing,High,Closed,13/11/2025 17:28
+391,08/11/2025,Brute Force,Low,Resolved,08/11/2025 21:02
+392,04/10/2025,Insider Threat,Low,Closed,04/10/2025 8:48
+393,14/04/2025,Phishing,Critical,Closed,14/04/2025 4:52
+394,13/07/2025,Malware,Critical,Under Investigation,13/07/2025 1:09
+395,28/04/2025,SQL Injection,Critical,Under Investigation,28/04/2025 21:31
+396,11/08/2025,Brute Force,Critical,Closed,11/08/2025 16:58
+397,17/11/2025,Malware,Low,Resolved,17/11/2025 8:06
+398,27/01/2025,DDoS,Low,Closed,27/01/2025 9:00
+399,10/03/2025,SQL Injection,Medium,Resolved,10/03/2025 0:30
+400,26/05/2025,Brute Force,Critical,Closed,26/05/2025 4:51
+401,18/09/2025,Data Leak,Critical,Resolved,18/09/2025 17:01
+402,13/11/2025,DDoS,Low,Pending Review,13/11/2025 1:25
+403,10/07/2025,Brute Force,Medium,Pending Review,10/07/2025 21:41
+404,09/09/2025,Ransomware,Critical,Resolved,09/09/2025 22:15
+405,26/09/2025,Insider Threat,Critical,Open,26/09/2025 2:02
+406,11/09/2025,Data Leak,Critical,Resolved,11/09/2025 17:45
+407,23/01/2025,Insider Threat,Critical,Open,23/01/2025 0:56
+408,08/05/2025,Data Leak,Low,Open,08/05/2025 7:09
+409,15/07/2025,Data Leak,Critical,Closed,15/07/2025 23:35
+410,27/07/2025,Brute Force,Low,Closed,27/07/2025 6:19
+411,14/11/2025,Brute Force,High,Resolved,14/11/2025 23:06
+412,26/12/2024,Phishing,Medium,Resolved,26/12/2024 2:24
+413,22/05/2025,Insider Threat,High,Pending Review,22/05/2025 19:54
+414,07/04/2025,Ransomware,Medium,Resolved,07/04/2025 11:47
+415,18/11/2025,DDoS,Medium,Under Investigation,18/11/2025 16:29
+416,03/05/2025,Insider Threat,High,Open,03/05/2025 19:51
+417,03/08/2025,Data Leak,Critical,Closed,03/08/2025 12:20
+418,13/01/2025,SQL Injection,High,Closed,13/01/2025 8:01
+419,01/06/2025,DDoS,High,Resolved,01/06/2025 3:03
+420,31/03/2025,DDoS,High,Under Investigation,31/03/2025 16:47
+421,28/03/2025,Data Leak,Critical,Under Investigation,28/03/2025 7:19
+422,03/11/2025,Phishing,High,Pending Review,03/11/2025 4:43
+423,08/07/2025,Brute Force,Critical,Closed,08/07/2025 14:50
+424,29/09/2025,SQL Injection,Medium,Closed,29/09/2025 3:24
+425,01/05/2025,Brute Force,Critical,Under Investigation,01/05/2025 3:58
+426,30/10/2025,DDoS,Medium,Open,30/10/2025 19:50
+427,17/04/2025,Malware,Low,Under Investigation,17/04/2025 6:15
+428,26/12/2024,Ransomware,Critical,Under Investigation,26/12/2024 17:11
+429,21/02/2025,Insider Threat,Low,Under Investigation,21/02/2025 17:27
+430,31/01/2025,Data Leak,High,Closed,31/01/2025 3:40
+431,24/12/2024,Insider Threat,Medium,Closed,24/12/2024 1:41
+432,11/09/2025,Ransomware,High,Open,11/09/2025 13:11
+433,11/10/2025,SQL Injection,Low,Pending Review,11/10/2025 4:19
+434,12/06/2025,SQL Injection,Low,Pending Review,12/06/2025 14:58
+435,07/06/2025,Ransomware,High,Pending Review,07/06/2025 15:18
+436,03/02/2025,Data Leak,Critical,Under Investigation,03/02/2025 23:10
+437,05/03/2025,Ransomware,High,Open,05/03/2025 18:41
+438,12/02/2025,Brute Force,Low,Open,12/02/2025 4:54
+439,24/12/2024,Malware,Low,Pending Review,24/12/2024 18:23
+440,07/05/2025,Insider Threat,Low,Under Investigation,07/05/2025 19:34
+441,30/07/2025,Ransomware,Medium,Pending Review,30/07/2025 0:52
+442,30/11/2025,Data Leak,Low,Under Investigation,30/11/2025 6:14
+443,15/06/2025,DDoS,Critical,Pending Review,15/06/2025 16:29
+444,08/07/2025,Malware,Critical,Closed,08/07/2025 17:47
+445,24/10/2025,Data Leak,Medium,Pending Review,24/10/2025 4:39
+446,31/10/2025,Insider Threat,Low,Pending Review,31/10/2025 22:28
+447,22/01/2025,Phishing,High,Open,22/01/2025 12:21
+448,10/04/2025,Data Leak,Low,Pending Review,10/04/2025 19:27
+449,04/09/2025,Insider Threat,Medium,Closed,04/09/2025 21:51
+450,01/08/2025,DDoS,High,Resolved,01/08/2025 22:30
+451,16/12/2024,Phishing,Critical,Under Investigation,16/12/2024 3:50
+452,28/10/2025,Malware,Medium,Resolved,28/10/2025 14:30
+453,14/11/2025,Ransomware,Medium,Open,14/11/2025 6:30
+454,25/06/2025,Malware,Medium,Closed,25/06/2025 2:13
+455,23/05/2025,Insider Threat,Low,Pending Review,23/05/2025 15:49
+456,04/05/2025,DDoS,High,Open,04/05/2025 2:39
+457,01/06/2025,Insider Threat,High,Under Investigation,01/06/2025 20:45
+458,31/03/2025,Brute Force,Low,Resolved,31/03/2025 19:43
+459,01/04/2025,Data Leak,Low,Pending Review,01/04/2025 5:58
+460,15/08/2025,Brute Force,High,Open,15/08/2025 20:12
+461,01/09/2025,Ransomware,Medium,Closed,01/09/2025 11:27
+462,02/07/2025,Malware,Critical,Pending Review,02/07/2025 10:22
+463,16/12/2024,Malware,High,Under Investigation,16/12/2024 17:37
+464,05/06/2025,Phishing,Low,Open,05/06/2025 23:33
+465,24/08/2025,Insider Threat,Medium,Closed,24/08/2025 3:38
+466,14/03/2025,Brute Force,Medium,Closed,14/03/2025 2:09
+467,30/08/2025,Phishing,Critical,Resolved,30/08/2025 14:44
+468,08/08/2025,Data Leak,Medium,Under Investigation,08/08/2025 10:51
+469,22/03/2025,Malware,High,Closed,22/03/2025 15:16
+470,23/05/2025,Brute Force,Low,Open,23/05/2025 5:10
+471,29/06/2025,Brute Force,High,Closed,29/06/2025 2:43
+472,29/01/2025,Phishing,Medium,Pending Review,29/01/2025 15:49
+473,10/05/2025,Data Leak,Medium,Resolved,10/05/2025 22:29
+474,26/05/2025,Insider Threat,Critical,Open,26/05/2025 5:29
+475,13/04/2025,Brute Force,Critical,Open,13/04/2025 22:11
+476,15/09/2025,Phishing,Critical,Resolved,15/09/2025 17:13
+477,12/11/2025,Data Leak,High,Closed,12/11/2025 2:56
+478,07/12/2025,SQL Injection,Low,Open,07/12/2025 17:25
+479,30/10/2025,Brute Force,High,Resolved,30/10/2025 20:22
+480,02/05/2025,DDoS,Low,Closed,02/05/2025 16:23
+481,25/09/2025,Ransomware,Low,Closed,25/09/2025 8:21
+482,10/01/2025,Insider Threat,Medium,Closed,10/01/2025 2:24
+483,19/03/2025,Data Leak,Medium,Pending Review,19/03/2025 2:53
+484,12/10/2025,Malware,Low,Pending Review,12/10/2025 1:33
+485,15/07/2025,Phishing,Low,Closed,15/07/2025 1:26
+486,17/01/2025,Brute Force,Critical,Closed,17/01/2025 2:08
+487,09/04/2025,DDoS,Medium,Pending Review,09/04/2025 22:20
+488,07/10/2025,Insider Threat,Critical,Pending Review,07/10/2025 6:49
+489,13/11/2025,Phishing,Medium,Resolved,13/11/2025 0:23
+490,16/11/2025,Ransomware,Low,Under Investigation,16/11/2025 19:04
+491,04/07/2025,Phishing,Low,Under Investigation,04/07/2025 14:03
+492,02/07/2025,Malware,High,Closed,02/07/2025 20:40
+493,22/06/2025,Insider Threat,Critical,Open,22/06/2025 5:07
+494,01/03/2025,SQL Injection,High,Open,01/03/2025 1:43
+495,14/11/2025,Ransomware,High,Closed,14/11/2025 5:38
+496,09/11/2025,Brute Force,Low,Closed,09/11/2025 10:57
+497,12/07/2025,Insider Threat,High,Resolved,12/07/2025 0:12
+498,04/12/2025,Malware,Critical,Closed,04/12/2025 23:37
+499,19/09/2025,Ransomware,Critical,Open,19/09/2025 23:44
+500,16/07/2025,Malware,Critical,Resolved,16/07/2025 7:43
+501,09/02/2025,Phishing,High,Closed,09/02/2025 12:29
+502,30/07/2025,Insider Threat,Medium,Closed,30/07/2025 13:13
+503,28/04/2025,Insider Threat,Medium,Open,28/04/2025 5:09
+504,08/08/2025,DDoS,Medium,Closed,08/08/2025 12:58
+505,02/01/2025,SQL Injection,Low,Resolved,02/01/2025 8:15
+506,08/06/2025,Insider Threat,Medium,Closed,08/06/2025 8:24
+507,21/07/2025,Brute Force,Low,Open,21/07/2025 11:45
+508,22/04/2025,DDoS,Low,Open,22/04/2025 8:37
+509,11/06/2025,SQL Injection,Low,Pending Review,11/06/2025 20:08
+510,20/02/2025,Insider Threat,Medium,Open,20/02/2025 13:17
+511,13/09/2025,Malware,Critical,Closed,13/09/2025 7:16
+512,15/03/2025,Data Leak,High,Pending Review,15/03/2025 3:14
+513,10/10/2025,Brute Force,Critical,Open,10/10/2025 8:56
+514,05/07/2025,Phishing,High,Open,05/07/2025 13:13
+515,04/10/2025,Insider Threat,High,Open,04/10/2025 9:23
+516,04/12/2025,Data Leak,Medium,Pending Review,04/12/2025 15:48
+517,19/08/2025,DDoS,Critical,Pending Review,19/08/2025 18:46
+518,06/05/2025,DDoS,Critical,Closed,06/05/2025 16:52
+519,13/07/2025,Data Leak,Critical,Pending Review,13/07/2025 4:18
+520,21/05/2025,SQL Injection,Low,Pending Review,21/05/2025 0:54
+521,29/01/2025,Malware,High,Resolved,29/01/2025 4:43
+522,21/01/2025,SQL Injection,Medium,Under Investigation,21/01/2025 15:17
+523,06/08/2025,DDoS,Medium,Open,06/08/2025 18:54
+524,07/07/2025,Brute Force,Low,Open,07/07/2025 19:35
+525,05/08/2025,Phishing,Low,Pending Review,05/08/2025 17:16
+526,10/09/2025,Ransomware,Critical,Under Investigation,10/09/2025 6:33
+527,10/08/2025,Insider Threat,Medium,Closed,10/08/2025 15:19
+528,24/09/2025,DDoS,Low,Resolved,24/09/2025 9:49
+529,01/01/2025,SQL Injection,Medium,Pending Review,01/01/2025 15:07
+530,02/05/2025,Malware,Medium,Resolved,02/05/2025 18:34
+531,07/01/2025,Insider Threat,Medium,Resolved,07/01/2025 5:26
+532,21/05/2025,Phishing,Low,Closed,21/05/2025 4:37
+533,26/07/2025,Insider Threat,Low,Resolved,26/07/2025 3:21
+534,26/10/2025,Data Leak,Low,Closed,26/10/2025 7:20
+535,21/01/2025,Insider Threat,Low,Closed,21/01/2025 14:29
+536,31/10/2025,Data Leak,High,Resolved,31/10/2025 16:47
+537,08/07/2025,Data Leak,Medium,Pending Review,08/07/2025 9:46
+538,20/10/2025,Brute Force,Low,Resolved,20/10/2025 13:29
+539,12/06/2025,DDoS,High,Open,12/06/2025 9:08
+540,17/11/2025,Phishing,Medium,Resolved,17/11/2025 5:21
+541,14/11/2025,Data Leak,High,Pending Review,14/11/2025 2:49
+542,05/05/2025,Data Leak,High,Closed,05/05/2025 0:22
+543,27/06/2025,Malware,High,Open,27/06/2025 10:54
+544,27/04/2025,Data Leak,Critical,Closed,27/04/2025 2:41
+545,09/02/2025,Phishing,Critical,Resolved,09/02/2025 12:09
+546,28/07/2025,Data Leak,Critical,Open,28/07/2025 6:24
+547,13/08/2025,Phishing,Critical,Pending Review,13/08/2025 5:17
+548,22/01/2025,DDoS,Medium,Under Investigation,22/01/2025 16:34
+549,03/12/2025,Brute Force,Critical,Closed,03/12/2025 23:47
+550,12/03/2025,Data Leak,Medium,Resolved,12/03/2025 3:43
+551,30/11/2025,Data Leak,High,Closed,30/11/2025 22:43
+552,30/03/2025,Phishing,Critical,Pending Review,30/03/2025 13:51
+553,26/07/2025,Insider Threat,Critical,Resolved,26/07/2025 20:05
+554,03/04/2025,Brute Force,Medium,Open,03/04/2025 1:13
+555,19/08/2025,Brute Force,Low,Resolved,19/08/2025 20:01
+556,28/10/2025,Insider Threat,Medium,Resolved,28/10/2025 18:26
+557,30/01/2025,SQL Injection,Low,Closed,30/01/2025 8:49
+558,21/10/2025,Data Leak,High,Closed,21/10/2025 11:15
+559,28/06/2025,DDoS,High,Resolved,28/06/2025 23:54
+560,05/02/2025,Phishing,Critical,Under Investigation,05/02/2025 9:07
+561,13/05/2025,Brute Force,High,Pending Review,13/05/2025 20:39
+562,30/07/2025,Brute Force,Medium,Pending Review,30/07/2025 12:07
+563,07/05/2025,Insider Threat,Critical,Closed,07/05/2025 16:24
+564,30/07/2025,Data Leak,Low,Resolved,30/07/2025 13:37
+565,24/03/2025,Brute Force,Low,Pending Review,24/03/2025 5:58
+566,12/08/2025,Ransomware,Medium,Resolved,12/08/2025 20:53
+567,01/10/2025,Brute Force,Medium,Pending Review,01/10/2025 8:37
+568,05/10/2025,Phishing,High,Open,05/10/2025 16:58
+569,28/12/2024,Insider Threat,High,Closed,28/12/2024 18:30
+570,31/03/2025,Brute Force,Critical,Closed,31/03/2025 15:44
+571,08/08/2025,SQL Injection,Critical,Pending Review,08/08/2025 15:01
+572,09/01/2025,Ransomware,Low,Under Investigation,09/01/2025 2:12
+573,08/02/2025,Phishing,High,Under Investigation,08/02/2025 0:48
+574,10/01/2025,DDoS,High,Pending Review,10/01/2025 12:03
+575,26/12/2024,Phishing,Low,Resolved,26/12/2024 15:30
+576,14/09/2025,SQL Injection,Low,Closed,14/09/2025 10:40
+577,24/03/2025,Ransomware,Low,Under Investigation,24/03/2025 3:43
+578,26/02/2025,Phishing,High,Pending Review,26/02/2025 3:42
+579,20/05/2025,SQL Injection,Critical,Resolved,20/05/2025 21:25
+580,27/09/2025,Phishing,High,Closed,27/09/2025 8:06
+581,31/12/2024,Insider Threat,Medium,Resolved,31/12/2024 18:00
+582,26/04/2025,SQL Injection,Critical,Closed,26/04/2025 3:46
+583,16/10/2025,Phishing,Medium,Closed,16/10/2025 19:47
+584,01/11/2025,Ransomware,Medium,Under Investigation,01/11/2025 3:20
+585,04/07/2025,SQL Injection,Critical,Under Investigation,04/07/2025 22:29
+586,26/03/2025,Ransomware,High,Pending Review,26/03/2025 9:03
+587,04/10/2025,DDoS,Critical,Pending Review,04/10/2025 5:19
+588,31/07/2025,DDoS,High,Open,31/07/2025 16:18
+589,17/06/2025,DDoS,Medium,Pending Review,17/06/2025 13:48
+590,11/04/2025,Data Leak,Low,Under Investigation,11/04/2025 7:56
+591,16/06/2025,Brute Force,High,Open,16/06/2025 4:59
+592,12/09/2025,SQL Injection,Low,Under Investigation,12/09/2025 6:14
+593,19/04/2025,SQL Injection,High,Under Investigation,19/04/2025 22:04
+594,12/01/2025,Insider Threat,Low,Pending Review,12/01/2025 10:29
+595,30/10/2025,Malware,Critical,Closed,30/10/2025 12:03
+596,09/07/2025,Phishing,Low,Under Investigation,09/07/2025 9:34
+597,07/06/2025,Phishing,Critical,Under Investigation,07/06/2025 14:43
+598,04/09/2025,Ransomware,Medium,Open,04/09/2025 1:32
+599,08/09/2025,Data Leak,Medium,Pending Review,08/09/2025 15:37
+600,02/07/2025,Phishing,Medium,Resolved,02/07/2025 14:31
+601,23/01/2025,Ransomware,Low,Open,23/01/2025 23:30
+602,13/01/2025,DDoS,High,Pending Review,13/01/2025 6:07
+603,27/11/2025,SQL Injection,Low,Open,27/11/2025 23:23
+604,30/03/2025,DDoS,Low,Pending Review,30/03/2025 3:23
+605,27/01/2025,DDoS,Medium,Closed,27/01/2025 7:03
+606,17/06/2025,Insider Threat,Critical,Open,17/06/2025 20:08
+607,19/09/2025,Malware,Low,Resolved,19/09/2025 10:01
+608,26/11/2025,Data Leak,High,Under Investigation,26/11/2025 0:09
+609,07/12/2025,Phishing,High,Pending Review,07/12/2025 8:46
+610,30/07/2025,Ransomware,Medium,Closed,30/07/2025 13:43
+611,05/05/2025,Phishing,Low,Open,05/05/2025 8:32
+612,07/11/2025,Brute Force,Medium,Closed,07/11/2025 14:35
+613,13/12/2025,Malware,Low,Under Investigation,13/12/2025 11:15
+614,10/02/2025,Insider Threat,Medium,Resolved,10/02/2025 14:56
+615,06/05/2025,Malware,Medium,Closed,06/05/2025 22:36
+616,30/06/2025,SQL Injection,Low,Resolved,30/06/2025 13:00
+617,22/03/2025,Malware,Low,Closed,22/03/2025 9:40
+618,05/08/2025,Data Leak,High,Closed,05/08/2025 19:22
+619,12/03/2025,Malware,High,Pending Review,12/03/2025 11:00
+620,09/07/2025,Data Leak,High,Pending Review,09/07/2025 2:11
+621,08/03/2025,Brute Force,High,Under Investigation,08/03/2025 12:17
+622,06/08/2025,Insider Threat,High,Open,06/08/2025 4:23
+623,28/11/2025,Malware,High,Pending Review,28/11/2025 11:26
+624,03/04/2025,Brute Force,High,Under Investigation,03/04/2025 7:07
+625,17/08/2025,DDoS,Critical,Resolved,17/08/2025 11:39
+626,24/04/2025,Insider Threat,Low,Closed,24/04/2025 2:19
+627,28/03/2025,Ransomware,High,Closed,28/03/2025 17:18
+628,08/01/2025,Phishing,Medium,Pending Review,08/01/2025 10:04
+629,18/07/2025,DDoS,High,Open,18/07/2025 9:50
+630,01/05/2025,Ransomware,High,Resolved,01/05/2025 3:33
+631,19/05/2025,Data Leak,Critical,Open,19/05/2025 23:38
+632,17/05/2025,Brute Force,Critical,Resolved,17/05/2025 23:10
+633,24/01/2025,Ransomware,High,Closed,24/01/2025 8:47
+634,11/07/2025,Brute Force,Medium,Under Investigation,11/07/2025 3:29
+635,16/03/2025,SQL Injection,Low,Closed,16/03/2025 10:21
+636,29/05/2025,Brute Force,Critical,Closed,29/05/2025 23:39
+637,21/12/2024,SQL Injection,High,Closed,21/12/2024 18:42
+638,17/06/2025,Insider Threat,Low,Under Investigation,17/06/2025 15:49
+639,18/12/2024,Insider Threat,Low,Resolved,18/12/2024 22:00
+640,03/02/2025,Insider Threat,High,Open,03/02/2025 0:49
+641,07/01/2025,Insider Threat,High,Closed,07/01/2025 11:44
+642,07/02/2025,SQL Injection,High,Under Investigation,07/02/2025 7:02
+643,14/08/2025,DDoS,High,Open,14/08/2025 3:26
+644,05/01/2025,Brute Force,Critical,Resolved,05/01/2025 19:21
+645,19/04/2025,Ransomware,High,Closed,19/04/2025 23:48
+646,14/08/2025,Data Leak,Low,Under Investigation,14/08/2025 2:20
+647,12/11/2025,Data Leak,Low,Closed,12/11/2025 3:10
+648,15/06/2025,Data Leak,Medium,Resolved,15/06/2025 8:23
+649,10/05/2025,Ransomware,Medium,Open,10/05/2025 23:34
+650,11/03/2025,Phishing,Critical,Resolved,11/03/2025 23:47
+651,02/06/2025,DDoS,High,Under Investigation,02/06/2025 15:03
+652,25/11/2025,Phishing,Critical,Under Investigation,25/11/2025 4:53
+653,10/08/2025,Ransomware,Critical,Pending Review,10/08/2025 17:34
+654,21/04/2025,DDoS,High,Under Investigation,21/04/2025 3:20
+655,22/06/2025,Insider Threat,Critical,Resolved,22/06/2025 21:52
+656,11/02/2025,Malware,High,Under Investigation,11/02/2025 4:03
+657,13/12/2025,DDoS,Medium,Under Investigation,13/12/2025 14:37
+658,28/01/2025,DDoS,Low,Pending Review,28/01/2025 14:31
+659,06/06/2025,Brute Force,Medium,Resolved,06/06/2025 13:50
+660,13/07/2025,Insider Threat,Medium,Under Investigation,13/07/2025 17:21
+661,27/06/2025,Ransomware,Critical,Closed,27/06/2025 19:20
+662,29/05/2025,Phishing,Critical,Under Investigation,29/05/2025 23:03
+663,24/08/2025,Ransomware,Medium,Under Investigation,24/08/2025 7:40
+664,10/07/2025,Malware,High,Resolved,10/07/2025 9:22
+665,10/01/2025,Data Leak,Low,Pending Review,10/01/2025 10:29
+666,12/09/2025,Ransomware,Medium,Resolved,12/09/2025 9:21
+667,27/03/2025,Data Leak,Low,Open,27/03/2025 3:32
+668,07/09/2025,DDoS,Critical,Under Investigation,07/09/2025 10:43
+669,07/07/2025,Insider Threat,High,Resolved,07/07/2025 15:12
+670,27/11/2025,Brute Force,Medium,Resolved,27/11/2025 18:30
+671,20/07/2025,Insider Threat,Medium,Pending Review,20/07/2025 2:32
+672,23/03/2025,Ransomware,Critical,Pending Review,23/03/2025 12:42
+673,30/08/2025,Phishing,High,Closed,30/08/2025 21:06
+674,14/07/2025,Phishing,Low,Closed,14/07/2025 11:02
+675,02/03/2025,Brute Force,Low,Open,02/03/2025 16:50
+676,20/04/2025,Data Leak,Critical,Open,20/04/2025 19:25
+677,01/05/2025,Insider Threat,High,Resolved,01/05/2025 5:23
+678,21/07/2025,Phishing,Medium,Closed,21/07/2025 4:23
+679,08/11/2025,DDoS,Critical,Resolved,08/11/2025 20:43
+680,07/04/2025,Insider Threat,High,Closed,07/04/2025 6:29
+681,29/01/2025,Data Leak,Critical,Closed,29/01/2025 15:45
+682,13/12/2024,Brute Force,Medium,Pending Review,13/12/2024 23:50
+683,11/05/2025,Brute Force,Critical,Under Investigation,11/05/2025 7:26
+684,27/05/2025,Insider Threat,Low,Under Investigation,27/05/2025 18:38
+685,15/04/2025,Brute Force,Low,Pending Review,15/04/2025 11:56
+686,07/09/2025,Phishing,High,Open,07/09/2025 6:59
+687,02/09/2025,Data Leak,High,Pending Review,02/09/2025 20:44
+688,04/05/2025,SQL Injection,Critical,Under Investigation,04/05/2025 18:50
+689,27/10/2025,Data Leak,Low,Open,27/10/2025 4:39
+690,13/11/2025,SQL Injection,Critical,Resolved,13/11/2025 4:02
+691,17/01/2025,Brute Force,Medium,Open,17/01/2025 15:24
+692,17/08/2025,Brute Force,Medium,Pending Review,17/08/2025 6:17
+693,04/08/2025,SQL Injection,Critical,Open,04/08/2025 21:04
+694,27/05/2025,Ransomware,Low,Open,27/05/2025 13:03
+695,29/06/2025,Insider Threat,Low,Closed,29/06/2025 7:18
+696,29/10/2025,Data Leak,Critical,Under Investigation,29/10/2025 16:23
+697,03/09/2025,Data Leak,Low,Open,03/09/2025 13:39
+698,03/06/2025,Insider Threat,Critical,Pending Review,03/06/2025 5:50
+699,22/07/2025,Ransomware,Medium,Under Investigation,22/07/2025 12:53
+700,19/03/2025,DDoS,Low,Resolved,19/03/2025 18:01
+701,08/11/2025,DDoS,Medium,Resolved,08/11/2025 2:48
+702,01/08/2025,Data Leak,Medium,Open,01/08/2025 23:08
+703,28/08/2025,Ransomware,Medium,Open,28/08/2025 11:49
+704,20/12/2024,SQL Injection,Low,Resolved,20/12/2024 23:39
+705,15/08/2025,Ransomware,High,Resolved,15/08/2025 5:12
+706,07/08/2025,Ransomware,Low,Open,07/08/2025 9:44
+707,07/08/2025,SQL Injection,Medium,Open,07/08/2025 6:23
+708,17/04/2025,SQL Injection,Medium,Resolved,17/04/2025 7:50
+709,11/10/2025,Malware,Low,Under Investigation,11/10/2025 11:07
+710,10/04/2025,SQL Injection,High,Pending Review,10/04/2025 12:12
+711,08/10/2025,Ransomware,Medium,Open,08/10/2025 17:24
+712,22/01/2025,SQL Injection,Medium,Closed,22/01/2025 13:55
+713,26/03/2025,Ransomware,Critical,Resolved,26/03/2025 6:18
+714,22/05/2025,Brute Force,Medium,Resolved,22/05/2025 19:45
+715,07/12/2025,Insider Threat,Critical,Resolved,07/12/2025 20:57
+716,12/12/2025,Ransomware,Critical,Under Investigation,12/12/2025 3:21
+717,31/12/2024,Insider Threat,Medium,Closed,31/12/2024 14:03
+718,29/06/2025,Brute Force,Critical,Open,29/06/2025 16:33
+719,01/11/2025,Malware,High,Under Investigation,01/11/2025 12:22
+720,07/01/2025,Ransomware,Critical,Pending Review,07/01/2025 5:19
+721,20/10/2025,Data Leak,High,Under Investigation,20/10/2025 19:46
+722,11/11/2025,Malware,Low,Under Investigation,11/11/2025 12:56
+723,22/07/2025,Malware,High,Open,22/07/2025 12:24
+724,09/10/2025,Phishing,High,Open,09/10/2025 10:45
+725,06/09/2025,DDoS,High,Open,06/09/2025 9:15
+726,17/06/2025,Ransomware,Medium,Under Investigation,17/06/2025 20:43
+727,25/12/2024,Malware,High,Closed,25/12/2024 13:28
+728,29/04/2025,Ransomware,High,Resolved,29/04/2025 13:53
+729,07/02/2025,DDoS,Critical,Pending Review,07/02/2025 0:24
+730,30/06/2025,Malware,Critical,Resolved,30/06/2025 14:33
+731,10/03/2025,DDoS,Low,Pending Review,10/03/2025 9:03
+732,09/10/2025,DDoS,Low,Closed,09/10/2025 7:06
+733,01/02/2025,Ransomware,High,Pending Review,01/02/2025 0:27
+734,21/02/2025,Malware,Low,Resolved,21/02/2025 12:29
+735,09/01/2025,Brute Force,Critical,Resolved,09/01/2025 5:44
+736,11/06/2025,SQL Injection,High,Closed,11/06/2025 19:42
+737,12/02/2025,Brute Force,Medium,Closed,12/02/2025 16:51
+738,09/05/2025,Insider Threat,Critical,Pending Review,09/05/2025 9:17
+739,28/04/2025,Phishing,Critical,Pending Review,28/04/2025 16:33
+740,18/04/2025,SQL Injection,Low,Under Investigation,18/04/2025 1:30
+741,28/04/2025,Malware,Low,Open,28/04/2025 0:24
+742,30/01/2025,Phishing,High,Pending Review,30/01/2025 12:24
+743,21/03/2025,Insider Threat,High,Resolved,21/03/2025 6:59
+744,11/04/2025,Malware,Low,Closed,11/04/2025 14:34
+745,10/05/2025,Ransomware,High,Open,10/05/2025 13:39
+746,31/03/2025,Malware,Medium,Pending Review,31/03/2025 11:53
+747,05/01/2025,Ransomware,High,Pending Review,05/01/2025 9:08
+748,26/01/2025,Ransomware,Low,Open,26/01/2025 4:48
+749,16/04/2025,Data Leak,Critical,Pending Review,16/04/2025 18:50
+750,03/09/2025,Phishing,Low,Resolved,03/09/2025 18:20
+751,19/02/2025,Brute Force,Low,Resolved,19/02/2025 9:51
+752,11/06/2025,Ransomware,High,Open,11/06/2025 18:22
+753,14/09/2025,Data Leak,High,Closed,14/09/2025 15:16
+754,30/06/2025,DDoS,Critical,Pending Review,30/06/2025 22:22
+755,10/05/2025,Malware,Critical,Resolved,10/05/2025 21:43
+756,23/04/2025,Insider Threat,Medium,Closed,23/04/2025 16:28
+757,05/04/2025,SQL Injection,Critical,Closed,05/04/2025 0:21
+758,10/09/2025,DDoS,Medium,Resolved,10/09/2025 2:14
+759,10/03/2025,DDoS,Critical,Pending Review,10/03/2025 5:17
+760,26/07/2025,Insider Threat,Medium,Pending Review,26/07/2025 20:49
+761,27/04/2025,Phishing,Low,Open,27/04/2025 13:15
+762,03/07/2025,Malware,High,Under Investigation,03/07/2025 8:38
+763,20/12/2024,DDoS,High,Under Investigation,20/12/2024 6:36
+764,25/06/2025,DDoS,Low,Pending Review,25/06/2025 21:03
+765,01/08/2025,Brute Force,Critical,Under Investigation,01/08/2025 14:50
+766,17/07/2025,Brute Force,Medium,Open,17/07/2025 13:54
+767,01/02/2025,Brute Force,Medium,Pending Review,01/02/2025 3:30
+768,02/10/2025,Phishing,High,Closed,02/10/2025 10:43
+769,27/10/2025,Insider Threat,High,Resolved,27/10/2025 14:29
+770,25/08/2025,DDoS,Low,Pending Review,25/08/2025 4:39
+771,08/08/2025,Malware,Low,Under Investigation,08/08/2025 22:02
+772,01/05/2025,Malware,Low,Under Investigation,01/05/2025 13:55
+773,06/05/2025,Phishing,Critical,Closed,06/05/2025 16:07
+774,23/05/2025,DDoS,Medium,Resolved,23/05/2025 1:05
+775,27/11/2025,Malware,Medium,Resolved,27/11/2025 7:45
+776,13/03/2025,Data Leak,High,Open,13/03/2025 17:20
+777,27/11/2025,DDoS,Medium,Open,27/11/2025 10:42
+778,05/08/2025,Phishing,Critical,Closed,05/08/2025 12:21
+779,09/12/2025,Insider Threat,Low,Closed,09/12/2025 5:33
+780,07/01/2025,DDoS,High,Open,07/01/2025 18:03
+781,29/12/2024,DDoS,Medium,Closed,29/12/2024 6:03
+782,22/10/2025,Brute Force,Medium,Closed,22/10/2025 6:29
+783,12/10/2025,DDoS,Medium,Resolved,12/10/2025 0:15
+784,09/11/2025,Data Leak,Critical,Resolved,09/11/2025 16:12
+785,23/02/2025,Ransomware,Low,Resolved,23/02/2025 11:59
+786,25/02/2025,Phishing,Critical,Under Investigation,25/02/2025 6:41
+787,24/10/2025,DDoS,Low,Open,24/10/2025 21:47
+788,01/11/2025,Phishing,Critical,Resolved,01/11/2025 23:01
+789,23/08/2025,Data Leak,Critical,Resolved,23/08/2025 11:00
+790,05/05/2025,Insider Threat,Medium,Resolved,05/05/2025 18:53
+791,19/11/2025,Ransomware,Critical,Under Investigation,19/11/2025 1:05
+792,01/02/2025,Brute Force,Medium,Resolved,01/02/2025 6:12
+793,18/07/2025,DDoS,High,Closed,18/07/2025 22:28
+794,26/06/2025,Phishing,Low,Under Investigation,26/06/2025 7:47
+795,16/06/2025,Phishing,Medium,Open,16/06/2025 2:24
+796,28/01/2025,Malware,Low,Pending Review,28/01/2025 19:20
+797,04/03/2025,DDoS,Critical,Under Investigation,04/03/2025 2:33
+798,13/08/2025,Malware,Critical,Open,13/08/2025 23:32
+799,10/01/2025,SQL Injection,Medium,Closed,10/01/2025 4:57
+800,09/01/2025,Phishing,High,Closed,09/01/2025 15:15
+801,22/04/2025,Phishing,Medium,Closed,22/04/2025 20:24
+802,13/09/2025,Ransomware,Low,Under Investigation,13/09/2025 15:49
+803,04/07/2025,SQL Injection,High,Under Investigation,04/07/2025 20:40
+804,05/10/2025,Brute Force,High,Pending Review,05/10/2025 0:43
+805,31/01/2025,Data Leak,Critical,Open,31/01/2025 19:56
+806,10/10/2025,DDoS,High,Under Investigation,10/10/2025 1:40
+807,13/01/2025,Ransomware,Medium,Resolved,13/01/2025 16:11
+808,20/02/2025,DDoS,Low,Resolved,20/02/2025 16:48
+809,17/08/2025,Ransomware,Medium,Under Investigation,17/08/2025 2:32
+810,02/12/2025,DDoS,High,Pending Review,02/12/2025 14:36
+811,27/11/2025,Brute Force,Critical,Closed,27/11/2025 0:26
+812,22/08/2025,Data Leak,Low,Closed,22/08/2025 1:38
+813,24/05/2025,Phishing,Critical,Resolved,24/05/2025 5:13
+814,13/08/2025,Brute Force,High,Pending Review,13/08/2025 0:50
+815,21/12/2024,Brute Force,High,Under Investigation,21/12/2024 9:12
+816,08/10/2025,Phishing,Medium,Pending Review,08/10/2025 14:15
+817,23/08/2025,Ransomware,Low,Pending Review,23/08/2025 8:31
+818,29/01/2025,Insider Threat,High,Open,29/01/2025 19:27
+819,09/10/2025,Ransomware,Critical,Open,09/10/2025 12:29
+820,13/09/2025,SQL Injection,Medium,Under Investigation,13/09/2025 18:05
+821,18/10/2025,Malware,Low,Closed,18/10/2025 7:25
+822,18/04/2025,Brute Force,Medium,Under Investigation,18/04/2025 16:39
+823,28/04/2025,Phishing,Low,Pending Review,28/04/2025 13:08
+824,14/05/2025,Phishing,Medium,Resolved,14/05/2025 23:46
+825,08/04/2025,SQL Injection,Medium,Resolved,08/04/2025 16:13
+826,11/05/2025,Brute Force,Medium,Under Investigation,11/05/2025 11:24
+827,06/10/2025,Malware,Medium,Closed,06/10/2025 17:13
+828,14/04/2025,Ransomware,Medium,Open,14/04/2025 19:38
+829,07/10/2025,Insider Threat,High,Under Investigation,07/10/2025 5:09
+830,10/11/2025,SQL Injection,Critical,Pending Review,10/11/2025 15:17
+831,30/01/2025,Data Leak,Medium,Resolved,30/01/2025 21:12
+832,13/05/2025,SQL Injection,Low,Resolved,13/05/2025 16:12
+833,18/08/2025,SQL Injection,Medium,Closed,18/08/2025 9:05
+834,23/08/2025,Insider Threat,Critical,Closed,23/08/2025 19:17
+835,06/12/2025,Brute Force,Critical,Open,06/12/2025 22:26
+836,25/12/2024,Malware,Medium,Pending Review,25/12/2024 9:44
+837,14/01/2025,DDoS,High,Resolved,14/01/2025 9:23
+838,09/11/2025,Brute Force,Critical,Open,09/11/2025 1:34
+839,03/05/2025,Data Leak,Medium,Pending Review,03/05/2025 1:31
+840,27/04/2025,Insider Threat,High,Open,27/04/2025 18:55
+841,04/08/2025,Insider Threat,Medium,Under Investigation,04/08/2025 18:59
+842,28/04/2025,Phishing,High,Pending Review,28/04/2025 18:14
+843,29/09/2025,SQL Injection,Low,Under Investigation,29/09/2025 4:51
+844,03/05/2025,DDoS,High,Open,03/05/2025 22:08
+845,26/05/2025,SQL Injection,Medium,Under Investigation,26/05/2025 3:39
+846,27/09/2025,SQL Injection,Medium,Pending Review,27/09/2025 1:54
+847,08/02/2025,DDoS,High,Under Investigation,08/02/2025 4:51
+848,04/08/2025,Insider Threat,Medium,Under Investigation,04/08/2025 8:24
+849,06/10/2025,Ransomware,Medium,Closed,06/10/2025 2:59
+850,09/11/2025,Phishing,Critical,Under Investigation,09/11/2025 17:39
+851,26/07/2025,Malware,Medium,Closed,26/07/2025 17:59
+852,30/10/2025,DDoS,Critical,Open,30/10/2025 18:48
+853,03/03/2025,Insider Threat,Medium,Open,03/03/2025 17:18
+854,01/03/2025,Insider Threat,Critical,Pending Review,01/03/2025 3:29
+855,09/01/2025,Data Leak,High,Under Investigation,09/01/2025 2:20
+856,08/11/2025,DDoS,High,Open,08/11/2025 17:38
+857,24/08/2025,Data Leak,Medium,Pending Review,24/08/2025 17:39
+858,09/01/2025,DDoS,Medium,Resolved,09/01/2025 5:42
+859,24/11/2025,Ransomware,Low,Closed,24/11/2025 16:45
+860,28/07/2025,DDoS,Medium,Open,28/07/2025 17:40
+861,12/06/2025,DDoS,High,Closed,12/06/2025 8:41
+862,26/06/2025,Data Leak,High,Closed,26/06/2025 12:16
+863,06/05/2025,SQL Injection,Critical,Under Investigation,06/05/2025 3:10
+864,12/12/2025,SQL Injection,Medium,Closed,12/12/2025 6:42
+865,03/11/2025,Ransomware,Medium,Closed,03/11/2025 8:51
+866,12/10/2025,Phishing,Critical,Resolved,12/10/2025 7:44
+867,18/08/2025,Brute Force,Low,Closed,18/08/2025 23:03
+868,29/03/2025,Malware,Medium,Closed,29/03/2025 7:27
+869,30/11/2025,Insider Threat,High,Resolved,30/11/2025 14:01
+870,06/06/2025,Data Leak,Critical,Open,06/06/2025 21:18
+871,21/01/2025,Brute Force,Medium,Open,21/01/2025 13:40
+872,19/04/2025,DDoS,High,Under Investigation,19/04/2025 12:29
+873,08/10/2025,Insider Threat,Low,Open,08/10/2025 22:41
+874,03/07/2025,Insider Threat,Medium,Open,03/07/2025 15:14
+875,19/12/2024,DDoS,Medium,Pending Review,19/12/2024 18:24
+876,23/03/2025,Insider Threat,High,Resolved,23/03/2025 21:49
+877,01/09/2025,SQL Injection,Critical,Pending Review,01/09/2025 2:50
+878,08/06/2025,SQL Injection,Low,Resolved,08/06/2025 20:50
+879,23/07/2025,Brute Force,High,Under Investigation,23/07/2025 15:50
+880,09/01/2025,Data Leak,Medium,Pending Review,09/01/2025 6:19
+881,17/05/2025,Brute Force,Low,Pending Review,17/05/2025 8:19
+882,02/03/2025,DDoS,Low,Resolved,02/03/2025 4:40
+883,06/02/2025,Phishing,Low,Open,06/02/2025 21:35
+884,20/08/2025,DDoS,Medium,Under Investigation,20/08/2025 10:49
+885,31/05/2025,Phishing,Low,Closed,31/05/2025 3:03
+886,11/12/2025,Ransomware,Medium,Pending Review,11/12/2025 22:32
+887,22/06/2025,Malware,Critical,Under Investigation,22/06/2025 23:54
+888,14/02/2025,Insider Threat,Critical,Resolved,14/02/2025 12:41
+889,26/12/2024,Insider Threat,Critical,Under Investigation,26/12/2024 22:25
+890,23/05/2025,Brute Force,High,Under Investigation,23/05/2025 9:09
+891,24/10/2025,Insider Threat,Medium,Closed,24/10/2025 18:47
+892,14/03/2025,SQL Injection,Critical,Pending Review,14/03/2025 22:23
+893,03/09/2025,SQL Injection,High,Pending Review,03/09/2025 6:23
+894,03/10/2025,DDoS,Low,Resolved,03/10/2025 12:36
+895,11/03/2025,DDoS,Critical,Pending Review,11/03/2025 3:12
+896,22/03/2025,DDoS,Low,Pending Review,22/03/2025 10:07
+897,21/01/2025,Insider Threat,Low,Open,21/01/2025 20:58
+898,15/04/2025,Brute Force,Low,Pending Review,15/04/2025 18:29
+899,06/01/2025,Insider Threat,Low,Resolved,06/01/2025 1:58
+900,29/03/2025,Ransomware,Low,Closed,29/03/2025 10:17
+901,17/10/2025,Brute Force,Low,Resolved,17/10/2025 19:58
+902,31/01/2025,Brute Force,Low,Under Investigation,31/01/2025 2:10
+903,21/06/2025,Ransomware,High,Open,21/06/2025 9:33
+904,25/05/2025,DDoS,High,Pending Review,25/05/2025 8:28
+905,17/02/2025,Phishing,Medium,Pending Review,17/02/2025 21:53
+906,02/07/2025,Malware,Critical,Open,02/07/2025 7:00
+907,09/04/2025,SQL Injection,High,Pending Review,09/04/2025 8:44
+908,30/05/2025,DDoS,Critical,Pending Review,30/05/2025 1:53
+909,21/08/2025,Insider Threat,Low,Closed,21/08/2025 0:34
+910,04/07/2025,Phishing,Critical,Under Investigation,04/07/2025 18:15
+911,01/09/2025,Phishing,Low,Under Investigation,01/09/2025 16:16
+912,27/07/2025,Data Leak,Medium,Closed,27/07/2025 6:06
+913,21/06/2025,Phishing,Low,Open,21/06/2025 8:15
+914,28/12/2024,Insider Threat,Low,Closed,28/12/2024 13:10
+915,24/01/2025,Brute Force,High,Under Investigation,24/01/2025 16:26
+916,22/04/2025,Brute Force,Critical,Resolved,22/04/2025 14:41
+917,03/02/2025,Phishing,Medium,Under Investigation,03/02/2025 22:09
+918,26/12/2024,Malware,Low,Pending Review,26/12/2024 13:23
+919,10/11/2025,Insider Threat,Low,Under Investigation,10/11/2025 10:52
+920,14/05/2025,Brute Force,Low,Open,14/05/2025 11:16
+921,11/10/2025,Data Leak,High,Under Investigation,11/10/2025 10:49
+922,19/10/2025,Phishing,High,Pending Review,19/10/2025 12:39
+923,05/10/2025,Ransomware,High,Resolved,05/10/2025 3:28
+924,29/04/2025,Ransomware,Low,Pending Review,29/04/2025 12:09
+925,13/07/2025,Ransomware,Critical,Under Investigation,13/07/2025 0:01
+926,12/06/2025,SQL Injection,Medium,Under Investigation,12/06/2025 5:05
+927,17/04/2025,Ransomware,Critical,Closed,17/04/2025 4:52
+928,10/10/2025,Insider Threat,Critical,Under Investigation,10/10/2025 22:51
+929,29/11/2025,Malware,High,Pending Review,29/11/2025 10:46
+930,09/02/2025,Malware,High,Pending Review,09/02/2025 7:11
+931,19/12/2024,Phishing,Critical,Resolved,19/12/2024 13:50
+932,03/08/2025,DDoS,Medium,Open,03/08/2025 23:46
+933,18/07/2025,Brute Force,High,Open,18/07/2025 21:06
+934,09/12/2025,Ransomware,Low,Open,09/12/2025 6:45
+935,17/03/2025,Ransomware,High,Closed,17/03/2025 11:56
+936,01/10/2025,Brute Force,Medium,Open,01/10/2025 9:43
+937,20/05/2025,Brute Force,Medium,Under Investigation,20/05/2025 18:45
+938,18/01/2025,Ransomware,Medium,Pending Review,18/01/2025 17:25
+939,10/01/2025,Insider Threat,Medium,Closed,10/01/2025 7:26
+940,27/09/2025,DDoS,Low,Under Investigation,27/09/2025 23:46
+941,23/04/2025,Phishing,Medium,Resolved,23/04/2025 0:45
+942,26/07/2025,Insider Threat,Medium,Open,26/07/2025 1:32
+943,26/07/2025,Brute Force,Low,Open,26/07/2025 22:45
+944,26/09/2025,Phishing,Critical,Pending Review,26/09/2025 23:21
+945,08/06/2025,Phishing,Medium,Under Investigation,08/06/2025 13:20
+946,21/03/2025,Malware,Critical,Closed,21/03/2025 0:46
+947,24/07/2025,Malware,Critical,Pending Review,24/07/2025 13:38
+948,13/06/2025,Malware,Low,Resolved,13/06/2025 13:54
+949,24/02/2025,Ransomware,Medium,Under Investigation,24/02/2025 3:13
+950,08/04/2025,Malware,Low,Under Investigation,08/04/2025 1:11
+951,19/07/2025,Brute Force,Low,Pending Review,19/07/2025 13:58
+952,23/01/2025,SQL Injection,Low,Closed,23/01/2025 22:03
+953,24/02/2025,Data Leak,Medium,Pending Review,24/02/2025 21:32
+954,26/07/2025,Data Leak,Critical,Under Investigation,26/07/2025 15:17
+955,16/06/2025,Malware,Medium,Pending Review,16/06/2025 3:10
+956,14/01/2025,Ransomware,High,Open,14/01/2025 7:58
+957,15/01/2025,Insider Threat,Medium,Closed,15/01/2025 10:15
+958,11/11/2025,Brute Force,Critical,Under Investigation,11/11/2025 22:25
+959,04/10/2025,Data Leak,Critical,Pending Review,04/10/2025 13:46
+960,19/12/2024,SQL Injection,Low,Open,19/12/2024 18:35
+961,03/04/2025,Phishing,Medium,Open,03/04/2025 23:15
+962,04/07/2025,DDoS,High,Open,04/07/2025 17:41
+963,28/08/2025,Ransomware,Medium,Closed,28/08/2025 23:47
+964,25/01/2025,Malware,Medium,Under Investigation,25/01/2025 8:50
+965,26/11/2025,DDoS,Critical,Closed,26/11/2025 6:15
+966,26/09/2025,Ransomware,Medium,Closed,26/09/2025 3:54
+967,20/02/2025,Data Leak,High,Under Investigation,20/02/2025 14:22
+968,18/02/2025,Phishing,High,Open,18/02/2025 3:48
+969,15/02/2025,Phishing,High,Closed,15/02/2025 10:38
+970,12/04/2025,Phishing,Low,Open,12/04/2025 21:45
+971,09/06/2025,Data Leak,High,Under Investigation,09/06/2025 7:54
+972,23/09/2025,SQL Injection,High,Under Investigation,23/09/2025 0:18
+973,20/06/2025,Ransomware,Critical,Pending Review,20/06/2025 6:53
+974,18/10/2025,Insider Threat,Critical,Resolved,18/10/2025 6:34
+975,17/11/2025,Malware,Low,Open,17/11/2025 0:09
+976,29/01/2025,Insider Threat,Critical,Under Investigation,29/01/2025 1:53
+977,14/11/2025,Phishing,Medium,Closed,14/11/2025 4:40
+978,04/05/2025,Insider Threat,High,Pending Review,04/05/2025 10:13
+979,20/05/2025,Insider Threat,Critical,Under Investigation,20/05/2025 15:48
+980,27/09/2025,Brute Force,High,Resolved,27/09/2025 20:41
+981,04/11/2025,SQL Injection,Medium,Closed,04/11/2025 10:36
+982,10/11/2025,Ransomware,Low,Closed,10/11/2025 11:12
+983,12/10/2025,Data Leak,Medium,Under Investigation,12/10/2025 2:22
+984,01/07/2025,Ransomware,Low,Resolved,01/07/2025 10:04
+985,15/10/2025,SQL Injection,Low,Resolved,15/10/2025 22:14
+986,09/02/2025,Brute Force,Medium,Open,09/02/2025 6:16
+987,10/10/2025,Brute Force,Low,Open,10/10/2025 17:01
+988,11/09/2025,DDoS,High,Closed,11/09/2025 16:47
+989,22/09/2025,Phishing,Low,Closed,22/09/2025 13:18
+990,03/09/2025,Brute Force,Medium,Closed,03/09/2025 21:41
+991,08/10/2025,Phishing,Low,Under Investigation,08/10/2025 2:51
+992,23/04/2025,Data Leak,High,Pending Review,23/04/2025 13:50
+993,30/04/2025,Insider Threat,Critical,Open,30/04/2025 8:48
+994,27/02/2025,SQL Injection,Critical,Closed,27/02/2025 13:35
+995,06/08/2025,DDoS,Critical,Pending Review,06/08/2025 8:16
+996,20/02/2025,DDoS,Critical,Closed,20/02/2025 13:47
+997,27/01/2025,Phishing,High,Under Investigation,27/01/2025 2:35
+998,15/12/2024,DDoS,High,Open,15/12/2024 13:15
+999,15/03/2025,Phishing,Medium,Closed,15/03/2025 10:48
+1000,16/08/2025,SQL Injection,Medium,Resolved,16/08/2025 18:00
